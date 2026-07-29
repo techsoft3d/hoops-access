@@ -15,10 +15,6 @@ function onNext(currentStep, setStep) {
     });
 }
 
-function onExpand(collapsed, setCollapsed) {
-    setCollapsed(!collapsed); 
-}
-
 export default function DemoStage() {
 
     const [activeId, setActiveId] = useState('nastran');
@@ -30,9 +26,9 @@ export default function DemoStage() {
 
         <div>
             {step === 'raw' && <FormatSelector activeId={activeId} onChange={setActiveId} />}
-            {step === 'raw' && <StepRawFile format={format} onNext={() => onNext(step, setStep)} collapsed={collapsed} onExpand={() => onExpand(collapsed, setCollapsed)} />}
+            <StepRawFile format={format} onNext={() => { onNext(step, setStep); setCollapsed(true); }} collapsed={collapsed} onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }} />
             {step === 'structured' && <StepStructured format={format} onNext={() => onNext(step, setStep)} />}
-            {step === '3D' && <StepResult format={format} onNext={() => onNext(step, setStep)} />}
+            {step === '3D' && <StepResult format={format} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
         </div>
     );
 }
