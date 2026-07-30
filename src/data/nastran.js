@@ -21,19 +21,39 @@ export const nastran = {
   tree: [
     {
       label: 'Part: Chassis',
+      nodeIds: [1, 2, 3, 4, 5],
       children: [
-        { label: 'Shell group 1', color: 'blue' },
-        { label: 'Shell group 2', color: 'gray' },
+        { label: 'Shell group 1 (PSHELL 1)', nodeIds: [1, 2, 3] },
+        { label: 'Shell group 2 (PSHELL 1)', nodeIds: [4, 5] },
       ],
     },
-    { label: 'Part: Engine mount', collapsed: true },
+    {
+      label: 'Part: Engine mount',
+      nodeIds: [6, 7, 8, 9],
+      children: [
+        { label: 'Bracket group (PSHELL 2)', nodeIds: [6, 7, 8, 9] },
+      ],
+    },
+    {
+      label: 'Material: Steel (MAT1 1)',
+      nodeIds: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      children: [
+        { label: 'E = 2.1E5, ν = 0.30', nodeIds: [1, 2, 3, 4, 5, 6, 7, 8, 9] },
+      ],
+    },
   ],
   table: {
     columns: ['Node', 'X', 'Y', 'Z'],
     rows: [
       { node: 1, x: 0.0, y: 0.0, z: 0.0, highlight: true },
       { node: 2, x: 1.0, y: 0.0, z: 0.0 },
-      { node: 3, x: 1.0, y: 1.0, z: 0.0 },
+      { node: 3, x: 1.0, y: 0.5, z: 0.0 },
+      { node: 4, x: 0.0, y: 0.5, z: 0.0 },
+      { node: 5, x: 0.0, y: 0.0, z: 0.4 },
+      { node: 6, x: 2.0, y: 0.0, z: 0.0 },
+      { node: 7, x: 3.0, y: 0.0, z: 0.0 },
+      { node: 8, x: 3.0, y: 0.5, z: 0.0 },
+      { node: 9, x: 2.0, y: 0.5, z: 0.0 },
     ],
   },
   contour: { resultName: 'Von Mises stress', placeholder: true },

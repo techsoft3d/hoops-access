@@ -20,11 +20,26 @@ export const fluent = {
   tree: [
     {
       label: 'Domain: Fluid',
+      nodeIds: [1, 2, 3, 4, 5],
       children: [
-        { label: 'Zone 1 (wall)', color: 'blue' },
+        { label: 'Zone 1 (wall)', nodeIds: [1, 2, 3] },
+        { label: 'Zone 2 (inlet)', nodeIds: [4, 5] },
       ],
     },
-    { label: 'Domain: Solid', collapsed: true },
+    {
+      label: 'Domain: Solid',
+      nodeIds: [6, 7, 8, 9],
+      children: [
+        { label: 'Zone 3 (bracket)', nodeIds: [6, 7, 8, 9] },
+      ],
+    },
+    {
+      label: 'Boundary conditions',
+      nodeIds: [1, 2, 3],
+      children: [
+        { label: 'Zone 1: no-slip wall', nodeIds: [1, 2, 3] },
+      ],
+    },
   ],
 
   table: {
@@ -33,6 +48,12 @@ export const fluent = {
       { node: 1, x: 0.0, y: 0.0, z: 0.0, highlight: true },
       { node: 2, x: 1.0, y: 0.0, z: 0.0 },
       { node: 3, x: 1.0, y: 0.5, z: 0.0 },
+      { node: 4, x: 0.0, y: 0.5, z: 0.0 },
+      { node: 5, x: 0.0, y: 0.0, z: 0.4 },
+      { node: 6, x: 2.0, y: 0.0, z: 0.0 },
+      { node: 7, x: 3.0, y: 0.0, z: 0.0 },
+      { node: 8, x: 3.0, y: 0.5, z: 0.0 },
+      { node: 9, x: 2.0, y: 0.5, z: 0.0 },
     ],
   },
 

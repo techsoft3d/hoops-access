@@ -1,27 +1,75 @@
+import { useEffect, useState } from 'react';
 import PrimaryButton from './PrimaryButton';
 
-function TreeNode({ node }) {
+function TreeNode({ node, selectedLabel, onSelect, isCollapsed, onToggleCollapse }) {
+  const isSelected = selectedLabel === node.label;
+  const hasChildren = Boolean(node.children);
   return (
     <div>
-      <div className="text-[13px] text-gray-800 leading-loose">
-        {node.children ? '▾' : '▸'} {node.label}
-      </div>
-      {node.children?.map((child) => (
-        <div key={child.label} className="pl-5 text-[13px] text-gray-800 leading-loose">
-          <span
-            className={
-              'inline-block w-2 h-2 rounded-sm mr-1.5 ' +
-              (child.color === 'blue' ? 'bg-brand' : 'bg-gray-400')
-            }
-          />
-          {child.label}
-        </div>
-      ))}
+      <button
+        type="button"
+        onClick={() => {
+          onSelect(node);
+          if (hasChildren) onToggleCollapse(node.label);
+        }}
+        className={
+          'w-full text-left text-[13px] leading-loose rounded px-1 -mx-1 transition-colors cursor-pointer ' +
+          (isSelected ? 'bg-brand/10 text-brand font-semibold' : 'text-gray-800 hover:bg-gray-100')
+        }
+      >
+        {hasChildren ? (isCollapsed ? '▸' : '▾') : '▸'} {node.label}
+      </button>
+      {hasChildren && !isCollapsed &&
+        node.children.map((child) => {
+          const isChildSelected = selectedLabel === child.label;
+          return (
+            <button
+              type="button"
+              key={child.label}
+              onClick={() => onSelect(child)}
+              className={
+                'block w-full text-left pl-5 text-[13px] leading-loose rounded px-1 -mx-1 transition-colors cursor-pointer ' +
+                (isChildSelected ? 'bg-brand/10 text-brand font-semibold' : 'text-gray-800 hover:bg-gray-100')
+              }
+            >
+              <span
+                className={
+                  'inline-block w-2 h-2 rounded-sm mr-1.5 bg-brand'
+                }
+              />
+              {child.label}
+            </button>
+          );
+        })}
     </div>
   );
 }
 
 export default function StepStructured({ format, onNext }) {
+  const [selected, setSelected] = useState(null);
+  const [collapsedLabels, setCollapsedLabels] = useState(() => new Set());
+
+  // reset the selection and collapse state whenever the user switches to a different format
+  useEffect(() => {
+    setSelected(null);
+    setCollapsedLabels(new Set());
+  }, [format]);
+
+  function handleSelect(node) {
+    setSelected((prev) => (prev?.label === node.label ? null : node));
+  }
+
+  function handleToggleCollapse(label) {
+    setCollapsedLabels((prev) => {
+      const next = new Set(prev);
+      if (next.has(label)) next.delete(label);
+      else next.add(label);
+      return next;
+    });
+  }
+
+  const highlightedIds = selected ? new Set(selected.nodeIds ?? []) : null;
+
   return (
     <div>
       <div className="grid grid-cols-[0.9fr_1.1fr] gap-5">
@@ -30,7 +78,14 @@ export default function StepStructured({ format, onNext }) {
             Model tree
           </p>
           {format.tree.map((node) => (
-            <TreeNode key={node.label} node={node} />
+            <TreeNode
+              key={node.label}
+              node={node}
+              selectedLabel={selected?.label}
+              onSelect={handleSelect}
+              isCollapsed={collapsedLabels.has(node.label)}
+              onToggleCollapse={handleToggleCollapse}
+            />
           ))}
         </div>
 
@@ -49,27 +104,35 @@ export default function StepStructured({ format, onNext }) {
               </tr>
             </thead>
             <tbody>
-              {format.table.rows.map((row) => (
-                <tr
-                  key={row.node}
-                  className={
-                    'border-t border-gray-200 ' +
-                    (row.highlight ? 'bg-[#eaf3ff]' : '')
-                  }
-                >
-                  <td className={'py-1 px-1.5 ' + (row.highlight ? 'text-brand' : '')}>
-                    {row.node}
-                  </td>
-                  <td className="py-1 px-1.5">{row.x}</td>
-                  <td className="py-1 px-1.5">{row.y}</td>
-                  <td className="py-1 px-1.5">{row.z}</td>
-                </tr>
-              ))}
+              {(highlightedIds
+                ? format.table.rows.filter((row) => highlightedIds.has(row.node))
+                : format.table.rows
+              ).map((row) => {
+                const isHighlighted = highlightedIds ? true : row.highlight;
+                return (
+                  <tr
+                    key={row.node}
+                    className={
+                      'border-t border-gray-200 ' +
+                      (isHighlighted ? 'bg-[#eaf3ff]' : '')
+                    }
+                  >
+                    <td className={'py-1 px-1.5 ' + (isHighlighted ? 'text-brand' : '')}>
+                      {row.node}
+                    </td>
+                    <td className="py-1 px-1.5">{row.x}</td>
+                    <td className="py-1 px-1.5">{row.y}</td>
+                    <td className="py-1 px-1.5">{row.z}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
-          <div className="bg-[#1a1a1a] rounded-md p-2 mt-2.5 font-mono text-[11px] text-gray-300">
-            {format.apiCall}
-          </div>
+          {selected && highlightedIds.size === 0 && (
+            <p className="text-[11px] text-gray-400 mt-2">
+              No coordinate data published for "{selected.label}" yet.
+            </p>
+          )}
         </div>
       </div>
 
