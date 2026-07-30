@@ -18,7 +18,6 @@ export const nastran = {
     { text: '$ MATERIAL DEFINITION', type: 'comment' },
     { text: 'MAT1     1     2.1E5   8.0E4   0.30   7.85E-9', type: 'code' },
   ],
-  rawCaption: 'Raw NASTRAN input file, model data as written by the solver',
   tree: [
     {
       label: 'Part: Chassis',
@@ -37,6 +36,5 @@ export const nastran = {
       { node: 3, x: 1.0, y: 1.0, z: 0.0 },
     ],
   },
-  apiCall: 'Model.GetDataset("X.N")',
   contour: { resultName: 'Von Mises stress', placeholder: true },
 };

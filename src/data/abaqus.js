@@ -24,7 +24,6 @@ export const abaqus = {
     { text: '*ELASTIC', type: 'code' },
     { text: '2.1E5, 0.30', type: 'code' },
   ],
-  rawCaption: 'Raw ABAQUS input deck, model data as written by the solver',
 
   tree: [
     {
@@ -44,8 +43,6 @@ export const abaqus = {
       { node: 3, x: 1.0, y: 0.5, z: 0.0 },
     ],
   },
-
-  apiCall: 'Model.GetDataset("X.N")',
 
   contour: {
     resultName: 'Von Mises stress',

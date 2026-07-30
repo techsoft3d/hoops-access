@@ -16,7 +16,6 @@ export const fluent = {
     { text: '(0.0 0.5 0.0)', type: 'code' },
     { text: '(0.0 0.0 0.4)', type: 'code' },
   ],
-  rawCaption: 'Raw Fluent case file, mesh data as written by the solver',
 
   tree: [
     {
@@ -36,8 +35,6 @@ export const fluent = {
       { node: 3, x: 1.0, y: 0.5, z: 0.0 },
     ],
   },
-
-  apiCall: 'Model.GetDataset("X.N")',
 
   contour: {
     resultName: 'Pressure',

@@ -1,18 +1,7 @@
 export default function StepResult3D({ format }) {
   return (
     <div>
-      <div className="flex items-center gap-2 text-[11px] text-gray-400 mb-4">
-        <span>Raw {format.label} file</span>
-        <span>›</span>
-        <span>Structured data</span>
-        <span>›</span>
-        <span className="font-semibold text-brand">3D result</span>
-      </div>
-
       <div className="flex items-center gap-2.5 mb-3.5">
-        <p className="text-[13px] font-light text-gray-600">
-          Rotatable shape, colored by results, the payoff moment
-        </p>
         <span className="ml-auto text-xs text-gray-600 border border-gray-200 rounded px-3 py-1">
           {format.contour.resultName} ▾
         </span>

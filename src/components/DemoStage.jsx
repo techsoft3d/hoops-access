@@ -4,6 +4,7 @@ import FormatSelector from './FormatSelector';
 import StepRawFile from './StepRawFile';
 import StepStructured from './StepStructured';
 import StepResult from './StepResult3D';
+import StepIndicator from './StepIndicator';
 
 function onNext(currentStep, setStep) {
     if (currentStep === '3D')
@@ -24,11 +25,14 @@ export default function DemoStage() {
     const format = formats[activeId];
     return (
 
-        <div>
-            {step === 'raw' && <FormatSelector activeId={activeId} onChange={setActiveId} />}
-            <StepRawFile format={format} onNext={() => { onNext(step, setStep); setCollapsed(true); }} collapsed={collapsed} onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }} />
-            {step === 'structured' && <StepStructured format={format} onNext={() => onNext(step, setStep)} />}
-            {step === '3D' && <StepResult format={format} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
+        <div className="min-h-screen flex items-start justify-center bg-slate-50 p-4 pt-16">
+            <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-6">
+                <StepIndicator step={step} format={format}/>
+                {step === 'raw' && <FormatSelector activeId={activeId} onChange={setActiveId} />}
+                <StepRawFile format={format} onNext={() => { onNext(step, setStep); setCollapsed(true); }} collapsed={collapsed} onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }} />
+                {step === 'structured' && <StepStructured format={format} onNext={() => onNext(step, setStep)} />}
+                {step === '3D' && <StepResult format={format} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
+            </div>
         </div>
     );
 }

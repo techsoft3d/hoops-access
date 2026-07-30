@@ -21,7 +21,6 @@ export const ansys = {
     { text: 'E,1,2,3,4', type: 'code' },
     { text: 'E,4,3,6,5', type: 'code' },
   ],
-  rawCaption: 'Raw ANSYS command input, model data as written by the solver',
 
   tree: [
     {
@@ -41,8 +40,6 @@ export const ansys = {
       { node: 3, x: 1.0, y: 0.5, z: 0.0 },
     ],
   },
-
-  apiCall: 'Model.GetDataset("X.N")',
 
   contour: {
     resultName: 'Von Mises stress',

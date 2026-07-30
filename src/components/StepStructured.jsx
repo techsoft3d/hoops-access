@@ -24,11 +24,6 @@ function TreeNode({ node }) {
 export default function StepStructured({ format, onNext }) {
   return (
     <div>
-      <p className="text-[13px] font-light text-gray-600 mb-3.5 text-center">
-        Same data, extracted through one consistent API, regardless of the
-        format above
-      </p>
-
       <div className="grid grid-cols-[0.9fr_1.1fr] gap-5">
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
           <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-2.5">

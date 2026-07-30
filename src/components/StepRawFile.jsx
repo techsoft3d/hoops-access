@@ -33,10 +33,6 @@ export default function StepRawFile({ format, onNext, collapsed, onExpand }) {
 
   return (
     <div>
-      <p className="text-[13px] font-light text-gray-600 mb-2.5 text-center">
-        {format.rawCaption}
-      </p>
-
       <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
         {/* editor chrome header */}
         <div className="flex items-center px-4 py-2.5 border-b border-white/10">
