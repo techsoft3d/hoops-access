@@ -12,7 +12,7 @@
  * @param {object} geometryData - one entry from geometryByFormat, e.g. geometryByFormat.nastran
  * @returns {{ geometry: cee.usg.Geometry, partRefToIndex: Record<string, number> }}
  */
-export function buildEnvisionGeometry(cee, geometryData) {
+export default function buildEnvisionGeometry(cee, geometryData) {
   const geometry = new cee.usg.Geometry();
   const partRefToIndex = {};
 

@@ -1,4 +1,4 @@
-import EnvisionViewer from "@envision/EnvisionViewer";
+import EnvisionViewer from "../envision/EnvisionViewer";
 
 export default function StepResult3D({ format }) {
   return (

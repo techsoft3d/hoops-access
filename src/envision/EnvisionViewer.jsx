@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import geometryByFormat from '../data/geometryData.js';
-import buildEnvisionGeometry from '../../public/envision/buildEnvisionGeometry.js';
+import { geometryByFormat } from '../data/geometryData.js';
+import buildEnvisionGeometry from '../envision/buildEnvisionGeometry.js';
 
 /**
  * Renders the 3D geometry for the given format id (e.g. "nastran", "ansys",

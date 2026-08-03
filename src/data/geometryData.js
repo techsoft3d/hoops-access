@@ -63,3 +63,4 @@ export const geometryByFormat = {
   ansys: chassisGeometry,
   abaqus: chassisGeometry,
 };
+
