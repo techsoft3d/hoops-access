@@ -10,9 +10,15 @@ export const nastran = {
     { text: 'GRID     3     0     1.0     0.5     0.0', type: 'code' },
     { text: 'GRID     4     0     0.0     0.5     0.0', type: 'code' },
     { text: 'GRID     5     0     0.0     0.0     0.4', type: 'code' },
+    { text: 'GRID     6     0     2.0     0.0     0.0', type: 'code' },
+    { text: 'GRID     7     0     3.0     0.0     0.0', type: 'code' },
+    { text: 'GRID     8     0     3.0     0.5     0.0', type: 'code' },
+    { text: 'GRID     9     0     2.0     0.5     0.0', type: 'code' },
     { text: '$ ELEMENT CONNECTIVITY', type: 'comment' },
     { text: 'CQUAD4   1     1     1     2     3   4', type: 'code' },
-    { text: 'CQUAD4   2     1     4     3     6   5', type: 'code' },
+    { text: 'CTRIA3   2     1     1     4     5', type: 'code' },
+    { text: 'CTRIA3   3     1     6     7     8', type: 'code' },
+    { text: 'CTRIA3   4     1     6     8     9', type: 'code' },
     { text: '$ SHELL PROPERTIES', type: 'comment' },
     { text: 'PSHELL   1     1     0.004', type: 'code' },
     { text: '$ MATERIAL DEFINITION', type: 'comment' },
@@ -21,21 +27,25 @@ export const nastran = {
   tree: [
     {
       label: 'Part: Chassis',
+      partRef: 'chassis',
       nodeIds: [1, 2, 3, 4, 5],
       children: [
-        { label: 'Shell group 1 (PSHELL 1)', nodeIds: [1, 2, 3] },
-        { label: 'Shell group 2 (PSHELL 1)', nodeIds: [4, 5] },
+        { label: 'Base plate (elem 1, PSHELL 1)', nodeIds: [1, 2, 3, 4] },
+        { label: 'Vertical flange (elem 2, PSHELL 1)', nodeIds: [1, 4, 5] },
       ],
     },
     {
       label: 'Part: Engine mount',
+      partRef: 'engineMount',
       nodeIds: [6, 7, 8, 9],
       children: [
-        { label: 'Bracket group (PSHELL 2)', nodeIds: [6, 7, 8, 9] },
+        { label: 'Mount panel A (elem 3, PSHELL 1)', nodeIds: [6, 7, 8] },
+        { label: 'Mount panel B (elem 4, PSHELL 1)', nodeIds: [6, 8, 9] },
       ],
     },
     {
       label: 'Material: Steel (MAT1 1)',
+      partRef: null,
       nodeIds: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       children: [
         { label: 'E = 2.1E5, ν = 0.30', nodeIds: [1, 2, 3, 4, 5, 6, 7, 8, 9] },
