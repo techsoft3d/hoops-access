@@ -1,3 +1,5 @@
+import EnvisionViewer from "@envision/EnvisionViewer";
+
 export default function StepResult3D({ format }) {
   return (
     <div>
@@ -7,11 +9,8 @@ export default function StepResult3D({ format }) {
         </span>
       </div>
 
-      {/* Placeholder until EnvisionViewer is built */}
-      <div className="bg-gray-100 rounded-lg h-75 flex items-center justify-center relative">
-        <span className="text-gray-400 text-sm font-mono">
-          [ 3D viewer placeholder ]
-        </span>
+      <div className="bg-gray-100 rounded-lg h-75 relative overflow-hidden">
+        <EnvisionViewer formatId={format.id} />
       </div>
 
       <div className="flex justify-center items-center gap-2 mt-3.5">
