@@ -13,7 +13,7 @@ export default function StepResult3D({ format }) {
         </span>
       </div>
 
-      <div className="bg-gray-100 rounded-lg h-75 relative overflow-hidden">
+      <div className="bg-gray-100 rounded-lg h-[34rem] relative overflow-hidden">
         <EnvisionViewer formatId={format.id} resultName={resultName} />
       </div>
 

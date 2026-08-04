@@ -9,7 +9,7 @@ import { CONTOUR_COLORS, hexToUnitRgb } from "../data/contourColors";
  * if a matching fake dataset exists in geometryData.js.
  *
  * Fills its parent container completely — size it with a wrapper div
- * (e.g. className="h-75 rounded-lg overflow-hidden").
+ * (e.g. className="h-[34rem] rounded-lg overflow-hidden").
  */
 export default function EnvisionViewer({ formatId, resultName }) {
   const containerRef = useRef(null);
