@@ -1,19 +1,20 @@
 import { useEffect, useRef } from "react";
-import { geometryByFormat } from '../data/geometryData.js';
-import buildEnvisionGeometry from '../envision/buildEnvisionGeometry.js';
+import { geometryByFormat } from "../data/geometryData";
+import { buildEnvisionGeometry } from "./buildEnvisionGeometry";
+import { CONTOUR_COLORS, hexToUnitRgb } from "../data/contourColors";
 
 /**
  * Renders the 3D geometry for the given format id (e.g. "nastran", "ansys",
- * "abaqus", "fluent") using HOOPS Envision for Web.
+ * "abaqus", "fluent") using HOOPS Envision for Web, contoured by resultName
+ * if a matching fake dataset exists in geometryData.js.
  *
  * Fills its parent container completely — size it with a wrapper div
  * (e.g. className="h-75 rounded-lg overflow-hidden").
  */
-export default function EnvisionViewer({ formatId }) {
+export default function EnvisionViewer({ formatId, resultName }) {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
 
-  // Long-lived Envision objects — created once, reused across format changes.
   const appRef = useRef({
     session: null,
     view: null,
@@ -42,7 +43,6 @@ export default function EnvisionViewer({ formatId }) {
     appRef.current.session = session;
     appRef.current.view = view;
 
-    // Keep the canvas sized to whatever space its container gives it.
     const resizeObserver = new ResizeObserver(() => {
       const { clientWidth, clientHeight } = container;
       if (clientWidth > 0 && clientHeight > 0) {
@@ -66,7 +66,7 @@ export default function EnvisionViewer({ formatId }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // --- Rebuild the model whenever the selected format changes ---
+  // --- Rebuild the model + contour whenever format or result changes ---
   useEffect(() => {
     const cee = window.cee;
     const { view } = appRef.current;
@@ -78,18 +78,56 @@ export default function EnvisionViewer({ formatId }) {
       return;
     }
 
-    // Remove whatever was shown before
     view.removeAllModels();
 
     const model = new cee.usg.UnstructGridModel();
     const state = model.addState();
-    const { geometry } = buildEnvisionGeometry(cee, geometryData);
+    const { geometry, nodeIdsByPartIndex } = buildEnvisionGeometry(cee, geometryData);
     state.geometry = geometry;
+
+    // Apply the fake scalar dataset for this resultName, if one exists.
+    const scalarsByNodeId = geometryData.scalarsByResult?.[resultName];
+    if (scalarsByNodeId) {
+      const allValues = Object.values(scalarsByNodeId);
+      const min = Math.min(...allValues);
+      const max = Math.max(...allValues);
+
+      const low = hexToUnitRgb(CONTOUR_COLORS.low);
+      const mid = hexToUnitRgb(CONTOUR_COLORS.mid);
+      const high = hexToUnitRgb(CONTOUR_COLORS.high);
+
+      const mapper = new cee.ScalarMapperFilledContoursUniform();
+      mapper.colorArray = [
+        new cee.Color4(low.r, low.g, low.b, 1),
+        new cee.Color4(mid.r, mid.g, mid.b, 1),
+        new cee.Color4(high.r, high.g, high.b, 1),
+      ];
+      mapper.setRange(min, max);
+      model.fringesSettings.scalarMapper = mapper;
+
+      state.geometry.getPartArray().forEach((part, partIdx) => {
+        const nodeIds = nodeIdsByPartIndex[partIdx];
+        const scalarArr = new Float32Array(
+          nodeIds.map((nodeId) => scalarsByNodeId[nodeId] ?? 0)
+        );
+        const partScalar = new cee.usg.PartScalars(
+          cee.usg.ResultMapping.PER_NODE,
+          scalarArr
+        );
+        state.setPartFringesAt(partIdx, partScalar);
+        part.settings.fringesVisible = true;
+      });
+    } else {
+      // No dataset for this result yet — fall back to a plain neutral color.
+      for (const part of state.geometry.getPartArray()) {
+        part.settings.color = new cee.Color3(0.6, 0.65, 0.7);
+        part.settings.fringesVisible = false;
+      }
+    }
 
     view.addModel(model);
     appRef.current.model = model;
 
-    // Frame the camera on the new model
     const bbox = model.getBoundingBox();
     const viewer = appRef.current.session.getViewerAt(0);
     const navOp = view.operators.get(cee.StandardOperator.NAVIGATION);
@@ -102,7 +140,7 @@ export default function EnvisionViewer({ formatId }) {
     );
     view.camera.fitView(bbox, view.camera.getDirection(), view.camera.getUp(), 1.4);
     viewer.requestRedraw();
-  }, [formatId]);
+  }, [formatId, resultName]);
 
   return (
     <div ref={containerRef} style={{ width: "100%", height: "100%" }}>

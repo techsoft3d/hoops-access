@@ -66,3 +66,39 @@ export const geometryByFormat = {
   ansys: bracketGeometry,
   abaqus: bracketGeometry,
 };
+
+// Fake-but-plausible per-node result values, keyed by the exact string in each
+// format's contour.resultName. This is where a real parser would eventually
+// plug in actual solver output instead of these illustrative numbers.
+//
+// "Von Mises stress" (MPa): stress naturally concentrates where the boss meets
+// the plate (a geometric stress-riser, like a fillet weld root) — high at
+// nodes 5-8, moderate on the plate itself, low at the unloaded top of the boss.
+//
+// "Pressure" (Pa): a simple front/back split as if air were flowing in the -Y
+// direction — high (stagnation) on the -Y faces, low/negative (wake suction)
+// on the +Y faces.
+bracketGeometry.scalarsByResult = {
+  "Von Mises stress": {
+    1: 42, 2: 38, 3: 35, 4: 45,
+    5: 175, 6: 168, 7: 172, 8: 180,
+    9: 12, 10: 10, 11: 11, 12: 9,
+  },
+  Pressure: {
+    1: 118, 2: 122, 3: -38, 4: -42,
+    5: 95, 6: 100, 7: -25, 8: -22,
+    9: 55, 10: 60, 11: -10, 12: -8,
+  },
+};
+
+/**
+ * @param {object} geometryData - e.g. geometryByFormat.nastran
+ * @param {string} resultName - e.g. "Von Mises stress"
+ * @returns {{ min: number, max: number } | null}
+ */
+export function getScalarRange(geometryData, resultName) {
+  const values = geometryData.scalarsByResult?.[resultName];
+  if (!values) return null;
+  const nums = Object.values(values);
+  return { min: Math.min(...nums), max: Math.max(...nums) };
+}

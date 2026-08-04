@@ -10,11 +10,12 @@
 /**
  * @param {object} cee - the global window.cee object
  * @param {object} geometryData - one entry from geometryByFormat, e.g. geometryByFormat.nastran
- * @returns {{ geometry: cee.usg.Geometry, partRefToIndex: Record<string, number> }}
+ * @returns {{ geometry: cee.usg.Geometry, partRefToIndex: Record<string, number>, nodeIdsByPartIndex: number[][] }}
  */
-export default function buildEnvisionGeometry(cee, geometryData) {
+export function buildEnvisionGeometry(cee, geometryData) {
   const geometry = new cee.usg.Geometry();
   const partRefToIndex = {};
+  const nodeIdsByPartIndex = []; // nodeIdsByPartIndex[partIdx] = [nodeId, nodeId, ...] in local mesh order
 
   for (let partIdx = 0; partIdx < geometryData.parts.length; ++partIdx) {
     const partDef = geometryData.parts[partIdx];
@@ -64,7 +65,8 @@ export default function buildEnvisionGeometry(cee, geometryData) {
     part.settings.drawStyle = cee.usg.DrawStyle.SURFACE_OUTLINE_MESH;
 
     partRefToIndex[partDef.partRef] = partIdx;
+    nodeIdsByPartIndex.push(nodeIdsInPart);
   }
 
-  return { geometry, partRefToIndex };
+  return { geometry, partRefToIndex, nodeIdsByPartIndex };
 }
