@@ -4,7 +4,7 @@
 // coloring and the legend swatches in StepResult3D can never drift apart.
 
 export const CONTOUR_COLORS = {
-  low: "#14b8a6", // TODO: swap for your exact tailwind "brand" hex if it differs
+  low: "#3d9cfb", 
   mid: "#f5a623",
   high: "#e5484d",
 };
