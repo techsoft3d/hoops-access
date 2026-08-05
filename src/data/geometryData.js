@@ -1,10 +1,6 @@
-// geometryData.js
-//
 // This file holds ONLY the 3D geometry (node coordinates + element connectivity).
-// It is intentionally separate from the file-browser UI data (nastran.js, ansys.js, etc.)
-// so that sensitive/full mesh data never has to pass through the UI's table/tree/rawLines.
 //
-// The two files are linked by a shared contract:
+// This file and the different formats are linked by a shared contract:
 //   - node ids here match the "node" column in each format's table.rows
 //   - top-level parts here match tree[i].partRef in each format's tree (a stable key,
 //     independent of the display label, since "Part: X" vs "Domain: X" differ by format)
@@ -15,29 +11,25 @@
 //     (this is what the engine actually sits on)
 
 const bracketGeometry = {
-  // nodeId -> [x, y, z]. Keys match table.rows[i].node in the UI files.
   nodes: {
-    // Base plate corners (flat, z = 0)
+    // Base plate corners
     1: [0.0, -0.5, 0.0],
     2: [2.0, -0.5, 0.0],
     3: [2.0, 0.5, 0.0],
     4: [0.0, 0.5, 0.0],
-    // Mounting boss — bottom corners (sits centered on the plate, z = 0)
+    // Mounting boss — bottom corners
     5: [0.7, -0.3, 0.0],
     6: [1.3, -0.3, 0.0],
     7: [1.3, 0.3, 0.0],
     8: [0.7, 0.3, 0.0],
-    // Mounting boss — top corners (z = 0.4, i.e. the boss is 0.4m tall)
+    // Mounting boss — top corners
     9: [0.7, -0.3, 0.4],
     10: [1.3, -0.3, 0.4],
     11: [1.3, 0.3, 0.4],
     12: [0.7, 0.3, 0.4],
   },
 
-  // One entry per part. "elements" are lists of node ids (not array indices —
-  // buildEnvisionGeometry.js handles that translation). All elements here are
-  // quads (4 nodes each) — a fabricated sheet-metal bracket modeled with shell
-  // elements per face, which is standard practice for this kind of part.
+  // Each part's elements are defined by the node ids of their corners.
   parts: [
     {
       partRef: "chassis",
@@ -67,13 +59,11 @@ export const geometryByFormat = {
   abaqus: bracketGeometry,
 };
 
-// Fake-but-plausible per-node result values, keyed by the exact string in each
-// format's contour.resultName. This is where a real parser would eventually
-// plug in actual solver output instead of these illustrative numbers.
+// Fake per-node result values, keyed by the exact string in each
+// format's contour.resultName. 
 //
 // "Von Mises stress" (MPa): stress naturally concentrates where the boss meets
-// the plate (a geometric stress-riser, like a fillet weld root) — high at
-// nodes 5-8, moderate on the plate itself, low at the unloaded top of the boss.
+// the plate, high at nodes 5-8, moderate on the plate itself, low at the unloaded top of the boss.
 //
 // "Pressure" (Pa): a simple front/back split as if air were flowing in the -Y
 // direction — high (stagnation) on the -Y faces, low/negative (wake suction)
@@ -98,7 +88,8 @@ bracketGeometry.scalarsByResult = {
  */
 export function getScalarRange(geometryData, resultName) {
   const values = geometryData.scalarsByResult?.[resultName];
-  if (!values) return null;
+  if (!values) 
+    return null;
   const nums = Object.values(values);
   return { min: Math.min(...nums), max: Math.max(...nums) };
 }

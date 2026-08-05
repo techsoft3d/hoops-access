@@ -7,9 +7,6 @@ import { CONTOUR_COLORS, hexToUnitRgb } from "../data/contourColors";
  * Renders the 3D geometry for the given format id (e.g. "nastran", "ansys",
  * "abaqus", "fluent") using HOOPS Envision for Web, contoured by resultName
  * if a matching fake dataset exists in geometryData.js.
- *
- * Fills its parent container completely — size it with a wrapper div
- * (e.g. className="h-[34rem] rounded-lg overflow-hidden").
  */
 export default function EnvisionViewer({ formatId, resultName }) {
   const containerRef = useRef(null);
@@ -23,12 +20,13 @@ export default function EnvisionViewer({ formatId, resultName }) {
     resizeObserver: null,
   });
 
-  // --- One-time setup: session, viewer, view, render loop ---
+  //1. One-time setup: session, viewer, view, render loop ---
   useEffect(() => {
     const cee = window.cee;
     const canvas = canvasRef.current;
     const container = containerRef.current;
-    if (!cee || !canvas || !container) return;
+    if (!cee || !canvas || !container) 
+      return;
 
     const session = new cee.CloudSession();
     const viewer = session.addViewer(canvas);
@@ -63,14 +61,14 @@ export default function EnvisionViewer({ formatId, resultName }) {
       appRef.current.resizeObserver?.disconnect();
       session.destroySession();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // --- Rebuild the model + contour whenever format or result changes ---
+  // 2. Rebuild the model + contour whenever format or result changes ---
   useEffect(() => {
     const cee = window.cee;
     const { view } = appRef.current;
-    if (!cee || !view) return;
+    if (!cee || !view) 
+      return;
 
     const geometryData = geometryByFormat[formatId];
     if (!geometryData) {
