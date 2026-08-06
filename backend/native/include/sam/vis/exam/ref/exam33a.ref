@@ -1,0 +1,23 @@
+
+Initial Conditions
+node= 2
+tag= 1
+ dofdot= 0.000000
+tag= 2
+ dofdot= 1000.000000
+tag= 3
+ dofdot= 0.000000
+node= 3
+tag= 1
+ dof= 1.000000
+tag= 2
+ dof= 0.000000
+tag= 3
+ dof= 0.000000
+node= 10
+tag= 1
+ dof= -2.000000
+tag= 2
+ dof= 0.000000
+tag= 3
+ dof= 0.000000

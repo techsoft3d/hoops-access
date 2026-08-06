@@ -1,0 +1,10 @@
+element= 1, face= 2, number of nodes= 4
+  p(node= 9)= 1.000000
+  p(node= 10)= 2.000000
+  p(node= 13)= 2.000000
+  p(node= 12)= 1.000000
+element= 2, face= 2, number of nodes= 4
+  p(node= 10)= 2.000000
+  p(node= 11)= 1.000000
+  p(node= 14)= 1.000000
+  p(node= 13)= 2.000000

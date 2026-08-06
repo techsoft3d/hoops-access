@@ -1,0 +1,553 @@
+
+ Model Object:
+
+ Connect Object:
+ ipre    = 4
+ numnode = 22
+ numedge = 0
+ numface = 0
+ numelem = 11
+ ndim    = 0
+element connectivity
+       1 shape=  7, maxi,maxj,maxk=   0   0   0
+         uid= 10, featype= 1, mid= 0, pid= 1, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         1 2 6 5 9 10 13 12
+         1 2 6 5 9 10 13 12
+       2 shape=  7, maxi,maxj,maxk=   0   0   0
+         uid= 11, featype= 1, mid= 0, pid= 1, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         2 3 7 6 10 11 14 13
+         2 30 70 6 10 11 14 13
+       3 shape=  3, maxi,maxj,maxk=   0   0   0
+         uid= 20, featype= 2, mid= 0, pid= 2, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         3 4 8 7
+         30 40 80 70
+       4 shape=  2, maxi,maxj,maxk=   0   0   0
+         uid= 21, featype= 2, mid= 0, pid= 2, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         4 15 8
+         40 15 80
+       5 shape=  4, maxi,maxj,maxk=   0   0   0
+         uid= 30, featype= 1, mid= 0, pid= 1, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         9 10 13 16
+         9 10 13 16
+       6 shape=  6, maxi,maxj,maxk=   0   0   0
+         uid= 31, featype= 1, mid= 0, pid= 1, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         10 13 16 11 14 17
+         10 13 16 11 14 17
+       7 shape=  1, maxi,maxj,maxk=   0   0   0
+         uid= 100, featype= 4, mid= 0, pid= 3, cid= -4, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         15 18
+         15 18
+       8 shape=  0, maxi,maxj,maxk=   0   0   0
+         uid= 101, featype= 13, mid= 0, pid= 4, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         18
+         18
+       9 shape=  1, maxi,maxj,maxk=   0   0   0
+         uid= 102, featype= 9, mid= 0, pid= 5, cid= 1, cmatflag= 0, mcid= 0
+         feaspec= 1, featwod= 0, exttype= 0
+         18 19
+         18 19
+      10 shape=  0, maxi,maxj,maxk=   2   0   0
+         uid= 103, featype= 10, mid= 0, pid= 6, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 0, featwod= 0, exttype= 0
+         18 20
+         18 20
+      11 shape=  0, maxi,maxj,maxk=   3   0   0
+         uid= 104, featype= 10, mid= 0, pid= 8, cid= 0, cmatflag= 0, mcid= 0
+         feaspec= 1, featwod= 0, exttype= 0
+         15 21 22
+         15 21 22
+node coordinates
+       1     0.000000e+00     0.000000e+00     0.000000e+00
+         uid= 1, cid= 0, featype= 1
+       2     1.000000e+00     0.000000e+00     0.000000e+00
+         uid= 2, cid= 0, featype= 1
+       3     2.000000e+00     0.000000e+00     1.000000e+00
+         uid= 30, cid= 0, featype= 1
+       4     3.000000e+00     0.000000e+00     1.000000e+00
+         uid= 40, cid= 0, featype= 1
+       5     0.000000e+00     1.000000e+00     0.000000e+00
+         uid= 5, cid= 0, featype= 1
+       6     1.000000e+00     1.000000e+00     0.000000e+00
+         uid= 6, cid= 0, featype= 1
+       7     2.000000e+00     1.000000e+00     1.000000e+00
+         uid= 70, cid= 0, featype= 1
+       8     3.000000e+00     1.000000e+00     1.000000e+00
+         uid= 80, cid= 0, featype= 1
+       9     0.000000e+00     0.000000e+00     2.000000e+00
+         uid= 9, cid= 0, featype= 1
+      10     1.000000e+00     0.000000e+00     2.000000e+00
+         uid= 10, cid= 0, featype= 1
+      11     2.000000e+00     0.000000e+00     2.000000e+00
+         uid= 11, cid= 0, featype= 1
+      12     0.000000e+00     1.000000e+00     2.000000e+00
+         uid= 12, cid= 0, featype= 1
+      13     1.000000e+00     1.000000e+00     2.000000e+00
+         uid= 13, cid= 0, featype= 1
+      14     2.000000e+00     1.000000e+00     2.000000e+00
+         uid= 14, cid= 0, featype= 1
+      15     4.000000e+00     0.000000e+00     1.000000e+00
+         uid= 15, cid= 0, featype= 1
+      16     1.000000e+00     0.000000e+00     3.000000e+00
+         uid= 16, cid= 0, featype= 1
+      17     2.000000e+00     0.000000e+00     3.000000e+00
+         uid= 17, cid= 0, featype= 1
+      18     5.000000e+00     0.000000e+00     1.000000e+00
+         uid= 18, cid= 0, featype= 1
+      19     6.000000e+00    -1.000000e+00     1.000000e+00
+         uid= 19, cid= 0, featype= 1
+      20     5.000000e+00     1.000000e+00     1.000000e+00
+         uid= 20, cid= 0, featype= 1
+      21     4.000000e+00    -1.000000e+00     1.000000e+00
+         uid= 21, cid= 0, featype= 1
+      22     4.500000e+00    -1.000000e+00     1.000000e+00
+         uid= 22, cid= 0, featype= 1
+
+Number of CoordSys= 1
+
+coordsys id= 1
+
+ CoordSys Object:
+ ierr     = 0
+ type     = 1
+ iop      = 0
+ resolve  = 1
+ cid      = 0
+ name     = NULL
+Origin
+         0.000000         0.000000         0.000000
+
+Triad
+         0.707100         0.707100         0.000000
+        -0.707100         0.707100         0.000000
+         0.000000         0.000000         1.000000
+ idirs    = 0
+ xcs      = 0.000000e+00
+
+Number of MProp= 1
+
+material property id= 1
+
+ MProp Object:
+ mtype    = 0
+ ntyps    = 22
+ mid      = 0
+ name     = NULL
+ Density: 1.330000e-05
+ Young's Modulus: 1.000000e+07
+ Poisson's Ratio: 3.000000e-01
+ Thermal Expansion Coefficient: undefined
+ Structural Damping Coefficient: undefined
+ Reference Temperature: undefined
+ X Tension Allowable: undefined
+ X Compression Allowable: undefined
+ Y Tension Allowable: undefined
+ Y Compression Allowable: undefined
+ Shear Allowable: undefined
+ Tsai-Wu Interaction Term: undefined
+ Stress or Strain Allowable Flag: undefined
+ Thermal Conductivity: undefined
+ Specific Heat: undefined
+ Film Coefficient: undefined
+ Heat Generation Capability: undefined
+ Reference Enthalpy: undefined
+ Emissivity: undefined
+ Bulk Modulus: undefined
+ Speed of Sound: undefined
+ Viscosity: undefined
+
+Number of EProp= 8
+
+element property id= 7
+
+ EProp Object:
+ etype    = 7
+ nvecs    = 2
+ mvecs    = 5
+ pid      = 0
+ name     = NULL
+ Material Id: undefined
+ Area: undefined
+ Initial gap: undefined
+ Preload force: undefined
+ Closed stiffness: undefined
+ Open stiffness: undefined
+ Transverse stiffness: undefined
+ Static friction coefficient along y axis: undefined
+ Static friction coefficient along z axis: undefined
+ Kinetic friction coefficient along y axis: undefined
+ Kinetic friction coefficient along z axis: undefined
+ Maximum penetration: undefined
+ Maximum stiffness: undefined
+ No separation option:
+  location 1 1
+ No slip option:
+  location 1 1
+
+element property id= 4
+
+ EProp Object:
+ etype    = 13
+ nvecs    = 1
+ mvecs    = 5
+ pid      = 0
+ name     = NULL
+ Material Id: undefined
+ Dof 1: undefined
+ Dof 2: undefined
+ Mass (mx,my,mz):
+  location 1 3.000000e+00 3.000000e+00 3.000000e+00
+ Offsets (x,y,z): undefined
+ Mass moments of inertia (xx,yy,zz,xy,yz,zx): undefined
+ Mass matrix (m11,m21,m22,...,m65,m66): undefined
+
+element property id= 1
+
+ EProp Object:
+ etype    = 1
+ nvecs    = 1
+ mvecs    = 5
+ pid      = 0
+ name     = NULL
+ Material Id:
+  location 1 1
+ Material coordinate system Id: undefined
+ Integration rule: undefined
+ Element tri name: undefined
+ Element quad name: undefined
+ Element tet name: undefined
+ Element pyramid name: undefined
+ Element wedge name: undefined
+ Element hex name: undefined
+ Solid mixture type: undefined
+ Number of phases: undefined
+ Phase material Id: undefined
+ Reference viscosity: undefined
+ Reference pressure: undefined
+ Reference density: undefined
+
+element property id= 8
+
+ EProp Object:
+ etype    = 10
+ nvecs    = 5
+ mvecs    = 5
+ pid      = 0
+ name     = NULL
+ Material Id: undefined
+ Penalty factor:
+  location 1 1.000000e+12
+ Number of distributed coupling points: undefined
+ Weighting factors: undefined
+ Dependent dof flags: undefined
+ Independent dof flags: undefined
+ Number of dof flags:
+  location 1 2
+ Weights:
+  location 1 2.000000e+00
+  location 2 2.000000e+00
+ Independent dof flags:
+  location 1 0
+  location 2 7
+ Dependent dof flags:
+  location 1 63
+  location 2 0
+
+element property id= 5
+
+ EProp Object:
+ etype    = 9
+ nvecs    = 3
+ mvecs    = 5
+ pid      = 0
+ name     = NULL
+ Material Id: undefined
+ Inside diameter: undefined
+ Outside diameter: undefined
+ Stress coefficient rotation: undefined
+ Stiffness:
+  location 1 1.000000e+05
+ Damping coefficient: undefined
+ Dof 1:
+  location 1 1
+ Dof 2:
+  location 1 2
+ Stiffness matrix (k11,k21,k22,...,k65,k66): undefined
+ Stress coefficient: undefined
+ Stiffness translation: undefined
+ Stiffness rotation: undefined
+ Damping translation: undefined
+ Damping rotation: undefined
+ Stress coefficient translation: undefined
+ Strain coefficient translation: undefined
+ Strain coefficient rotation: undefined
+
+element property id= 2
+
+ EProp Object:
+ etype    = 2
+ nvecs    = 2
+ mvecs    = 5
+ pid      = 0
+ name     = NULL
+ Material Id:
+  location 1 1
+ Material Id - bending: undefined
+ Material Id - transverse shear: undefined
+ Material Id - membrane bending coupling: undefined
+ Material coordinate system Id: undefined
+ Integration rule: undefined
+ Thickness:
+  location 1 5.000000e-01
+  location 2 5.000000e-01
+  location 3 5.000000e-01
+  location 4 5.000000e-01
+ Offset: undefined
+ Effective shear ratio: undefined
+ Bending moment of inertia ratio: undefined
+ Nonstructural mass: undefined
+ Stress recovery fiber distance - bottom: undefined
+ Stress recovery fiber distance - top: undefined
+ Element line name: undefined
+ Element tri name: undefined
+ Element quad name: undefined
+ Shell wall type: undefined
+ Shell wall matrix: undefined
+ Shell wall alpha: undefined
+ Transverse shear matrix: undefined
+ Transverse shear alpha: undefined
+ Number of layers: undefined
+ Layer thickness: undefined
+ Layer angle: undefined
+ Layer material Id: undefined
+ Layer number of integration points: undefined
+ Eccentricity: undefined
+ Layer global Id: undefined
+
+element property id= 6
+
+ EProp Object:
+ etype    = 10
+ nvecs    = 5
+ mvecs    = 5
+ pid      = 0
+ name     = NULL
+ Material Id: undefined
+ Penalty factor:
+  location 1 1.000000e+12
+ Number of distributed coupling points: undefined
+ Weighting factors: undefined
+ Dependent dof flags: undefined
+ Independent dof flags: undefined
+ Number of dof flags:
+  location 1 2
+ Weights: undefined
+ Independent dof flags:
+  location 1 63
+  location 2 0
+ Dependent dof flags:
+  location 1 0
+  location 2 7
+
+element property id= 3
+
+ EProp Object:
+ etype    = 4
+ nvecs    = 2
+ mvecs    = 5
+ pid      = 0
+ name     = NULL
+ Material Id:
+  location 1 1
+ Nonstructural mass: undefined
+ Area:
+  location 1 2.000000e+00
+  location 2 2.000000e+00
+ Moment of inertia about y axis: undefined
+ Moment of inertia about z axis: undefined
+ Product of inertia: undefined
+ Torsional constant: undefined
+ Effective shear factor along y axis: undefined
+ Effective shear factor along z axis: undefined
+ Shear center offset along y axis: undefined
+ Shear center offset along z axis: undefined
+ Offset along y axis: undefined
+ Offset along z axis: undefined
+ Warping coefficient: undefined
+ Stress coefficient rotation: undefined
+ Stress recovery section location - C(y,z): undefined
+ Stress recovery section location - D(y,z): undefined
+ Stress recovery section location - E(y,z): undefined
+ Stress recovery section location - F(y,z): undefined
+ Element point name: undefined
+ Element line name: undefined
+ Beam section type: undefined
+ Beam section dimensions: undefined
+ Transverse shear matrix: undefined
+ Transverse shear alpha: undefined
+ Beam section matrix: undefined
+ Beam section alpha: undefined
+ Beam section reflect about y axis: undefined
+ Beam section reflect about z axis: undefined
+ Beam section rotation angle: undefined
+ Beam section number of points: undefined
+ Beam section points: undefined
+ Beam section number of loops: undefined
+ Beam section loop number of points: undefined
+ Beam section loop type: undefined
+ Beam section loop material Id: undefined
+ Beam section all loop points: undefined
+ Beam section number of segments: undefined
+ Beam section segment thickness: undefined
+ Beam section segment points: undefined
+ Effective shear factor yz coupling: undefined
+
+Number of ElemDat= 2
+
+ ElemDat Object:
+ ipre     = 2
+ nument   = 11
+ enttype  = 4
+ subtype  = 1
+ datatype = 0
+ nrows    = 1
+elemdat data
+element 4
+           4 5.000000e-01
+          15 3.000000e-01
+           8 5.000000e-01
+
+ ElemDat Object:
+ ipre     = 2
+ nument   = 11
+ enttype  = 4
+ subtype  = 0
+ datatype = 1
+ nrows    = 3
+elemdat data
+element 7
+ 0.000000e+00 1.000000e+00 0.000000e+00
+
+Number of CPair= 1
+
+ CPair Object:
+ ierr         = 0
+ mastent      = 3
+ slavent      = 3
+ ctype        = 1
+ maxmastindex = 2
+ maxslavindex = 3
+ asid         = 0
+ name     = NULL
+master elem index= 2, flags= 20
+slave elem index= 3, flags= 1
+ Property Id: 7
+ Adjust distance: 1.000000e-01
+ Small sliding option: undefined
+ Tied option: undefined
+ Smooth factor: undefined
+ HCrit factor: undefined
+ Extension zone factor: undefined
+ Symmetric contact option: undefined
+
+Number of SProp= 1
+
+ SProp Object:
+ stype    = 1
+ ntyps    = 48
+ sid      = 0
+ name     = NULL
+ Analysis type: undefined
+ Case Id: 1
+ Diagonal mass flag: undefined
+ Mass factor: undefined
+ Number of load cases: 1
+ Load case Id: 1
+ Load case factor: 1.000000e+00
+ Time initial: 2.000000e-01
+ Time step: 1.000000e-01
+ Time termination: 1.000000e+00
+ Time step minimum: undefined
+ Time step maximum: undefined
+ Time step fixed: undefined
+ Load case time curve Id: undefined
+ Initial condition case Id: undefined
+ Inertia relief flag: undefined
+ Thermal strain flag: undefined
+ Prestress flag: undefined
+ Perturbation flag: undefined
+ Load case temp ref: undefined
+ Large strain flag: undefined
+ Nonlinear analysis flag: 1
+ Force convergence tolerance: undefined
+ Displacement convergence tolerance: undefined
+ Matrix reformation iteration frequency: undefined
+ Matrix reformation step frequency: undefined
+ Iteration maximum: undefined
+ Restraint case Id: 1
+ Restraint case factor: 1.000000e+00
+ Multipoint constraint case Id: undefined
+ Save frequency: undefined
+ Save last: undefined
+ Number of coupled analyses: undefined
+ Coupled analysis: undefined
+ Number of results filed: undefined
+ Results filed: undefined
+ Number of results printed: undefined
+ Results printed: undefined
+ Title: undefined
+ Subtitle: undefined
+ Label: undefined
+ Sublabel: undefined
+ First qualifier for filed results: undefined
+ Second qualifier for filed results: undefined
+ String qualifier for filed results: undefined
+ First qualifier for printed results: undefined
+ Second qualifier for printed results: undefined
+ String qualifier for printed results: undefined
+
+Number of RCase= 1
+
+ RCase Object:
+ ierr        = 0
+ maxspcindex = 3
+ numvalue    = 0
+ nummaster   = 0
+ rid         = 0
+ name     = NULL
+index,tag,type 3 1 1
+index,tag,type 3 2 1
+index,tag,type 3 3 1
+index,tag,type 2 1 1
+index,tag,type 2 2 1
+index,tag,type 2 3 1
+index,tag,type 1 1 1
+index,tag,type 1 2 1
+index,tag,type 1 3 1
+
+Number of LCase= 1
+
+load case id= 1
+
+ LCase Object:
+ ierr       = 0
+ lid        = 0
+ name     = NULL
+index,type 12 1
+ force  1.000000 2.000000 3.000000
+index,type 16 4
+ temp   100.000000
+index,type 17 4
+ temp   200.000000
+index,face,type 1 2 2
+ pressure 50.000000
+ pressure 50.000000
+ pressure 50.000000
+ pressure 50.000000

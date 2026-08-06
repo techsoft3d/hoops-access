@@ -1,0 +1,28 @@
+istep= 10, index= 1801, vector= 3.000000 2.000000 0.000000, indep= 1.000000
+istep= 10, index= 2102, vector= -1.000000 0.000000 0.000000, indep= 1.000000
+istep= 20, index= 1801, vector= 3.100000 2.200000 0.000000, indep= 3.000000
+istep= 20, index= 2102, vector= -1.100000 0.000000 0.000000, indep= 3.000000
+istep= 30, index= 1801, vector= 3.200000 2.400000 0.000000, indep= 5.000000
+istep= 30, index= 2102, vector= -1.200000 0.000000 0.000000, indep= 5.000000
+istep= 40, index= 1801, vector= 3.300000 2.200000 0.000000, indep= 7.000000
+istep= 40, index= 2102, vector= -1.300000 0.000000 0.000000, indep= 7.000000
+istep= 50, index= 1801, vector= 3.400000 2.000000 0.000000, indep= 9.000000
+istep= 50, index= 2102, vector= -1.400000 0.000000 0.000000, indep= 9.000000
+vector min= -1.400000 0.000000 0.000000
+vector max= 3.400000 2.400000 0.000000
+istep= 20, index= 1801, mag= 3.801316
+istep= 10, mag= 3.605551
+istep= 20, mag= 3.801316
+istep= 30, mag= 4.000000
+istep= 40, mag= 3.966106
+istep= 50, mag= 3.944617
+istep= 10, rank= 4
+istep= 20, rank= 1
+istep= 30, rank= 3
+istep= 40, rank= 2
+istep= 50, rank= 5
+cutoffrank= 2
+draw step 20
+draw step 30
+ignore step 40
+draw step 50

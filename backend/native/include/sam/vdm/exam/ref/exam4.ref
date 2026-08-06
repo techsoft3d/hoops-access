@@ -1,0 +1,64 @@
+Library Table of Contents
+ Name: exam4
+ Path: bumper.unv
+ Type: SDRC/IDEAS Universal File
+ IDst         LRec  NRow     NCol Type NAtt  Dataset
+    0          200     1      200    1    0  PARAMETER.INT.T
+    1          200     1      200    3    0  PARAMETER.HOL.T
+    2         1956     3      652    2    2  X.N
+             Contents = Position
+             DataType = Vector
+    3          652     1      652    1    0  NID.N
+    4          652     1      652    1    0  DOF.CID.N
+    5          652     1      652    1    0  COLOR.NODE.N
+    6         2296     1      604    1    2  ELEM.NODE.EL
+            Structure = IndexedArray
+            Link.Size = ELEM.SIZE.E
+    7          604     1      604    1    0  ELEM.SIZE.E
+    8          604     1      604    1    0  ELEM.SHAP.E
+    9         1812     3      604    1    0  ELEM.MIJK.E
+   10          604     1      604    1    0  ELEM.TOPO.E
+   11          604     1      604    1    0  ELEM.TYPE.E
+   12          604     1      604    1    0  ELEM.TYPE.EXT.E
+   13         1208     2      604    3    0  ELEM.TYPE.HOL.E
+   14          604     1      604    1    0  EID.E
+   15          604     1      604    1    0  MID.E
+   16          604     1      604    1    0  PID.E
+   17          604     1      604    1    0  ERS.CID.E
+   18          604     1      604    1    0  COLOR.ELEM.E
+   19          604     1      604    1    0  PARTID.E
+   20         2296     1      604    4    3  THICKNESS.EL
+             Contents = Element Thickness
+             DataType = Scalar
+            Structure = ElementNode
+   21          690     1      690    1    0  PROP.FLAG.T
+   22           14     1       14    1    0  PROP.INT.T
+   23           35     1       35    4    0  PROP.T
+   24            5     1        5    3    0  PROP.HOL.T
+   25            5     1        5    1    0  PROP.TYPE.T
+   26            5     1        5    1    0  PROP.ID.T
+   27          100    20        5    3    0  PROP.NAME.T
+   28         3912     6      652    2   11  D.N:1:1
+             Contents = Displacement - Vibration mode
+             Category = Vibration
+             DataType = SixDof
+            Frequency = 3.543780e+01
+      GeneralizedMass = 0.000000e+00
+                Title = GRID POINT DISPLACEMENTS
+             Subtitle = 9370 BUMPER
+                Label = MODE SHAPE         1 FREQUENCY  3.54378E+01
+            Subtitle1 = ANALYSIS DATE  9/10/89
+            Subtitle2 = REAL EIGENVALUE SOLUTION
+           DataSource = 8
+   29         3912     6      652    2   11  D.N:1:2
+             Contents = Displacement - Vibration mode
+             Category = Vibration
+             DataType = SixDof
+            Frequency = 4.420990e+01
+      GeneralizedMass = 0.000000e+00
+                Title = GRID POINT DISPLACEMENTS
+             Subtitle = 9370 BUMPER
+                Label = MODE SHAPE         2 FREQUENCY  4.42099E+01
+            Subtitle1 = ANALYSIS DATE  9/10/89
+            Subtitle2 = REAL EIGENVALUE SOLUTION
+           DataSource = 8

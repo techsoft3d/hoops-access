@@ -1,0 +1,18 @@
+Pred is able to do exact arithmetic
+Point outside sphere: retval= 3.796250e+02
+Point inside sphere: retval= -5.350000e-01
+Point on sphere: retval= 0.000000e+00
+Proper tetrahedron: retval= 1.000000e+00
+Proper tetrahedron: retval= 1.000000e-100
+Degenerate tetrahedron: retval= 0.000000e+00
+Inverted tetrahedron: retval= -1.000000e-100
+Line Tri no intersection, code= 0
+Line Tri coplanar intersection, code= -1
+Line Tri coplanar intersection, code= -1
+Point inside circle: retval= 2.000000e+00
+Point outside circle: retval= -6.000000e+00
+Point on circle: retval= 0.000000e+00
+Proper triangle: retval= 1.000000e+00
+Degenerate triangle: retval= -0.000000e+00
+Inverted triangle: retval= -1.000000e+00
+Line Line intersection, code= -1, ient= 0

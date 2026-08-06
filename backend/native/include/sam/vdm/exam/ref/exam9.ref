@@ -1,0 +1,21 @@
+numdatsets= 1
+Library Table of Contents
+ Name: NAT
+ Path: exam9.vdm
+ Type: VdmTools Native
+ IDst         LRec  NRow     NCol Type NAtt  Dataset
+    0           12     3        4    2    1  X.N
+             Contents = Position
+read idst= 0
+coords[0] = 1.000000
+coords[1] = 0.000000
+coords[2] = 0.000000
+coords[3] = 2.000000
+coords[4] = 1.000000
+coords[5] = 0.000000
+coords[6] = 3.000000
+coords[7] = 2.000000
+coords[8] = 1.000000
+coords[9] = 4.000000
+coords[10] = 3.000000
+coords[11] = 2.000000

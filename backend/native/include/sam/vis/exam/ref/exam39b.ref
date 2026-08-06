@@ -1,0 +1,2834 @@
+Nastran Bulk Data File: shell.bdf
+Number of nodes=    194
+Number of elements= 51
+
+Nodes
+id= 97, cid= 0, x= 4.000000e-01 1.000000e-01 8.333334e-02
+id= 99, cid= 0, x= 4.000000e-01 1.000000e-01 1.666667e-01
+id= 110, cid= 0, x= 4.998271e-01 1.000000e-01 1.649957e-01
+id= 112, cid= 0, x= 4.994995e-01 1.000000e-01 8.185773e-02
+id= 98, cid= 0, x= 4.000000e-01 1.000000e-01 1.250000e-01
+id= 107, cid= 0, x= 4.499135e-01 1.000000e-01 1.658312e-01
+id= 108, cid= 0, x= 4.996633e-01 1.000000e-01 1.234267e-01
+id= 106, cid= 0, x= 4.497497e-01 1.000000e-01 8.259553e-02
+id= 95, cid= 0, x= 4.000000e-01 1.000000e-01 2.500000e-01
+id= 93, cid= 0, x= 5.000000e-01 1.000000e-01 2.500000e-01
+id= 100, cid= 0, x= 4.000000e-01 1.000000e-01 2.083333e-01
+id= 94, cid= 0, x= 4.500000e-01 1.000000e-01 2.500000e-01
+id= 111, cid= 0, x= 4.999135e-01 1.000000e-01 2.074978e-01
+id= 72, cid= 0, x= 5.000000e-01 1.000000e-01 0.000000e+00
+id= 70, cid= 0, x= 4.000000e-01 1.000000e-01 0.000000e+00
+id= 71, cid= 0, x= 4.500000e-01 1.000000e-01 0.000000e+00
+id= 96, cid= 0, x= 4.000000e-01 1.000000e-01 4.166667e-02
+id= 109, cid= 0, x= 4.997497e-01 1.000000e-01 4.092886e-02
+id= 118, cid= 0, x= 5.990233e-01 1.000000e-01 8.159758e-02
+id= 119, cid= 0, x= 5.997658e-01 1.000000e-01 1.644478e-01
+id= 113, cid= 0, x= 5.492615e-01 1.000000e-01 8.172765e-02
+id= 114, cid= 0, x= 5.497964e-01 1.000000e-01 1.647217e-01
+id= 115, cid= 0, x= 5.993946e-01 1.000000e-01 1.230227e-01
+id= 91, cid= 0, x= 6.000000e-01 1.000000e-01 2.500000e-01
+id= 92, cid= 0, x= 5.500000e-01 1.000000e-01 2.500000e-01
+id= 117, cid= 0, x= 5.998829e-01 1.000000e-01 2.072239e-01
+id= 74, cid= 0, x= 6.000000e-01 1.000000e-01 0.000000e+00
+id= 73, cid= 0, x= 5.500000e-01 1.000000e-01 0.000000e+00
+id= 116, cid= 0, x= 5.995117e-01 1.000000e-01 4.079879e-02
+id= 76, cid= 0, x= 7.000000e-01 1.000000e-01 0.000000e+00
+id= 122, cid= 0, x= 7.003863e-01 1.000000e-01 8.159866e-02
+id= 75, cid= 0, x= 6.500000e-01 1.000000e-01 0.000000e+00
+id= 120, cid= 0, x= 6.497048e-01 1.000000e-01 8.159813e-02
+id= 125, cid= 0, x= 7.001931e-01 1.000000e-01 4.079933e-02
+id= 123, cid= 0, x= 7.003117e-01 1.000000e-01 1.642948e-01
+id= 121, cid= 0, x= 6.500387e-01 1.000000e-01 1.643713e-01
+id= 126, cid= 0, x= 7.003490e-01 1.000000e-01 1.229467e-01
+id= 89, cid= 0, x= 7.000000e-01 1.000000e-01 2.500000e-01
+id= 90, cid= 0, x= 6.500000e-01 1.000000e-01 2.500000e-01
+id= 124, cid= 0, x= 7.001559e-01 1.000000e-01 2.071474e-01
+id= 78, cid= 0, x= 8.000000e-01 1.000000e-01 0.000000e+00
+id= 129, cid= 0, x= 8.010721e-01 1.000000e-01 8.186340e-02
+id= 77, cid= 0, x= 7.500000e-01 1.000000e-01 0.000000e+00
+id= 127, cid= 0, x= 7.507291e-01 1.000000e-01 8.173104e-02
+id= 131, cid= 0, x= 8.005360e-01 1.000000e-01 4.093170e-02
+id= 130, cid= 0, x= 8.014560e-01 1.000000e-01 1.653604e-01
+id= 128, cid= 0, x= 7.508839e-01 1.000000e-01 1.648276e-01
+id= 133, cid= 0, x= 8.012640e-01 1.000000e-01 1.236119e-01
+id= 87, cid= 0, x= 8.000000e-01 1.000000e-01 2.500000e-01
+id= 88, cid= 0, x= 7.500000e-01 1.000000e-01 2.500000e-01
+id= 132, cid= 0, x= 8.007280e-01 1.000000e-01 2.076802e-01
+id= 85, cid= 0, x= 9.000000e-01 1.000000e-01 2.500000e-01
+id= 136, cid= 0, x= 9.009020e-01 1.000000e-01 1.662536e-01
+id= 86, cid= 0, x= 8.500000e-01 1.000000e-01 2.500000e-01
+id= 138, cid= 0, x= 9.004509e-01 1.000000e-01 2.081268e-01
+id= 135, cid= 0, x= 8.511790e-01 1.000000e-01 1.658070e-01
+id= 80, cid= 0, x= 9.000000e-01 1.000000e-01 0.000000e+00
+id= 139, cid= 0, x= 9.004935e-01 1.000000e-01 8.286259e-02
+id= 79, cid= 0, x= 8.500000e-01 1.000000e-01 0.000000e+00
+id= 134, cid= 0, x= 8.507828e-01 1.000000e-01 8.236299e-02
+id= 137, cid= 0, x= 9.002467e-01 1.000000e-01 4.143130e-02
+id= 140, cid= 0, x= 9.006977e-01 1.000000e-01 1.245581e-01
+id= 83, cid= 0, x= 1.000000e+00 1.000000e-01 2.500000e-01
+id= 104, cid= 0, x= 1.000000e+00 1.000000e-01 1.666667e-01
+id= 84, cid= 0, x= 9.500000e-01 1.000000e-01 2.500000e-01
+id= 105, cid= 0, x= 1.000000e+00 1.000000e-01 2.083333e-01
+id= 142, cid= 0, x= 9.504510e-01 1.000000e-01 1.664601e-01
+id= 102, cid= 0, x= 1.000000e+00 1.000000e-01 8.333334e-02
+id= 82, cid= 0, x= 1.000000e+00 1.000000e-01 0.000000e+00
+id= 101, cid= 0, x= 1.000000e+00 1.000000e-01 4.166667e-02
+id= 81, cid= 0, x= 9.500000e-01 1.000000e-01 0.000000e+00
+id= 141, cid= 0, x= 9.502468e-01 1.000000e-01 8.309796e-02
+id= 103, cid= 0, x= 1.000000e+00 1.000000e-01 1.250000e-01
+id= 166, cid= 1, x= 1.000000e-01 4.000000e-01 8.333334e-02
+id= 164, cid= 1, x= 1.000000e-01 4.000000e-01 1.666667e-01
+id= 172, cid= 0, x= 1.146558e-01 3.073787e-01 1.656140e-01
+id= 174, cid= 0, x= 1.145768e-01 3.076226e-01 8.241241e-02
+id= 165, cid= 1, x= 1.000000e-01 4.000000e-01 1.250000e-01
+id= 169, cid= 0, x= 1.036866e-01 3.531132e-01 1.661403e-01
+id= 170, cid= 0, x= 1.146163e-01 3.075006e-01 1.240132e-01
+id= 168, cid= 0, x= 1.036666e-01 3.532398e-01 8.287288e-02
+id= 162, cid= 1, x= 1.000000e-01 4.000000e-01 2.500000e-01
+id= 160, cid= 0, x= 1.146830e-01 3.072949e-01 2.500000e-01
+id= 163, cid= 1, x= 1.000000e-01 4.000000e-01 2.083333e-01
+id= 161, cid= 0, x= 1.036935e-01 3.530697e-01 2.500000e-01
+id= 173, cid= 0, x= 1.146694e-01 3.073368e-01 2.078070e-01
+id= 145, cid= 0, x= 1.146830e-01 3.072949e-01 0.000000e+00
+id= 143, cid= 1, x= 1.000000e-01 4.000000e-01 0.000000e+00
+id= 144, cid= 0, x= 1.036935e-01 3.530697e-01 0.000000e+00
+id= 167, cid= 1, x= 1.000000e-01 4.000000e-01 4.166667e-02
+id= 171, cid= 0, x= 1.146299e-01 3.074587e-01 4.120621e-02
+id= 180, cid= 0, x= 1.569612e-01 2.241246e-01 8.228150e-02
+id= 181, cid= 0, x= 1.573122e-01 2.236406e-01 1.652770e-01
+id= 175, cid= 0, x= 1.324911e-01 2.642097e-01 8.234695e-02
+id= 176, cid= 0, x= 1.326847e-01 2.638290e-01 1.654455e-01
+id= 177, cid= 0, x= 1.571366e-01 2.238825e-01 1.237792e-01
+id= 158, cid= 0, x= 1.572949e-01 2.236644e-01 2.500000e-01
+id= 159, cid= 0, x= 1.326980e-01 2.638029e-01 2.500000e-01
+id= 179, cid= 0, x= 1.573036e-01 2.236525e-01 2.076385e-01
+id= 147, cid= 0, x= 1.572949e-01 2.236644e-01 0.000000e+00
+id= 146, cid= 0, x= 1.326980e-01 2.638029e-01 0.000000e+00
+id= 178, cid= 0, x= 1.571279e-01 2.238944e-01 4.114075e-02
+id= 149, cid= 0, x= 2.236644e-01 1.572949e-01 0.000000e+00
+id= 184, cid= 0, x= 2.243124e-01 1.568254e-01 8.241579e-02
+id= 148, cid= 0, x= 1.878680e-01 1.878680e-01 0.000000e+00
+id= 182, cid= 0, x= 1.879499e-01 1.877860e-01 8.234864e-02
+id= 186, cid= 0, x= 2.239883e-01 1.570599e-01 4.120789e-02
+id= 185, cid= 0, x= 2.245304e-01 1.566681e-01 1.658740e-01
+id= 183, cid= 0, x= 1.882567e-01 1.874800e-01 1.655755e-01
+id= 188, cid= 0, x= 2.244214e-01 1.567467e-01 1.241449e-01
+id= 156, cid= 0, x= 2.236644e-01 1.572949e-01 2.500000e-01
+id= 157, cid= 0, x= 1.878680e-01 1.878680e-01 2.500000e-01
+id= 187, cid= 0, x= 2.240971e-01 1.569811e-01 2.079370e-01
+id= 154, cid= 0, x= 3.072949e-01 1.146830e-01 2.500000e-01
+id= 191, cid= 0, x= 3.079496e-01 1.144712e-01 1.664145e-01
+id= 155, cid= 0, x= 2.638029e-01 1.326980e-01 2.500000e-01
+id= 193, cid= 0, x= 3.076222e-01 1.145769e-01 2.082073e-01
+id= 190, cid= 0, x= 2.645862e-01 1.323003e-01 1.661442e-01
+id= 151, cid= 0, x= 3.072949e-01 1.146830e-01 0.000000e+00
+id= 194, cid= 0, x= 3.076482e-01 1.145685e-01 8.304091e-02
+id= 150, cid= 0, x= 2.638029e-01 1.326980e-01 0.000000e+00
+id= 189, cid= 0, x= 2.643251e-01 1.324326e-01 8.272835e-02
+id= 192, cid= 0, x= 3.074715e-01 1.146257e-01 4.152045e-02
+id= 195, cid= 0, x= 3.077989e-01 1.145198e-01 1.247277e-01
+id= 153, cid= 0, x= 3.530697e-01 1.036935e-01 2.500000e-01
+id= 197, cid= 0, x= 3.534095e-01 1.036399e-01 1.665406e-01
+id= 152, cid= 0, x= 3.530697e-01 1.036935e-01 0.000000e+00
+id= 196, cid= 0, x= 3.532531e-01 1.036645e-01 8.318712e-02
+id= 225, cid= 1, x= 1.000000e-01 5.000000e-01 0.000000e+00
+id= 231, cid= 1, x= 1.000000e-01 4.998271e-01 8.500431e-02
+id= 226, cid= 1, x= 1.000000e-01 4.500000e-01 0.000000e+00
+id= 232, cid= 1, x= 1.000000e-01 4.999135e-01 4.250216e-02
+id= 228, cid= 1, x= 1.000000e-01 4.499135e-01 8.416883e-02
+id= 233, cid= 1, x= 1.000000e-01 4.994995e-01 1.681423e-01
+id= 229, cid= 1, x= 1.000000e-01 4.996633e-01 1.265733e-01
+id= 227, cid= 1, x= 1.000000e-01 4.497497e-01 1.674045e-01
+id= 206, cid= 1, x= 1.000000e-01 5.000000e-01 2.500000e-01
+id= 205, cid= 1, x= 1.000000e-01 4.500000e-01 2.500000e-01
+id= 230, cid= 1, x= 1.000000e-01 4.997497e-01 2.090711e-01
+id= 223, cid= 1, x= 1.000000e-01 6.000000e-01 0.000000e+00
+id= 239, cid= 1, x= 1.000000e-01 5.997658e-01 8.555221e-02
+id= 224, cid= 1, x= 1.000000e-01 5.500000e-01 0.000000e+00
+id= 238, cid= 1, x= 1.000000e-01 5.998829e-01 4.277610e-02
+id= 235, cid= 1, x= 1.000000e-01 5.497964e-01 8.527826e-02
+id= 240, cid= 1, x= 1.000000e-01 5.990233e-01 1.684024e-01
+id= 234, cid= 1, x= 1.000000e-01 5.492615e-01 1.682723e-01
+id= 236, cid= 1, x= 1.000000e-01 5.993946e-01 1.269773e-01
+id= 208, cid= 1, x= 1.000000e-01 6.000000e-01 2.500000e-01
+id= 207, cid= 1, x= 1.000000e-01 5.500000e-01 2.500000e-01
+id= 237, cid= 1, x= 1.000000e-01 5.995117e-01 2.092012e-01
+id= 221, cid= 1, x= 1.000000e-01 7.000000e-01 0.000000e+00
+id= 243, cid= 1, x= 1.000000e-01 7.003117e-01 8.570518e-02
+id= 222, cid= 1, x= 1.000000e-01 6.500000e-01 0.000000e+00
+id= 245, cid= 1, x= 1.000000e-01 7.001559e-01 4.285259e-02
+id= 242, cid= 1, x= 1.000000e-01 6.500387e-01 8.562870e-02
+id= 244, cid= 1, x= 1.000000e-01 7.003863e-01 1.684013e-01
+id= 247, cid= 1, x= 1.000000e-01 7.003490e-01 1.270533e-01
+id= 241, cid= 1, x= 1.000000e-01 6.497048e-01 1.684019e-01
+id= 210, cid= 1, x= 1.000000e-01 7.000000e-01 2.500000e-01
+id= 209, cid= 1, x= 1.000000e-01 6.500000e-01 2.500000e-01
+id= 246, cid= 1, x= 1.000000e-01 7.001931e-01 2.092007e-01
+id= 219, cid= 1, x= 1.000000e-01 8.000000e-01 0.000000e+00
+id= 250, cid= 1, x= 1.000000e-01 8.014560e-01 8.463965e-02
+id= 220, cid= 1, x= 1.000000e-01 7.500000e-01 0.000000e+00
+id= 253, cid= 1, x= 1.000000e-01 8.007280e-01 4.231982e-02
+id= 249, cid= 1, x= 1.000000e-01 7.508839e-01 8.517241e-02
+id= 251, cid= 1, x= 1.000000e-01 8.010721e-01 1.681366e-01
+id= 248, cid= 1, x= 1.000000e-01 7.507291e-01 1.682690e-01
+id= 254, cid= 1, x= 1.000000e-01 8.012640e-01 1.263881e-01
+id= 212, cid= 1, x= 1.000000e-01 8.000000e-01 2.500000e-01
+id= 211, cid= 1, x= 1.000000e-01 7.500000e-01 2.500000e-01
+id= 252, cid= 1, x= 1.000000e-01 8.005360e-01 2.090683e-01
+id= 217, cid= 1, x= 1.000000e-01 9.000000e-01 0.000000e+00
+id= 257, cid= 1, x= 1.000000e-01 9.009020e-01 8.374638e-02
+id= 218, cid= 1, x= 1.000000e-01 8.500000e-01 0.000000e+00
+id= 259, cid= 1, x= 1.000000e-01 9.004509e-01 4.187319e-02
+id= 256, cid= 1, x= 1.000000e-01 8.511790e-01 8.419301e-02
+id= 260, cid= 1, x= 1.000000e-01 9.004935e-01 1.671374e-01
+id= 255, cid= 1, x= 1.000000e-01 8.507828e-01 1.676370e-01
+id= 261, cid= 1, x= 1.000000e-01 9.006977e-01 1.254419e-01
+id= 214, cid= 1, x= 1.000000e-01 9.000000e-01 2.500000e-01
+id= 213, cid= 1, x= 1.000000e-01 8.500000e-01 2.500000e-01
+id= 258, cid= 1, x= 1.000000e-01 9.002467e-01 2.085687e-01
+id= 198, cid= 1, x= 1.000000e-01 1.000000e+00 0.000000e+00
+id= 200, cid= 1, x= 1.000000e-01 1.000000e+00 8.333334e-02
+id= 216, cid= 1, x= 1.000000e-01 9.500000e-01 0.000000e+00
+id= 199, cid= 1, x= 1.000000e-01 1.000000e+00 4.166667e-02
+id= 263, cid= 1, x= 1.000000e-01 9.504510e-01 8.353986e-02
+id= 202, cid= 1, x= 1.000000e-01 1.000000e+00 1.666667e-01
+id= 201, cid= 1, x= 1.000000e-01 1.000000e+00 1.250000e-01
+id= 262, cid= 1, x= 1.000000e-01 9.502468e-01 1.669020e-01
+id= 204, cid= 1, x= 1.000000e-01 1.000000e+00 2.500000e-01
+id= 203, cid= 1, x= 1.000000e-01 1.000000e+00 2.083333e-01
+id= 215, cid= 1, x= 1.000000e-01 9.500000e-01 2.500000e-01
+
+Elements
+id= 16, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 97 99 110 112 98 107 108 106
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 97 99 110 112 98 107 108 106
+id= 17, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 99 95 93 110 100 94 111 107
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 99 95 93 110 100 94 111 107
+id= 18, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 72 70 97 112 71 96 106 109
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 72 70 97 112 71 96 106 109
+id= 19, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 118 112 110 119 113 108 114 115
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 118 112 110 119 113 108 114 115
+id= 20, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 93 91 119 110 92 117 114 111
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 93 91 119 110 92 117 114 111
+id= 21, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 74 72 112 118 73 109 113 116
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 74 72 112 118 73 109 113 116
+id= 22, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 76 74 118 122 75 116 120 125
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 76 74 118 122 75 116 120 125
+id= 23, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 119 123 122 118 121 126 120 115
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 119 123 122 118 121 126 120 115
+id= 24, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 91 89 123 119 90 124 121 117
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 91 89 123 119 90 124 121 117
+id= 25, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 78 76 122 129 77 125 127 131
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 78 76 122 129 77 125 127 131
+id= 26, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 129 122 123 130 127 126 128 133
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 129 122 123 130 127 126 128 133
+id= 27, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 89 87 130 123 88 132 128 124
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 89 87 130 123 88 132 128 124
+id= 28, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 87 85 136 130 86 138 135 132
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 87 85 136 130 86 138 135 132
+id= 29, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 80 78 129 139 79 131 134 137
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 80 78 129 139 79 131 134 137
+id= 30, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 139 129 130 136 134 133 135 140
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 139 129 130 136 134 133 135 140
+id= 31, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 85 83 104 136 84 105 142 138
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 85 83 104 136 84 105 142 138
+id= 32, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 102 82 80 139 101 81 137 141
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 102 82 80 139 101 81 137 141
+id= 33, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 104 102 139 136 103 141 140 142
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 104 102 139 136 103 141 140 142
+id= 34, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 166 164 172 174 165 169 170 168
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 166 164 172 174 165 169 170 168
+id= 35, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 164 162 160 172 163 161 173 169
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 164 162 160 172 163 161 173 169
+id= 36, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 145 143 166 174 144 167 168 171
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 145 143 166 174 144 167 168 171
+id= 37, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 180 174 172 181 175 170 176 177
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 180 174 172 181 175 170 176 177
+id= 38, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 160 158 181 172 159 179 176 173
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 160 158 181 172 159 179 176 173
+id= 39, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 147 145 174 180 146 171 175 178
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 147 145 174 180 146 171 175 178
+id= 40, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 149 147 180 184 148 178 182 186
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 149 147 180 184 148 178 182 186
+id= 41, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 184 180 181 185 182 177 183 188
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 184 180 181 185 182 177 183 188
+id= 42, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 158 156 185 181 157 187 183 179
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 158 156 185 181 157 187 183 179
+id= 43, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 156 154 191 185 155 193 190 187
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 156 154 191 185 155 193 190 187
+id= 44, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 151 149 184 194 150 186 189 192
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 151 149 184 194 150 186 189 192
+id= 45, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 194 184 185 191 189 188 190 195
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 194 184 185 191 189 188 190 195
+id= 46, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 154 95 99 191 153 100 197 193
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 154 95 99 191 153 100 197 193
+id= 47, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 97 70 151 194 96 152 192 196
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 97 70 151 194 96 152 192 196
+id= 48, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 99 97 194 191 98 196 195 197
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 99 97 194 191 98 196 195 197
+id= 49, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 166 143 225 231 167 226 232 228
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 166 143 225 231 167 226 232 228
+id= 50, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 164 166 231 233 165 228 229 227
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 164 166 231 233 165 228 229 227
+id= 51, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 206 162 164 233 205 163 227 230
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 206 162 164 233 205 163 227 230
+id= 52, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 225 223 239 231 224 238 235 232
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 225 223 239 231 224 238 235 232
+id= 53, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 240 233 231 239 234 229 235 236
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 240 233 231 239 234 229 235 236
+id= 54, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 208 206 233 240 207 230 234 237
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 208 206 233 240 207 230 234 237
+id= 55, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 223 221 243 239 222 245 242 238
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 223 221 243 239 222 245 242 238
+id= 56, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 239 243 244 240 242 247 241 236
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 239 243 244 240 242 247 241 236
+id= 57, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 210 208 240 244 209 237 241 246
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 210 208 240 244 209 237 241 246
+id= 58, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 221 219 250 243 220 253 249 245
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 221 219 250 243 220 253 249 245
+id= 59, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 251 244 243 250 248 247 249 254
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 251 244 243 250 248 247 249 254
+id= 60, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 212 210 244 251 211 246 248 252
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 212 210 244 251 211 246 248 252
+id= 61, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 219 217 257 250 218 259 256 253
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 219 217 257 250 218 259 256 253
+id= 62, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 260 251 250 257 255 254 256 261
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 260 251 250 257 255 254 256 261
+id= 63, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 214 212 251 260 213 252 255 258
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 214 212 251 260 213 252 255 258
+id= 64, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 217 198 200 257 216 199 263 259
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 217 198 200 257 216 199 263 259
+id= 65, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 200 202 260 257 201 262 261 263
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 200 202 260 257 201 262 261 263
+id= 66, partid= 1, pid= 1, mid= 0, cid= -5, nodes= 8
+ shape= Quadrilateral:  maxi= 3, maxj= 0, maxk= 0
+ featype= Shell
+ extname= CQUAD8  
+ connectivity= 202 204 214 260 203 215 258 262
+ number of faces= 1
+ face= 1
+   shape= Quadrilateral:  maxi= 3, maxj= 0
+   connectivity= 202 204 214 260 203 215 258 262
+
+Coordinate Systems
+id= 1, type=  Cartesian
+ origin= 0.000000e+00 0.000000e+00 0.000000e+00
+ dircos= 1.000000e+00 0.000000e+00 0.000000e+00
+         0.000000e+00 1.000000e+00 0.000000e+00
+         0.000000e+00 0.000000e+00 1.000000e+00
+
+Element Properties
+id= 1, type=  Shell Property
+
+ name= Material Id
+ nval= 1, nloc= 1
+ Integer
+  value= 1
+
+ name= Material Id - bending
+ nval= 1, nloc= 1
+ Integer
+  value= 1
+
+ name= Material Id - transverse shear
+ nval= 1, nloc= 1
+ Integer
+  value= 1
+
+ name= Material Id - membrane bending coupling
+ nval= 1, nloc= 1
+ Integer
+  value= 0
+
+ name= Thickness
+ nval= 1, nloc= 4
+ Real
+ Location= 0
+  value= 2.000000e-01
+ Location= 1
+  value= 2.000000e-01
+ Location= 2
+  value= 2.000000e-01
+ Location= 3
+  value= 2.000000e-01
+
+ name= Effective shear ratio
+ nval= 1, nloc= 1
+ Real
+  value= 8.333330e-01
+
+ name= Bending moment of inertia ratio
+ nval= 1, nloc= 1
+ Real
+  value= 1.000000e+00
+
+ name= Shell wall type
+ nval= 1, nloc= 1
+ Integer
+  value= 0
+
+Material Properties
+id= 1, type=  Isotropic Property
+
+ name = Density
+ nval= 1
+ Real
+  value= 0.000000e+00
+
+ name = Young's Modulus
+ nval= 1
+ Real
+  value= 3.000000e+07
+
+ name = Poisson's Ratio
+ nval= 1
+ Real
+  value= 3.000000e-01
+
+ name = Thermal Expansion Coefficient
+ nval= 1
+ Real
+  value= 6.500000e-06
+
+ name = Reference Temperature
+ nval= 1
+ Real
+  value= 0.000000e+00
+
+Element Data
+
+Element Fiber Locations
+elem= 16
+ node= 97, fiber (bottom)= -1.000000e-01
+ node= 99, fiber (bottom)= -1.000000e-01
+ node= 110, fiber (bottom)= -1.000000e-01
+ node= 112, fiber (bottom)= -1.000000e-01
+ node= 98, fiber (bottom)= -1.000000e-01
+ node= 107, fiber (bottom)= -1.000000e-01
+ node= 108, fiber (bottom)= -1.000000e-01
+ node= 106, fiber (bottom)= -1.000000e-01
+elem= 17
+ node= 99, fiber (bottom)= -1.000000e-01
+ node= 95, fiber (bottom)= -1.000000e-01
+ node= 93, fiber (bottom)= -1.000000e-01
+ node= 110, fiber (bottom)= -1.000000e-01
+ node= 100, fiber (bottom)= -1.000000e-01
+ node= 94, fiber (bottom)= -1.000000e-01
+ node= 111, fiber (bottom)= -1.000000e-01
+ node= 107, fiber (bottom)= -1.000000e-01
+elem= 18
+ node= 72, fiber (bottom)= -1.000000e-01
+ node= 70, fiber (bottom)= -1.000000e-01
+ node= 97, fiber (bottom)= -1.000000e-01
+ node= 112, fiber (bottom)= -1.000000e-01
+ node= 71, fiber (bottom)= -1.000000e-01
+ node= 96, fiber (bottom)= -1.000000e-01
+ node= 106, fiber (bottom)= -1.000000e-01
+ node= 109, fiber (bottom)= -1.000000e-01
+elem= 19
+ node= 118, fiber (bottom)= -1.000000e-01
+ node= 112, fiber (bottom)= -1.000000e-01
+ node= 110, fiber (bottom)= -1.000000e-01
+ node= 119, fiber (bottom)= -1.000000e-01
+ node= 113, fiber (bottom)= -1.000000e-01
+ node= 108, fiber (bottom)= -1.000000e-01
+ node= 114, fiber (bottom)= -1.000000e-01
+ node= 115, fiber (bottom)= -1.000000e-01
+elem= 20
+ node= 93, fiber (bottom)= -1.000000e-01
+ node= 91, fiber (bottom)= -1.000000e-01
+ node= 119, fiber (bottom)= -1.000000e-01
+ node= 110, fiber (bottom)= -1.000000e-01
+ node= 92, fiber (bottom)= -1.000000e-01
+ node= 117, fiber (bottom)= -1.000000e-01
+ node= 114, fiber (bottom)= -1.000000e-01
+ node= 111, fiber (bottom)= -1.000000e-01
+elem= 21
+ node= 74, fiber (bottom)= -1.000000e-01
+ node= 72, fiber (bottom)= -1.000000e-01
+ node= 112, fiber (bottom)= -1.000000e-01
+ node= 118, fiber (bottom)= -1.000000e-01
+ node= 73, fiber (bottom)= -1.000000e-01
+ node= 109, fiber (bottom)= -1.000000e-01
+ node= 113, fiber (bottom)= -1.000000e-01
+ node= 116, fiber (bottom)= -1.000000e-01
+elem= 22
+ node= 76, fiber (bottom)= -1.000000e-01
+ node= 74, fiber (bottom)= -1.000000e-01
+ node= 118, fiber (bottom)= -1.000000e-01
+ node= 122, fiber (bottom)= -1.000000e-01
+ node= 75, fiber (bottom)= -1.000000e-01
+ node= 116, fiber (bottom)= -1.000000e-01
+ node= 120, fiber (bottom)= -1.000000e-01
+ node= 125, fiber (bottom)= -1.000000e-01
+elem= 23
+ node= 119, fiber (bottom)= -1.000000e-01
+ node= 123, fiber (bottom)= -1.000000e-01
+ node= 122, fiber (bottom)= -1.000000e-01
+ node= 118, fiber (bottom)= -1.000000e-01
+ node= 121, fiber (bottom)= -1.000000e-01
+ node= 126, fiber (bottom)= -1.000000e-01
+ node= 120, fiber (bottom)= -1.000000e-01
+ node= 115, fiber (bottom)= -1.000000e-01
+elem= 24
+ node= 91, fiber (bottom)= -1.000000e-01
+ node= 89, fiber (bottom)= -1.000000e-01
+ node= 123, fiber (bottom)= -1.000000e-01
+ node= 119, fiber (bottom)= -1.000000e-01
+ node= 90, fiber (bottom)= -1.000000e-01
+ node= 124, fiber (bottom)= -1.000000e-01
+ node= 121, fiber (bottom)= -1.000000e-01
+ node= 117, fiber (bottom)= -1.000000e-01
+elem= 25
+ node= 78, fiber (bottom)= -1.000000e-01
+ node= 76, fiber (bottom)= -1.000000e-01
+ node= 122, fiber (bottom)= -1.000000e-01
+ node= 129, fiber (bottom)= -1.000000e-01
+ node= 77, fiber (bottom)= -1.000000e-01
+ node= 125, fiber (bottom)= -1.000000e-01
+ node= 127, fiber (bottom)= -1.000000e-01
+ node= 131, fiber (bottom)= -1.000000e-01
+elem= 26
+ node= 129, fiber (bottom)= -1.000000e-01
+ node= 122, fiber (bottom)= -1.000000e-01
+ node= 123, fiber (bottom)= -1.000000e-01
+ node= 130, fiber (bottom)= -1.000000e-01
+ node= 127, fiber (bottom)= -1.000000e-01
+ node= 126, fiber (bottom)= -1.000000e-01
+ node= 128, fiber (bottom)= -1.000000e-01
+ node= 133, fiber (bottom)= -1.000000e-01
+elem= 27
+ node= 89, fiber (bottom)= -1.000000e-01
+ node= 87, fiber (bottom)= -1.000000e-01
+ node= 130, fiber (bottom)= -1.000000e-01
+ node= 123, fiber (bottom)= -1.000000e-01
+ node= 88, fiber (bottom)= -1.000000e-01
+ node= 132, fiber (bottom)= -1.000000e-01
+ node= 128, fiber (bottom)= -1.000000e-01
+ node= 124, fiber (bottom)= -1.000000e-01
+elem= 28
+ node= 87, fiber (bottom)= -1.000000e-01
+ node= 85, fiber (bottom)= -1.000000e-01
+ node= 136, fiber (bottom)= -1.000000e-01
+ node= 130, fiber (bottom)= -1.000000e-01
+ node= 86, fiber (bottom)= -1.000000e-01
+ node= 138, fiber (bottom)= -1.000000e-01
+ node= 135, fiber (bottom)= -1.000000e-01
+ node= 132, fiber (bottom)= -1.000000e-01
+elem= 29
+ node= 80, fiber (bottom)= -1.000000e-01
+ node= 78, fiber (bottom)= -1.000000e-01
+ node= 129, fiber (bottom)= -1.000000e-01
+ node= 139, fiber (bottom)= -1.000000e-01
+ node= 79, fiber (bottom)= -1.000000e-01
+ node= 131, fiber (bottom)= -1.000000e-01
+ node= 134, fiber (bottom)= -1.000000e-01
+ node= 137, fiber (bottom)= -1.000000e-01
+elem= 30
+ node= 139, fiber (bottom)= -1.000000e-01
+ node= 129, fiber (bottom)= -1.000000e-01
+ node= 130, fiber (bottom)= -1.000000e-01
+ node= 136, fiber (bottom)= -1.000000e-01
+ node= 134, fiber (bottom)= -1.000000e-01
+ node= 133, fiber (bottom)= -1.000000e-01
+ node= 135, fiber (bottom)= -1.000000e-01
+ node= 140, fiber (bottom)= -1.000000e-01
+elem= 31
+ node= 85, fiber (bottom)= -1.000000e-01
+ node= 83, fiber (bottom)= -1.000000e-01
+ node= 104, fiber (bottom)= -1.000000e-01
+ node= 136, fiber (bottom)= -1.000000e-01
+ node= 84, fiber (bottom)= -1.000000e-01
+ node= 105, fiber (bottom)= -1.000000e-01
+ node= 142, fiber (bottom)= -1.000000e-01
+ node= 138, fiber (bottom)= -1.000000e-01
+elem= 32
+ node= 102, fiber (bottom)= -1.000000e-01
+ node= 82, fiber (bottom)= -1.000000e-01
+ node= 80, fiber (bottom)= -1.000000e-01
+ node= 139, fiber (bottom)= -1.000000e-01
+ node= 101, fiber (bottom)= -1.000000e-01
+ node= 81, fiber (bottom)= -1.000000e-01
+ node= 137, fiber (bottom)= -1.000000e-01
+ node= 141, fiber (bottom)= -1.000000e-01
+elem= 33
+ node= 104, fiber (bottom)= -1.000000e-01
+ node= 102, fiber (bottom)= -1.000000e-01
+ node= 139, fiber (bottom)= -1.000000e-01
+ node= 136, fiber (bottom)= -1.000000e-01
+ node= 103, fiber (bottom)= -1.000000e-01
+ node= 141, fiber (bottom)= -1.000000e-01
+ node= 140, fiber (bottom)= -1.000000e-01
+ node= 142, fiber (bottom)= -1.000000e-01
+elem= 34
+ node= 166, fiber (bottom)= -1.000000e-01
+ node= 164, fiber (bottom)= -1.000000e-01
+ node= 172, fiber (bottom)= -1.000000e-01
+ node= 174, fiber (bottom)= -1.000000e-01
+ node= 165, fiber (bottom)= -1.000000e-01
+ node= 169, fiber (bottom)= -1.000000e-01
+ node= 170, fiber (bottom)= -1.000000e-01
+ node= 168, fiber (bottom)= -1.000000e-01
+elem= 35
+ node= 164, fiber (bottom)= -1.000000e-01
+ node= 162, fiber (bottom)= -1.000000e-01
+ node= 160, fiber (bottom)= -1.000000e-01
+ node= 172, fiber (bottom)= -1.000000e-01
+ node= 163, fiber (bottom)= -1.000000e-01
+ node= 161, fiber (bottom)= -1.000000e-01
+ node= 173, fiber (bottom)= -1.000000e-01
+ node= 169, fiber (bottom)= -1.000000e-01
+elem= 36
+ node= 145, fiber (bottom)= -1.000000e-01
+ node= 143, fiber (bottom)= -1.000000e-01
+ node= 166, fiber (bottom)= -1.000000e-01
+ node= 174, fiber (bottom)= -1.000000e-01
+ node= 144, fiber (bottom)= -1.000000e-01
+ node= 167, fiber (bottom)= -1.000000e-01
+ node= 168, fiber (bottom)= -1.000000e-01
+ node= 171, fiber (bottom)= -1.000000e-01
+elem= 37
+ node= 180, fiber (bottom)= -1.000000e-01
+ node= 174, fiber (bottom)= -1.000000e-01
+ node= 172, fiber (bottom)= -1.000000e-01
+ node= 181, fiber (bottom)= -1.000000e-01
+ node= 175, fiber (bottom)= -1.000000e-01
+ node= 170, fiber (bottom)= -1.000000e-01
+ node= 176, fiber (bottom)= -1.000000e-01
+ node= 177, fiber (bottom)= -1.000000e-01
+elem= 38
+ node= 160, fiber (bottom)= -1.000000e-01
+ node= 158, fiber (bottom)= -1.000000e-01
+ node= 181, fiber (bottom)= -1.000000e-01
+ node= 172, fiber (bottom)= -1.000000e-01
+ node= 159, fiber (bottom)= -1.000000e-01
+ node= 179, fiber (bottom)= -1.000000e-01
+ node= 176, fiber (bottom)= -1.000000e-01
+ node= 173, fiber (bottom)= -1.000000e-01
+elem= 39
+ node= 147, fiber (bottom)= -1.000000e-01
+ node= 145, fiber (bottom)= -1.000000e-01
+ node= 174, fiber (bottom)= -1.000000e-01
+ node= 180, fiber (bottom)= -1.000000e-01
+ node= 146, fiber (bottom)= -1.000000e-01
+ node= 171, fiber (bottom)= -1.000000e-01
+ node= 175, fiber (bottom)= -1.000000e-01
+ node= 178, fiber (bottom)= -1.000000e-01
+elem= 40
+ node= 149, fiber (bottom)= -1.000000e-01
+ node= 147, fiber (bottom)= -1.000000e-01
+ node= 180, fiber (bottom)= -1.000000e-01
+ node= 184, fiber (bottom)= -1.000000e-01
+ node= 148, fiber (bottom)= -1.000000e-01
+ node= 178, fiber (bottom)= -1.000000e-01
+ node= 182, fiber (bottom)= -1.000000e-01
+ node= 186, fiber (bottom)= -1.000000e-01
+elem= 41
+ node= 184, fiber (bottom)= -1.000000e-01
+ node= 180, fiber (bottom)= -1.000000e-01
+ node= 181, fiber (bottom)= -1.000000e-01
+ node= 185, fiber (bottom)= -1.000000e-01
+ node= 182, fiber (bottom)= -1.000000e-01
+ node= 177, fiber (bottom)= -1.000000e-01
+ node= 183, fiber (bottom)= -1.000000e-01
+ node= 188, fiber (bottom)= -1.000000e-01
+elem= 42
+ node= 158, fiber (bottom)= -1.000000e-01
+ node= 156, fiber (bottom)= -1.000000e-01
+ node= 185, fiber (bottom)= -1.000000e-01
+ node= 181, fiber (bottom)= -1.000000e-01
+ node= 157, fiber (bottom)= -1.000000e-01
+ node= 187, fiber (bottom)= -1.000000e-01
+ node= 183, fiber (bottom)= -1.000000e-01
+ node= 179, fiber (bottom)= -1.000000e-01
+elem= 43
+ node= 156, fiber (bottom)= -1.000000e-01
+ node= 154, fiber (bottom)= -1.000000e-01
+ node= 191, fiber (bottom)= -1.000000e-01
+ node= 185, fiber (bottom)= -1.000000e-01
+ node= 155, fiber (bottom)= -1.000000e-01
+ node= 193, fiber (bottom)= -1.000000e-01
+ node= 190, fiber (bottom)= -1.000000e-01
+ node= 187, fiber (bottom)= -1.000000e-01
+elem= 44
+ node= 151, fiber (bottom)= -1.000000e-01
+ node= 149, fiber (bottom)= -1.000000e-01
+ node= 184, fiber (bottom)= -1.000000e-01
+ node= 194, fiber (bottom)= -1.000000e-01
+ node= 150, fiber (bottom)= -1.000000e-01
+ node= 186, fiber (bottom)= -1.000000e-01
+ node= 189, fiber (bottom)= -1.000000e-01
+ node= 192, fiber (bottom)= -1.000000e-01
+elem= 45
+ node= 194, fiber (bottom)= -1.000000e-01
+ node= 184, fiber (bottom)= -1.000000e-01
+ node= 185, fiber (bottom)= -1.000000e-01
+ node= 191, fiber (bottom)= -1.000000e-01
+ node= 189, fiber (bottom)= -1.000000e-01
+ node= 188, fiber (bottom)= -1.000000e-01
+ node= 190, fiber (bottom)= -1.000000e-01
+ node= 195, fiber (bottom)= -1.000000e-01
+elem= 46
+ node= 154, fiber (bottom)= -1.000000e-01
+ node= 95, fiber (bottom)= -1.000000e-01
+ node= 99, fiber (bottom)= -1.000000e-01
+ node= 191, fiber (bottom)= -1.000000e-01
+ node= 153, fiber (bottom)= -1.000000e-01
+ node= 100, fiber (bottom)= -1.000000e-01
+ node= 197, fiber (bottom)= -1.000000e-01
+ node= 193, fiber (bottom)= -1.000000e-01
+elem= 47
+ node= 97, fiber (bottom)= -1.000000e-01
+ node= 70, fiber (bottom)= -1.000000e-01
+ node= 151, fiber (bottom)= -1.000000e-01
+ node= 194, fiber (bottom)= -1.000000e-01
+ node= 96, fiber (bottom)= -1.000000e-01
+ node= 152, fiber (bottom)= -1.000000e-01
+ node= 192, fiber (bottom)= -1.000000e-01
+ node= 196, fiber (bottom)= -1.000000e-01
+elem= 48
+ node= 99, fiber (bottom)= -1.000000e-01
+ node= 97, fiber (bottom)= -1.000000e-01
+ node= 194, fiber (bottom)= -1.000000e-01
+ node= 191, fiber (bottom)= -1.000000e-01
+ node= 98, fiber (bottom)= -1.000000e-01
+ node= 196, fiber (bottom)= -1.000000e-01
+ node= 195, fiber (bottom)= -1.000000e-01
+ node= 197, fiber (bottom)= -1.000000e-01
+elem= 49
+ node= 166, fiber (bottom)= -1.000000e-01
+ node= 143, fiber (bottom)= -1.000000e-01
+ node= 225, fiber (bottom)= -1.000000e-01
+ node= 231, fiber (bottom)= -1.000000e-01
+ node= 167, fiber (bottom)= -1.000000e-01
+ node= 226, fiber (bottom)= -1.000000e-01
+ node= 232, fiber (bottom)= -1.000000e-01
+ node= 228, fiber (bottom)= -1.000000e-01
+elem= 50
+ node= 164, fiber (bottom)= -1.000000e-01
+ node= 166, fiber (bottom)= -1.000000e-01
+ node= 231, fiber (bottom)= -1.000000e-01
+ node= 233, fiber (bottom)= -1.000000e-01
+ node= 165, fiber (bottom)= -1.000000e-01
+ node= 228, fiber (bottom)= -1.000000e-01
+ node= 229, fiber (bottom)= -1.000000e-01
+ node= 227, fiber (bottom)= -1.000000e-01
+elem= 51
+ node= 206, fiber (bottom)= -1.000000e-01
+ node= 162, fiber (bottom)= -1.000000e-01
+ node= 164, fiber (bottom)= -1.000000e-01
+ node= 233, fiber (bottom)= -1.000000e-01
+ node= 205, fiber (bottom)= -1.000000e-01
+ node= 163, fiber (bottom)= -1.000000e-01
+ node= 227, fiber (bottom)= -1.000000e-01
+ node= 230, fiber (bottom)= -1.000000e-01
+elem= 52
+ node= 225, fiber (bottom)= -1.000000e-01
+ node= 223, fiber (bottom)= -1.000000e-01
+ node= 239, fiber (bottom)= -1.000000e-01
+ node= 231, fiber (bottom)= -1.000000e-01
+ node= 224, fiber (bottom)= -1.000000e-01
+ node= 238, fiber (bottom)= -1.000000e-01
+ node= 235, fiber (bottom)= -1.000000e-01
+ node= 232, fiber (bottom)= -1.000000e-01
+elem= 53
+ node= 240, fiber (bottom)= -1.000000e-01
+ node= 233, fiber (bottom)= -1.000000e-01
+ node= 231, fiber (bottom)= -1.000000e-01
+ node= 239, fiber (bottom)= -1.000000e-01
+ node= 234, fiber (bottom)= -1.000000e-01
+ node= 229, fiber (bottom)= -1.000000e-01
+ node= 235, fiber (bottom)= -1.000000e-01
+ node= 236, fiber (bottom)= -1.000000e-01
+elem= 54
+ node= 208, fiber (bottom)= -1.000000e-01
+ node= 206, fiber (bottom)= -1.000000e-01
+ node= 233, fiber (bottom)= -1.000000e-01
+ node= 240, fiber (bottom)= -1.000000e-01
+ node= 207, fiber (bottom)= -1.000000e-01
+ node= 230, fiber (bottom)= -1.000000e-01
+ node= 234, fiber (bottom)= -1.000000e-01
+ node= 237, fiber (bottom)= -1.000000e-01
+elem= 55
+ node= 223, fiber (bottom)= -1.000000e-01
+ node= 221, fiber (bottom)= -1.000000e-01
+ node= 243, fiber (bottom)= -1.000000e-01
+ node= 239, fiber (bottom)= -1.000000e-01
+ node= 222, fiber (bottom)= -1.000000e-01
+ node= 245, fiber (bottom)= -1.000000e-01
+ node= 242, fiber (bottom)= -1.000000e-01
+ node= 238, fiber (bottom)= -1.000000e-01
+elem= 56
+ node= 239, fiber (bottom)= -1.000000e-01
+ node= 243, fiber (bottom)= -1.000000e-01
+ node= 244, fiber (bottom)= -1.000000e-01
+ node= 240, fiber (bottom)= -1.000000e-01
+ node= 242, fiber (bottom)= -1.000000e-01
+ node= 247, fiber (bottom)= -1.000000e-01
+ node= 241, fiber (bottom)= -1.000000e-01
+ node= 236, fiber (bottom)= -1.000000e-01
+elem= 57
+ node= 210, fiber (bottom)= -1.000000e-01
+ node= 208, fiber (bottom)= -1.000000e-01
+ node= 240, fiber (bottom)= -1.000000e-01
+ node= 244, fiber (bottom)= -1.000000e-01
+ node= 209, fiber (bottom)= -1.000000e-01
+ node= 237, fiber (bottom)= -1.000000e-01
+ node= 241, fiber (bottom)= -1.000000e-01
+ node= 246, fiber (bottom)= -1.000000e-01
+elem= 58
+ node= 221, fiber (bottom)= -1.000000e-01
+ node= 219, fiber (bottom)= -1.000000e-01
+ node= 250, fiber (bottom)= -1.000000e-01
+ node= 243, fiber (bottom)= -1.000000e-01
+ node= 220, fiber (bottom)= -1.000000e-01
+ node= 253, fiber (bottom)= -1.000000e-01
+ node= 249, fiber (bottom)= -1.000000e-01
+ node= 245, fiber (bottom)= -1.000000e-01
+elem= 59
+ node= 251, fiber (bottom)= -1.000000e-01
+ node= 244, fiber (bottom)= -1.000000e-01
+ node= 243, fiber (bottom)= -1.000000e-01
+ node= 250, fiber (bottom)= -1.000000e-01
+ node= 248, fiber (bottom)= -1.000000e-01
+ node= 247, fiber (bottom)= -1.000000e-01
+ node= 249, fiber (bottom)= -1.000000e-01
+ node= 254, fiber (bottom)= -1.000000e-01
+elem= 60
+ node= 212, fiber (bottom)= -1.000000e-01
+ node= 210, fiber (bottom)= -1.000000e-01
+ node= 244, fiber (bottom)= -1.000000e-01
+ node= 251, fiber (bottom)= -1.000000e-01
+ node= 211, fiber (bottom)= -1.000000e-01
+ node= 246, fiber (bottom)= -1.000000e-01
+ node= 248, fiber (bottom)= -1.000000e-01
+ node= 252, fiber (bottom)= -1.000000e-01
+elem= 61
+ node= 219, fiber (bottom)= -1.000000e-01
+ node= 217, fiber (bottom)= -1.000000e-01
+ node= 257, fiber (bottom)= -1.000000e-01
+ node= 250, fiber (bottom)= -1.000000e-01
+ node= 218, fiber (bottom)= -1.000000e-01
+ node= 259, fiber (bottom)= -1.000000e-01
+ node= 256, fiber (bottom)= -1.000000e-01
+ node= 253, fiber (bottom)= -1.000000e-01
+elem= 62
+ node= 260, fiber (bottom)= -1.000000e-01
+ node= 251, fiber (bottom)= -1.000000e-01
+ node= 250, fiber (bottom)= -1.000000e-01
+ node= 257, fiber (bottom)= -1.000000e-01
+ node= 255, fiber (bottom)= -1.000000e-01
+ node= 254, fiber (bottom)= -1.000000e-01
+ node= 256, fiber (bottom)= -1.000000e-01
+ node= 261, fiber (bottom)= -1.000000e-01
+elem= 63
+ node= 214, fiber (bottom)= -1.000000e-01
+ node= 212, fiber (bottom)= -1.000000e-01
+ node= 251, fiber (bottom)= -1.000000e-01
+ node= 260, fiber (bottom)= -1.000000e-01
+ node= 213, fiber (bottom)= -1.000000e-01
+ node= 252, fiber (bottom)= -1.000000e-01
+ node= 255, fiber (bottom)= -1.000000e-01
+ node= 258, fiber (bottom)= -1.000000e-01
+elem= 64
+ node= 217, fiber (bottom)= -1.000000e-01
+ node= 198, fiber (bottom)= -1.000000e-01
+ node= 200, fiber (bottom)= -1.000000e-01
+ node= 257, fiber (bottom)= -1.000000e-01
+ node= 216, fiber (bottom)= -1.000000e-01
+ node= 199, fiber (bottom)= -1.000000e-01
+ node= 263, fiber (bottom)= -1.000000e-01
+ node= 259, fiber (bottom)= -1.000000e-01
+elem= 65
+ node= 200, fiber (bottom)= -1.000000e-01
+ node= 202, fiber (bottom)= -1.000000e-01
+ node= 260, fiber (bottom)= -1.000000e-01
+ node= 257, fiber (bottom)= -1.000000e-01
+ node= 201, fiber (bottom)= -1.000000e-01
+ node= 262, fiber (bottom)= -1.000000e-01
+ node= 261, fiber (bottom)= -1.000000e-01
+ node= 263, fiber (bottom)= -1.000000e-01
+elem= 66
+ node= 202, fiber (bottom)= -1.000000e-01
+ node= 204, fiber (bottom)= -1.000000e-01
+ node= 214, fiber (bottom)= -1.000000e-01
+ node= 260, fiber (bottom)= -1.000000e-01
+ node= 203, fiber (bottom)= -1.000000e-01
+ node= 215, fiber (bottom)= -1.000000e-01
+ node= 258, fiber (bottom)= -1.000000e-01
+ node= 262, fiber (bottom)= -1.000000e-01
+
+Element Thicknesses
+elem= 16
+ node= 97, thickness= 2.000000e-01
+ node= 99, thickness= 2.000000e-01
+ node= 110, thickness= 2.000000e-01
+ node= 112, thickness= 2.000000e-01
+ node= 98, thickness= 2.000000e-01
+ node= 107, thickness= 2.000000e-01
+ node= 108, thickness= 2.000000e-01
+ node= 106, thickness= 2.000000e-01
+elem= 17
+ node= 99, thickness= 2.000000e-01
+ node= 95, thickness= 2.000000e-01
+ node= 93, thickness= 2.000000e-01
+ node= 110, thickness= 2.000000e-01
+ node= 100, thickness= 2.000000e-01
+ node= 94, thickness= 2.000000e-01
+ node= 111, thickness= 2.000000e-01
+ node= 107, thickness= 2.000000e-01
+elem= 18
+ node= 72, thickness= 2.000000e-01
+ node= 70, thickness= 2.000000e-01
+ node= 97, thickness= 2.000000e-01
+ node= 112, thickness= 2.000000e-01
+ node= 71, thickness= 2.000000e-01
+ node= 96, thickness= 2.000000e-01
+ node= 106, thickness= 2.000000e-01
+ node= 109, thickness= 2.000000e-01
+elem= 19
+ node= 118, thickness= 2.000000e-01
+ node= 112, thickness= 2.000000e-01
+ node= 110, thickness= 2.000000e-01
+ node= 119, thickness= 2.000000e-01
+ node= 113, thickness= 2.000000e-01
+ node= 108, thickness= 2.000000e-01
+ node= 114, thickness= 2.000000e-01
+ node= 115, thickness= 2.000000e-01
+elem= 20
+ node= 93, thickness= 2.000000e-01
+ node= 91, thickness= 2.000000e-01
+ node= 119, thickness= 2.000000e-01
+ node= 110, thickness= 2.000000e-01
+ node= 92, thickness= 2.000000e-01
+ node= 117, thickness= 2.000000e-01
+ node= 114, thickness= 2.000000e-01
+ node= 111, thickness= 2.000000e-01
+elem= 21
+ node= 74, thickness= 2.000000e-01
+ node= 72, thickness= 2.000000e-01
+ node= 112, thickness= 2.000000e-01
+ node= 118, thickness= 2.000000e-01
+ node= 73, thickness= 2.000000e-01
+ node= 109, thickness= 2.000000e-01
+ node= 113, thickness= 2.000000e-01
+ node= 116, thickness= 2.000000e-01
+elem= 22
+ node= 76, thickness= 2.000000e-01
+ node= 74, thickness= 2.000000e-01
+ node= 118, thickness= 2.000000e-01
+ node= 122, thickness= 2.000000e-01
+ node= 75, thickness= 2.000000e-01
+ node= 116, thickness= 2.000000e-01
+ node= 120, thickness= 2.000000e-01
+ node= 125, thickness= 2.000000e-01
+elem= 23
+ node= 119, thickness= 2.000000e-01
+ node= 123, thickness= 2.000000e-01
+ node= 122, thickness= 2.000000e-01
+ node= 118, thickness= 2.000000e-01
+ node= 121, thickness= 2.000000e-01
+ node= 126, thickness= 2.000000e-01
+ node= 120, thickness= 2.000000e-01
+ node= 115, thickness= 2.000000e-01
+elem= 24
+ node= 91, thickness= 2.000000e-01
+ node= 89, thickness= 2.000000e-01
+ node= 123, thickness= 2.000000e-01
+ node= 119, thickness= 2.000000e-01
+ node= 90, thickness= 2.000000e-01
+ node= 124, thickness= 2.000000e-01
+ node= 121, thickness= 2.000000e-01
+ node= 117, thickness= 2.000000e-01
+elem= 25
+ node= 78, thickness= 2.000000e-01
+ node= 76, thickness= 2.000000e-01
+ node= 122, thickness= 2.000000e-01
+ node= 129, thickness= 2.000000e-01
+ node= 77, thickness= 2.000000e-01
+ node= 125, thickness= 2.000000e-01
+ node= 127, thickness= 2.000000e-01
+ node= 131, thickness= 2.000000e-01
+elem= 26
+ node= 129, thickness= 2.000000e-01
+ node= 122, thickness= 2.000000e-01
+ node= 123, thickness= 2.000000e-01
+ node= 130, thickness= 2.000000e-01
+ node= 127, thickness= 2.000000e-01
+ node= 126, thickness= 2.000000e-01
+ node= 128, thickness= 2.000000e-01
+ node= 133, thickness= 2.000000e-01
+elem= 27
+ node= 89, thickness= 2.000000e-01
+ node= 87, thickness= 2.000000e-01
+ node= 130, thickness= 2.000000e-01
+ node= 123, thickness= 2.000000e-01
+ node= 88, thickness= 2.000000e-01
+ node= 132, thickness= 2.000000e-01
+ node= 128, thickness= 2.000000e-01
+ node= 124, thickness= 2.000000e-01
+elem= 28
+ node= 87, thickness= 2.000000e-01
+ node= 85, thickness= 2.000000e-01
+ node= 136, thickness= 2.000000e-01
+ node= 130, thickness= 2.000000e-01
+ node= 86, thickness= 2.000000e-01
+ node= 138, thickness= 2.000000e-01
+ node= 135, thickness= 2.000000e-01
+ node= 132, thickness= 2.000000e-01
+elem= 29
+ node= 80, thickness= 2.000000e-01
+ node= 78, thickness= 2.000000e-01
+ node= 129, thickness= 2.000000e-01
+ node= 139, thickness= 2.000000e-01
+ node= 79, thickness= 2.000000e-01
+ node= 131, thickness= 2.000000e-01
+ node= 134, thickness= 2.000000e-01
+ node= 137, thickness= 2.000000e-01
+elem= 30
+ node= 139, thickness= 2.000000e-01
+ node= 129, thickness= 2.000000e-01
+ node= 130, thickness= 2.000000e-01
+ node= 136, thickness= 2.000000e-01
+ node= 134, thickness= 2.000000e-01
+ node= 133, thickness= 2.000000e-01
+ node= 135, thickness= 2.000000e-01
+ node= 140, thickness= 2.000000e-01
+elem= 31
+ node= 85, thickness= 2.000000e-01
+ node= 83, thickness= 2.000000e-01
+ node= 104, thickness= 2.000000e-01
+ node= 136, thickness= 2.000000e-01
+ node= 84, thickness= 2.000000e-01
+ node= 105, thickness= 2.000000e-01
+ node= 142, thickness= 2.000000e-01
+ node= 138, thickness= 2.000000e-01
+elem= 32
+ node= 102, thickness= 2.000000e-01
+ node= 82, thickness= 2.000000e-01
+ node= 80, thickness= 2.000000e-01
+ node= 139, thickness= 2.000000e-01
+ node= 101, thickness= 2.000000e-01
+ node= 81, thickness= 2.000000e-01
+ node= 137, thickness= 2.000000e-01
+ node= 141, thickness= 2.000000e-01
+elem= 33
+ node= 104, thickness= 2.000000e-01
+ node= 102, thickness= 2.000000e-01
+ node= 139, thickness= 2.000000e-01
+ node= 136, thickness= 2.000000e-01
+ node= 103, thickness= 2.000000e-01
+ node= 141, thickness= 2.000000e-01
+ node= 140, thickness= 2.000000e-01
+ node= 142, thickness= 2.000000e-01
+elem= 34
+ node= 166, thickness= 2.000000e-01
+ node= 164, thickness= 2.000000e-01
+ node= 172, thickness= 2.000000e-01
+ node= 174, thickness= 2.000000e-01
+ node= 165, thickness= 2.000000e-01
+ node= 169, thickness= 2.000000e-01
+ node= 170, thickness= 2.000000e-01
+ node= 168, thickness= 2.000000e-01
+elem= 35
+ node= 164, thickness= 2.000000e-01
+ node= 162, thickness= 2.000000e-01
+ node= 160, thickness= 2.000000e-01
+ node= 172, thickness= 2.000000e-01
+ node= 163, thickness= 2.000000e-01
+ node= 161, thickness= 2.000000e-01
+ node= 173, thickness= 2.000000e-01
+ node= 169, thickness= 2.000000e-01
+elem= 36
+ node= 145, thickness= 2.000000e-01
+ node= 143, thickness= 2.000000e-01
+ node= 166, thickness= 2.000000e-01
+ node= 174, thickness= 2.000000e-01
+ node= 144, thickness= 2.000000e-01
+ node= 167, thickness= 2.000000e-01
+ node= 168, thickness= 2.000000e-01
+ node= 171, thickness= 2.000000e-01
+elem= 37
+ node= 180, thickness= 2.000000e-01
+ node= 174, thickness= 2.000000e-01
+ node= 172, thickness= 2.000000e-01
+ node= 181, thickness= 2.000000e-01
+ node= 175, thickness= 2.000000e-01
+ node= 170, thickness= 2.000000e-01
+ node= 176, thickness= 2.000000e-01
+ node= 177, thickness= 2.000000e-01
+elem= 38
+ node= 160, thickness= 2.000000e-01
+ node= 158, thickness= 2.000000e-01
+ node= 181, thickness= 2.000000e-01
+ node= 172, thickness= 2.000000e-01
+ node= 159, thickness= 2.000000e-01
+ node= 179, thickness= 2.000000e-01
+ node= 176, thickness= 2.000000e-01
+ node= 173, thickness= 2.000000e-01
+elem= 39
+ node= 147, thickness= 2.000000e-01
+ node= 145, thickness= 2.000000e-01
+ node= 174, thickness= 2.000000e-01
+ node= 180, thickness= 2.000000e-01
+ node= 146, thickness= 2.000000e-01
+ node= 171, thickness= 2.000000e-01
+ node= 175, thickness= 2.000000e-01
+ node= 178, thickness= 2.000000e-01
+elem= 40
+ node= 149, thickness= 2.000000e-01
+ node= 147, thickness= 2.000000e-01
+ node= 180, thickness= 2.000000e-01
+ node= 184, thickness= 2.000000e-01
+ node= 148, thickness= 2.000000e-01
+ node= 178, thickness= 2.000000e-01
+ node= 182, thickness= 2.000000e-01
+ node= 186, thickness= 2.000000e-01
+elem= 41
+ node= 184, thickness= 2.000000e-01
+ node= 180, thickness= 2.000000e-01
+ node= 181, thickness= 2.000000e-01
+ node= 185, thickness= 2.000000e-01
+ node= 182, thickness= 2.000000e-01
+ node= 177, thickness= 2.000000e-01
+ node= 183, thickness= 2.000000e-01
+ node= 188, thickness= 2.000000e-01
+elem= 42
+ node= 158, thickness= 2.000000e-01
+ node= 156, thickness= 2.000000e-01
+ node= 185, thickness= 2.000000e-01
+ node= 181, thickness= 2.000000e-01
+ node= 157, thickness= 2.000000e-01
+ node= 187, thickness= 2.000000e-01
+ node= 183, thickness= 2.000000e-01
+ node= 179, thickness= 2.000000e-01
+elem= 43
+ node= 156, thickness= 2.000000e-01
+ node= 154, thickness= 2.000000e-01
+ node= 191, thickness= 2.000000e-01
+ node= 185, thickness= 2.000000e-01
+ node= 155, thickness= 2.000000e-01
+ node= 193, thickness= 2.000000e-01
+ node= 190, thickness= 2.000000e-01
+ node= 187, thickness= 2.000000e-01
+elem= 44
+ node= 151, thickness= 2.000000e-01
+ node= 149, thickness= 2.000000e-01
+ node= 184, thickness= 2.000000e-01
+ node= 194, thickness= 2.000000e-01
+ node= 150, thickness= 2.000000e-01
+ node= 186, thickness= 2.000000e-01
+ node= 189, thickness= 2.000000e-01
+ node= 192, thickness= 2.000000e-01
+elem= 45
+ node= 194, thickness= 2.000000e-01
+ node= 184, thickness= 2.000000e-01
+ node= 185, thickness= 2.000000e-01
+ node= 191, thickness= 2.000000e-01
+ node= 189, thickness= 2.000000e-01
+ node= 188, thickness= 2.000000e-01
+ node= 190, thickness= 2.000000e-01
+ node= 195, thickness= 2.000000e-01
+elem= 46
+ node= 154, thickness= 2.000000e-01
+ node= 95, thickness= 2.000000e-01
+ node= 99, thickness= 2.000000e-01
+ node= 191, thickness= 2.000000e-01
+ node= 153, thickness= 2.000000e-01
+ node= 100, thickness= 2.000000e-01
+ node= 197, thickness= 2.000000e-01
+ node= 193, thickness= 2.000000e-01
+elem= 47
+ node= 97, thickness= 2.000000e-01
+ node= 70, thickness= 2.000000e-01
+ node= 151, thickness= 2.000000e-01
+ node= 194, thickness= 2.000000e-01
+ node= 96, thickness= 2.000000e-01
+ node= 152, thickness= 2.000000e-01
+ node= 192, thickness= 2.000000e-01
+ node= 196, thickness= 2.000000e-01
+elem= 48
+ node= 99, thickness= 2.000000e-01
+ node= 97, thickness= 2.000000e-01
+ node= 194, thickness= 2.000000e-01
+ node= 191, thickness= 2.000000e-01
+ node= 98, thickness= 2.000000e-01
+ node= 196, thickness= 2.000000e-01
+ node= 195, thickness= 2.000000e-01
+ node= 197, thickness= 2.000000e-01
+elem= 49
+ node= 166, thickness= 2.000000e-01
+ node= 143, thickness= 2.000000e-01
+ node= 225, thickness= 2.000000e-01
+ node= 231, thickness= 2.000000e-01
+ node= 167, thickness= 2.000000e-01
+ node= 226, thickness= 2.000000e-01
+ node= 232, thickness= 2.000000e-01
+ node= 228, thickness= 2.000000e-01
+elem= 50
+ node= 164, thickness= 2.000000e-01
+ node= 166, thickness= 2.000000e-01
+ node= 231, thickness= 2.000000e-01
+ node= 233, thickness= 2.000000e-01
+ node= 165, thickness= 2.000000e-01
+ node= 228, thickness= 2.000000e-01
+ node= 229, thickness= 2.000000e-01
+ node= 227, thickness= 2.000000e-01
+elem= 51
+ node= 206, thickness= 2.000000e-01
+ node= 162, thickness= 2.000000e-01
+ node= 164, thickness= 2.000000e-01
+ node= 233, thickness= 2.000000e-01
+ node= 205, thickness= 2.000000e-01
+ node= 163, thickness= 2.000000e-01
+ node= 227, thickness= 2.000000e-01
+ node= 230, thickness= 2.000000e-01
+elem= 52
+ node= 225, thickness= 2.000000e-01
+ node= 223, thickness= 2.000000e-01
+ node= 239, thickness= 2.000000e-01
+ node= 231, thickness= 2.000000e-01
+ node= 224, thickness= 2.000000e-01
+ node= 238, thickness= 2.000000e-01
+ node= 235, thickness= 2.000000e-01
+ node= 232, thickness= 2.000000e-01
+elem= 53
+ node= 240, thickness= 2.000000e-01
+ node= 233, thickness= 2.000000e-01
+ node= 231, thickness= 2.000000e-01
+ node= 239, thickness= 2.000000e-01
+ node= 234, thickness= 2.000000e-01
+ node= 229, thickness= 2.000000e-01
+ node= 235, thickness= 2.000000e-01
+ node= 236, thickness= 2.000000e-01
+elem= 54
+ node= 208, thickness= 2.000000e-01
+ node= 206, thickness= 2.000000e-01
+ node= 233, thickness= 2.000000e-01
+ node= 240, thickness= 2.000000e-01
+ node= 207, thickness= 2.000000e-01
+ node= 230, thickness= 2.000000e-01
+ node= 234, thickness= 2.000000e-01
+ node= 237, thickness= 2.000000e-01
+elem= 55
+ node= 223, thickness= 2.000000e-01
+ node= 221, thickness= 2.000000e-01
+ node= 243, thickness= 2.000000e-01
+ node= 239, thickness= 2.000000e-01
+ node= 222, thickness= 2.000000e-01
+ node= 245, thickness= 2.000000e-01
+ node= 242, thickness= 2.000000e-01
+ node= 238, thickness= 2.000000e-01
+elem= 56
+ node= 239, thickness= 2.000000e-01
+ node= 243, thickness= 2.000000e-01
+ node= 244, thickness= 2.000000e-01
+ node= 240, thickness= 2.000000e-01
+ node= 242, thickness= 2.000000e-01
+ node= 247, thickness= 2.000000e-01
+ node= 241, thickness= 2.000000e-01
+ node= 236, thickness= 2.000000e-01
+elem= 57
+ node= 210, thickness= 2.000000e-01
+ node= 208, thickness= 2.000000e-01
+ node= 240, thickness= 2.000000e-01
+ node= 244, thickness= 2.000000e-01
+ node= 209, thickness= 2.000000e-01
+ node= 237, thickness= 2.000000e-01
+ node= 241, thickness= 2.000000e-01
+ node= 246, thickness= 2.000000e-01
+elem= 58
+ node= 221, thickness= 2.000000e-01
+ node= 219, thickness= 2.000000e-01
+ node= 250, thickness= 2.000000e-01
+ node= 243, thickness= 2.000000e-01
+ node= 220, thickness= 2.000000e-01
+ node= 253, thickness= 2.000000e-01
+ node= 249, thickness= 2.000000e-01
+ node= 245, thickness= 2.000000e-01
+elem= 59
+ node= 251, thickness= 2.000000e-01
+ node= 244, thickness= 2.000000e-01
+ node= 243, thickness= 2.000000e-01
+ node= 250, thickness= 2.000000e-01
+ node= 248, thickness= 2.000000e-01
+ node= 247, thickness= 2.000000e-01
+ node= 249, thickness= 2.000000e-01
+ node= 254, thickness= 2.000000e-01
+elem= 60
+ node= 212, thickness= 2.000000e-01
+ node= 210, thickness= 2.000000e-01
+ node= 244, thickness= 2.000000e-01
+ node= 251, thickness= 2.000000e-01
+ node= 211, thickness= 2.000000e-01
+ node= 246, thickness= 2.000000e-01
+ node= 248, thickness= 2.000000e-01
+ node= 252, thickness= 2.000000e-01
+elem= 61
+ node= 219, thickness= 2.000000e-01
+ node= 217, thickness= 2.000000e-01
+ node= 257, thickness= 2.000000e-01
+ node= 250, thickness= 2.000000e-01
+ node= 218, thickness= 2.000000e-01
+ node= 259, thickness= 2.000000e-01
+ node= 256, thickness= 2.000000e-01
+ node= 253, thickness= 2.000000e-01
+elem= 62
+ node= 260, thickness= 2.000000e-01
+ node= 251, thickness= 2.000000e-01
+ node= 250, thickness= 2.000000e-01
+ node= 257, thickness= 2.000000e-01
+ node= 255, thickness= 2.000000e-01
+ node= 254, thickness= 2.000000e-01
+ node= 256, thickness= 2.000000e-01
+ node= 261, thickness= 2.000000e-01
+elem= 63
+ node= 214, thickness= 2.000000e-01
+ node= 212, thickness= 2.000000e-01
+ node= 251, thickness= 2.000000e-01
+ node= 260, thickness= 2.000000e-01
+ node= 213, thickness= 2.000000e-01
+ node= 252, thickness= 2.000000e-01
+ node= 255, thickness= 2.000000e-01
+ node= 258, thickness= 2.000000e-01
+elem= 64
+ node= 217, thickness= 2.000000e-01
+ node= 198, thickness= 2.000000e-01
+ node= 200, thickness= 2.000000e-01
+ node= 257, thickness= 2.000000e-01
+ node= 216, thickness= 2.000000e-01
+ node= 199, thickness= 2.000000e-01
+ node= 263, thickness= 2.000000e-01
+ node= 259, thickness= 2.000000e-01
+elem= 65
+ node= 200, thickness= 2.000000e-01
+ node= 202, thickness= 2.000000e-01
+ node= 260, thickness= 2.000000e-01
+ node= 257, thickness= 2.000000e-01
+ node= 201, thickness= 2.000000e-01
+ node= 262, thickness= 2.000000e-01
+ node= 261, thickness= 2.000000e-01
+ node= 263, thickness= 2.000000e-01
+elem= 66
+ node= 202, thickness= 2.000000e-01
+ node= 204, thickness= 2.000000e-01
+ node= 214, thickness= 2.000000e-01
+ node= 260, thickness= 2.000000e-01
+ node= 203, thickness= 2.000000e-01
+ node= 215, thickness= 2.000000e-01
+ node= 258, thickness= 2.000000e-01
+ node= 262, thickness= 2.000000e-01
+
+Element Fiber Locations
+elem= 16
+ node= 97, fiber (top)= 1.000000e-01
+ node= 99, fiber (top)= 1.000000e-01
+ node= 110, fiber (top)= 1.000000e-01
+ node= 112, fiber (top)= 1.000000e-01
+ node= 98, fiber (top)= 1.000000e-01
+ node= 107, fiber (top)= 1.000000e-01
+ node= 108, fiber (top)= 1.000000e-01
+ node= 106, fiber (top)= 1.000000e-01
+elem= 17
+ node= 99, fiber (top)= 1.000000e-01
+ node= 95, fiber (top)= 1.000000e-01
+ node= 93, fiber (top)= 1.000000e-01
+ node= 110, fiber (top)= 1.000000e-01
+ node= 100, fiber (top)= 1.000000e-01
+ node= 94, fiber (top)= 1.000000e-01
+ node= 111, fiber (top)= 1.000000e-01
+ node= 107, fiber (top)= 1.000000e-01
+elem= 18
+ node= 72, fiber (top)= 1.000000e-01
+ node= 70, fiber (top)= 1.000000e-01
+ node= 97, fiber (top)= 1.000000e-01
+ node= 112, fiber (top)= 1.000000e-01
+ node= 71, fiber (top)= 1.000000e-01
+ node= 96, fiber (top)= 1.000000e-01
+ node= 106, fiber (top)= 1.000000e-01
+ node= 109, fiber (top)= 1.000000e-01
+elem= 19
+ node= 118, fiber (top)= 1.000000e-01
+ node= 112, fiber (top)= 1.000000e-01
+ node= 110, fiber (top)= 1.000000e-01
+ node= 119, fiber (top)= 1.000000e-01
+ node= 113, fiber (top)= 1.000000e-01
+ node= 108, fiber (top)= 1.000000e-01
+ node= 114, fiber (top)= 1.000000e-01
+ node= 115, fiber (top)= 1.000000e-01
+elem= 20
+ node= 93, fiber (top)= 1.000000e-01
+ node= 91, fiber (top)= 1.000000e-01
+ node= 119, fiber (top)= 1.000000e-01
+ node= 110, fiber (top)= 1.000000e-01
+ node= 92, fiber (top)= 1.000000e-01
+ node= 117, fiber (top)= 1.000000e-01
+ node= 114, fiber (top)= 1.000000e-01
+ node= 111, fiber (top)= 1.000000e-01
+elem= 21
+ node= 74, fiber (top)= 1.000000e-01
+ node= 72, fiber (top)= 1.000000e-01
+ node= 112, fiber (top)= 1.000000e-01
+ node= 118, fiber (top)= 1.000000e-01
+ node= 73, fiber (top)= 1.000000e-01
+ node= 109, fiber (top)= 1.000000e-01
+ node= 113, fiber (top)= 1.000000e-01
+ node= 116, fiber (top)= 1.000000e-01
+elem= 22
+ node= 76, fiber (top)= 1.000000e-01
+ node= 74, fiber (top)= 1.000000e-01
+ node= 118, fiber (top)= 1.000000e-01
+ node= 122, fiber (top)= 1.000000e-01
+ node= 75, fiber (top)= 1.000000e-01
+ node= 116, fiber (top)= 1.000000e-01
+ node= 120, fiber (top)= 1.000000e-01
+ node= 125, fiber (top)= 1.000000e-01
+elem= 23
+ node= 119, fiber (top)= 1.000000e-01
+ node= 123, fiber (top)= 1.000000e-01
+ node= 122, fiber (top)= 1.000000e-01
+ node= 118, fiber (top)= 1.000000e-01
+ node= 121, fiber (top)= 1.000000e-01
+ node= 126, fiber (top)= 1.000000e-01
+ node= 120, fiber (top)= 1.000000e-01
+ node= 115, fiber (top)= 1.000000e-01
+elem= 24
+ node= 91, fiber (top)= 1.000000e-01
+ node= 89, fiber (top)= 1.000000e-01
+ node= 123, fiber (top)= 1.000000e-01
+ node= 119, fiber (top)= 1.000000e-01
+ node= 90, fiber (top)= 1.000000e-01
+ node= 124, fiber (top)= 1.000000e-01
+ node= 121, fiber (top)= 1.000000e-01
+ node= 117, fiber (top)= 1.000000e-01
+elem= 25
+ node= 78, fiber (top)= 1.000000e-01
+ node= 76, fiber (top)= 1.000000e-01
+ node= 122, fiber (top)= 1.000000e-01
+ node= 129, fiber (top)= 1.000000e-01
+ node= 77, fiber (top)= 1.000000e-01
+ node= 125, fiber (top)= 1.000000e-01
+ node= 127, fiber (top)= 1.000000e-01
+ node= 131, fiber (top)= 1.000000e-01
+elem= 26
+ node= 129, fiber (top)= 1.000000e-01
+ node= 122, fiber (top)= 1.000000e-01
+ node= 123, fiber (top)= 1.000000e-01
+ node= 130, fiber (top)= 1.000000e-01
+ node= 127, fiber (top)= 1.000000e-01
+ node= 126, fiber (top)= 1.000000e-01
+ node= 128, fiber (top)= 1.000000e-01
+ node= 133, fiber (top)= 1.000000e-01
+elem= 27
+ node= 89, fiber (top)= 1.000000e-01
+ node= 87, fiber (top)= 1.000000e-01
+ node= 130, fiber (top)= 1.000000e-01
+ node= 123, fiber (top)= 1.000000e-01
+ node= 88, fiber (top)= 1.000000e-01
+ node= 132, fiber (top)= 1.000000e-01
+ node= 128, fiber (top)= 1.000000e-01
+ node= 124, fiber (top)= 1.000000e-01
+elem= 28
+ node= 87, fiber (top)= 1.000000e-01
+ node= 85, fiber (top)= 1.000000e-01
+ node= 136, fiber (top)= 1.000000e-01
+ node= 130, fiber (top)= 1.000000e-01
+ node= 86, fiber (top)= 1.000000e-01
+ node= 138, fiber (top)= 1.000000e-01
+ node= 135, fiber (top)= 1.000000e-01
+ node= 132, fiber (top)= 1.000000e-01
+elem= 29
+ node= 80, fiber (top)= 1.000000e-01
+ node= 78, fiber (top)= 1.000000e-01
+ node= 129, fiber (top)= 1.000000e-01
+ node= 139, fiber (top)= 1.000000e-01
+ node= 79, fiber (top)= 1.000000e-01
+ node= 131, fiber (top)= 1.000000e-01
+ node= 134, fiber (top)= 1.000000e-01
+ node= 137, fiber (top)= 1.000000e-01
+elem= 30
+ node= 139, fiber (top)= 1.000000e-01
+ node= 129, fiber (top)= 1.000000e-01
+ node= 130, fiber (top)= 1.000000e-01
+ node= 136, fiber (top)= 1.000000e-01
+ node= 134, fiber (top)= 1.000000e-01
+ node= 133, fiber (top)= 1.000000e-01
+ node= 135, fiber (top)= 1.000000e-01
+ node= 140, fiber (top)= 1.000000e-01
+elem= 31
+ node= 85, fiber (top)= 1.000000e-01
+ node= 83, fiber (top)= 1.000000e-01
+ node= 104, fiber (top)= 1.000000e-01
+ node= 136, fiber (top)= 1.000000e-01
+ node= 84, fiber (top)= 1.000000e-01
+ node= 105, fiber (top)= 1.000000e-01
+ node= 142, fiber (top)= 1.000000e-01
+ node= 138, fiber (top)= 1.000000e-01
+elem= 32
+ node= 102, fiber (top)= 1.000000e-01
+ node= 82, fiber (top)= 1.000000e-01
+ node= 80, fiber (top)= 1.000000e-01
+ node= 139, fiber (top)= 1.000000e-01
+ node= 101, fiber (top)= 1.000000e-01
+ node= 81, fiber (top)= 1.000000e-01
+ node= 137, fiber (top)= 1.000000e-01
+ node= 141, fiber (top)= 1.000000e-01
+elem= 33
+ node= 104, fiber (top)= 1.000000e-01
+ node= 102, fiber (top)= 1.000000e-01
+ node= 139, fiber (top)= 1.000000e-01
+ node= 136, fiber (top)= 1.000000e-01
+ node= 103, fiber (top)= 1.000000e-01
+ node= 141, fiber (top)= 1.000000e-01
+ node= 140, fiber (top)= 1.000000e-01
+ node= 142, fiber (top)= 1.000000e-01
+elem= 34
+ node= 166, fiber (top)= 1.000000e-01
+ node= 164, fiber (top)= 1.000000e-01
+ node= 172, fiber (top)= 1.000000e-01
+ node= 174, fiber (top)= 1.000000e-01
+ node= 165, fiber (top)= 1.000000e-01
+ node= 169, fiber (top)= 1.000000e-01
+ node= 170, fiber (top)= 1.000000e-01
+ node= 168, fiber (top)= 1.000000e-01
+elem= 35
+ node= 164, fiber (top)= 1.000000e-01
+ node= 162, fiber (top)= 1.000000e-01
+ node= 160, fiber (top)= 1.000000e-01
+ node= 172, fiber (top)= 1.000000e-01
+ node= 163, fiber (top)= 1.000000e-01
+ node= 161, fiber (top)= 1.000000e-01
+ node= 173, fiber (top)= 1.000000e-01
+ node= 169, fiber (top)= 1.000000e-01
+elem= 36
+ node= 145, fiber (top)= 1.000000e-01
+ node= 143, fiber (top)= 1.000000e-01
+ node= 166, fiber (top)= 1.000000e-01
+ node= 174, fiber (top)= 1.000000e-01
+ node= 144, fiber (top)= 1.000000e-01
+ node= 167, fiber (top)= 1.000000e-01
+ node= 168, fiber (top)= 1.000000e-01
+ node= 171, fiber (top)= 1.000000e-01
+elem= 37
+ node= 180, fiber (top)= 1.000000e-01
+ node= 174, fiber (top)= 1.000000e-01
+ node= 172, fiber (top)= 1.000000e-01
+ node= 181, fiber (top)= 1.000000e-01
+ node= 175, fiber (top)= 1.000000e-01
+ node= 170, fiber (top)= 1.000000e-01
+ node= 176, fiber (top)= 1.000000e-01
+ node= 177, fiber (top)= 1.000000e-01
+elem= 38
+ node= 160, fiber (top)= 1.000000e-01
+ node= 158, fiber (top)= 1.000000e-01
+ node= 181, fiber (top)= 1.000000e-01
+ node= 172, fiber (top)= 1.000000e-01
+ node= 159, fiber (top)= 1.000000e-01
+ node= 179, fiber (top)= 1.000000e-01
+ node= 176, fiber (top)= 1.000000e-01
+ node= 173, fiber (top)= 1.000000e-01
+elem= 39
+ node= 147, fiber (top)= 1.000000e-01
+ node= 145, fiber (top)= 1.000000e-01
+ node= 174, fiber (top)= 1.000000e-01
+ node= 180, fiber (top)= 1.000000e-01
+ node= 146, fiber (top)= 1.000000e-01
+ node= 171, fiber (top)= 1.000000e-01
+ node= 175, fiber (top)= 1.000000e-01
+ node= 178, fiber (top)= 1.000000e-01
+elem= 40
+ node= 149, fiber (top)= 1.000000e-01
+ node= 147, fiber (top)= 1.000000e-01
+ node= 180, fiber (top)= 1.000000e-01
+ node= 184, fiber (top)= 1.000000e-01
+ node= 148, fiber (top)= 1.000000e-01
+ node= 178, fiber (top)= 1.000000e-01
+ node= 182, fiber (top)= 1.000000e-01
+ node= 186, fiber (top)= 1.000000e-01
+elem= 41
+ node= 184, fiber (top)= 1.000000e-01
+ node= 180, fiber (top)= 1.000000e-01
+ node= 181, fiber (top)= 1.000000e-01
+ node= 185, fiber (top)= 1.000000e-01
+ node= 182, fiber (top)= 1.000000e-01
+ node= 177, fiber (top)= 1.000000e-01
+ node= 183, fiber (top)= 1.000000e-01
+ node= 188, fiber (top)= 1.000000e-01
+elem= 42
+ node= 158, fiber (top)= 1.000000e-01
+ node= 156, fiber (top)= 1.000000e-01
+ node= 185, fiber (top)= 1.000000e-01
+ node= 181, fiber (top)= 1.000000e-01
+ node= 157, fiber (top)= 1.000000e-01
+ node= 187, fiber (top)= 1.000000e-01
+ node= 183, fiber (top)= 1.000000e-01
+ node= 179, fiber (top)= 1.000000e-01
+elem= 43
+ node= 156, fiber (top)= 1.000000e-01
+ node= 154, fiber (top)= 1.000000e-01
+ node= 191, fiber (top)= 1.000000e-01
+ node= 185, fiber (top)= 1.000000e-01
+ node= 155, fiber (top)= 1.000000e-01
+ node= 193, fiber (top)= 1.000000e-01
+ node= 190, fiber (top)= 1.000000e-01
+ node= 187, fiber (top)= 1.000000e-01
+elem= 44
+ node= 151, fiber (top)= 1.000000e-01
+ node= 149, fiber (top)= 1.000000e-01
+ node= 184, fiber (top)= 1.000000e-01
+ node= 194, fiber (top)= 1.000000e-01
+ node= 150, fiber (top)= 1.000000e-01
+ node= 186, fiber (top)= 1.000000e-01
+ node= 189, fiber (top)= 1.000000e-01
+ node= 192, fiber (top)= 1.000000e-01
+elem= 45
+ node= 194, fiber (top)= 1.000000e-01
+ node= 184, fiber (top)= 1.000000e-01
+ node= 185, fiber (top)= 1.000000e-01
+ node= 191, fiber (top)= 1.000000e-01
+ node= 189, fiber (top)= 1.000000e-01
+ node= 188, fiber (top)= 1.000000e-01
+ node= 190, fiber (top)= 1.000000e-01
+ node= 195, fiber (top)= 1.000000e-01
+elem= 46
+ node= 154, fiber (top)= 1.000000e-01
+ node= 95, fiber (top)= 1.000000e-01
+ node= 99, fiber (top)= 1.000000e-01
+ node= 191, fiber (top)= 1.000000e-01
+ node= 153, fiber (top)= 1.000000e-01
+ node= 100, fiber (top)= 1.000000e-01
+ node= 197, fiber (top)= 1.000000e-01
+ node= 193, fiber (top)= 1.000000e-01
+elem= 47
+ node= 97, fiber (top)= 1.000000e-01
+ node= 70, fiber (top)= 1.000000e-01
+ node= 151, fiber (top)= 1.000000e-01
+ node= 194, fiber (top)= 1.000000e-01
+ node= 96, fiber (top)= 1.000000e-01
+ node= 152, fiber (top)= 1.000000e-01
+ node= 192, fiber (top)= 1.000000e-01
+ node= 196, fiber (top)= 1.000000e-01
+elem= 48
+ node= 99, fiber (top)= 1.000000e-01
+ node= 97, fiber (top)= 1.000000e-01
+ node= 194, fiber (top)= 1.000000e-01
+ node= 191, fiber (top)= 1.000000e-01
+ node= 98, fiber (top)= 1.000000e-01
+ node= 196, fiber (top)= 1.000000e-01
+ node= 195, fiber (top)= 1.000000e-01
+ node= 197, fiber (top)= 1.000000e-01
+elem= 49
+ node= 166, fiber (top)= 1.000000e-01
+ node= 143, fiber (top)= 1.000000e-01
+ node= 225, fiber (top)= 1.000000e-01
+ node= 231, fiber (top)= 1.000000e-01
+ node= 167, fiber (top)= 1.000000e-01
+ node= 226, fiber (top)= 1.000000e-01
+ node= 232, fiber (top)= 1.000000e-01
+ node= 228, fiber (top)= 1.000000e-01
+elem= 50
+ node= 164, fiber (top)= 1.000000e-01
+ node= 166, fiber (top)= 1.000000e-01
+ node= 231, fiber (top)= 1.000000e-01
+ node= 233, fiber (top)= 1.000000e-01
+ node= 165, fiber (top)= 1.000000e-01
+ node= 228, fiber (top)= 1.000000e-01
+ node= 229, fiber (top)= 1.000000e-01
+ node= 227, fiber (top)= 1.000000e-01
+elem= 51
+ node= 206, fiber (top)= 1.000000e-01
+ node= 162, fiber (top)= 1.000000e-01
+ node= 164, fiber (top)= 1.000000e-01
+ node= 233, fiber (top)= 1.000000e-01
+ node= 205, fiber (top)= 1.000000e-01
+ node= 163, fiber (top)= 1.000000e-01
+ node= 227, fiber (top)= 1.000000e-01
+ node= 230, fiber (top)= 1.000000e-01
+elem= 52
+ node= 225, fiber (top)= 1.000000e-01
+ node= 223, fiber (top)= 1.000000e-01
+ node= 239, fiber (top)= 1.000000e-01
+ node= 231, fiber (top)= 1.000000e-01
+ node= 224, fiber (top)= 1.000000e-01
+ node= 238, fiber (top)= 1.000000e-01
+ node= 235, fiber (top)= 1.000000e-01
+ node= 232, fiber (top)= 1.000000e-01
+elem= 53
+ node= 240, fiber (top)= 1.000000e-01
+ node= 233, fiber (top)= 1.000000e-01
+ node= 231, fiber (top)= 1.000000e-01
+ node= 239, fiber (top)= 1.000000e-01
+ node= 234, fiber (top)= 1.000000e-01
+ node= 229, fiber (top)= 1.000000e-01
+ node= 235, fiber (top)= 1.000000e-01
+ node= 236, fiber (top)= 1.000000e-01
+elem= 54
+ node= 208, fiber (top)= 1.000000e-01
+ node= 206, fiber (top)= 1.000000e-01
+ node= 233, fiber (top)= 1.000000e-01
+ node= 240, fiber (top)= 1.000000e-01
+ node= 207, fiber (top)= 1.000000e-01
+ node= 230, fiber (top)= 1.000000e-01
+ node= 234, fiber (top)= 1.000000e-01
+ node= 237, fiber (top)= 1.000000e-01
+elem= 55
+ node= 223, fiber (top)= 1.000000e-01
+ node= 221, fiber (top)= 1.000000e-01
+ node= 243, fiber (top)= 1.000000e-01
+ node= 239, fiber (top)= 1.000000e-01
+ node= 222, fiber (top)= 1.000000e-01
+ node= 245, fiber (top)= 1.000000e-01
+ node= 242, fiber (top)= 1.000000e-01
+ node= 238, fiber (top)= 1.000000e-01
+elem= 56
+ node= 239, fiber (top)= 1.000000e-01
+ node= 243, fiber (top)= 1.000000e-01
+ node= 244, fiber (top)= 1.000000e-01
+ node= 240, fiber (top)= 1.000000e-01
+ node= 242, fiber (top)= 1.000000e-01
+ node= 247, fiber (top)= 1.000000e-01
+ node= 241, fiber (top)= 1.000000e-01
+ node= 236, fiber (top)= 1.000000e-01
+elem= 57
+ node= 210, fiber (top)= 1.000000e-01
+ node= 208, fiber (top)= 1.000000e-01
+ node= 240, fiber (top)= 1.000000e-01
+ node= 244, fiber (top)= 1.000000e-01
+ node= 209, fiber (top)= 1.000000e-01
+ node= 237, fiber (top)= 1.000000e-01
+ node= 241, fiber (top)= 1.000000e-01
+ node= 246, fiber (top)= 1.000000e-01
+elem= 58
+ node= 221, fiber (top)= 1.000000e-01
+ node= 219, fiber (top)= 1.000000e-01
+ node= 250, fiber (top)= 1.000000e-01
+ node= 243, fiber (top)= 1.000000e-01
+ node= 220, fiber (top)= 1.000000e-01
+ node= 253, fiber (top)= 1.000000e-01
+ node= 249, fiber (top)= 1.000000e-01
+ node= 245, fiber (top)= 1.000000e-01
+elem= 59
+ node= 251, fiber (top)= 1.000000e-01
+ node= 244, fiber (top)= 1.000000e-01
+ node= 243, fiber (top)= 1.000000e-01
+ node= 250, fiber (top)= 1.000000e-01
+ node= 248, fiber (top)= 1.000000e-01
+ node= 247, fiber (top)= 1.000000e-01
+ node= 249, fiber (top)= 1.000000e-01
+ node= 254, fiber (top)= 1.000000e-01
+elem= 60
+ node= 212, fiber (top)= 1.000000e-01
+ node= 210, fiber (top)= 1.000000e-01
+ node= 244, fiber (top)= 1.000000e-01
+ node= 251, fiber (top)= 1.000000e-01
+ node= 211, fiber (top)= 1.000000e-01
+ node= 246, fiber (top)= 1.000000e-01
+ node= 248, fiber (top)= 1.000000e-01
+ node= 252, fiber (top)= 1.000000e-01
+elem= 61
+ node= 219, fiber (top)= 1.000000e-01
+ node= 217, fiber (top)= 1.000000e-01
+ node= 257, fiber (top)= 1.000000e-01
+ node= 250, fiber (top)= 1.000000e-01
+ node= 218, fiber (top)= 1.000000e-01
+ node= 259, fiber (top)= 1.000000e-01
+ node= 256, fiber (top)= 1.000000e-01
+ node= 253, fiber (top)= 1.000000e-01
+elem= 62
+ node= 260, fiber (top)= 1.000000e-01
+ node= 251, fiber (top)= 1.000000e-01
+ node= 250, fiber (top)= 1.000000e-01
+ node= 257, fiber (top)= 1.000000e-01
+ node= 255, fiber (top)= 1.000000e-01
+ node= 254, fiber (top)= 1.000000e-01
+ node= 256, fiber (top)= 1.000000e-01
+ node= 261, fiber (top)= 1.000000e-01
+elem= 63
+ node= 214, fiber (top)= 1.000000e-01
+ node= 212, fiber (top)= 1.000000e-01
+ node= 251, fiber (top)= 1.000000e-01
+ node= 260, fiber (top)= 1.000000e-01
+ node= 213, fiber (top)= 1.000000e-01
+ node= 252, fiber (top)= 1.000000e-01
+ node= 255, fiber (top)= 1.000000e-01
+ node= 258, fiber (top)= 1.000000e-01
+elem= 64
+ node= 217, fiber (top)= 1.000000e-01
+ node= 198, fiber (top)= 1.000000e-01
+ node= 200, fiber (top)= 1.000000e-01
+ node= 257, fiber (top)= 1.000000e-01
+ node= 216, fiber (top)= 1.000000e-01
+ node= 199, fiber (top)= 1.000000e-01
+ node= 263, fiber (top)= 1.000000e-01
+ node= 259, fiber (top)= 1.000000e-01
+elem= 65
+ node= 200, fiber (top)= 1.000000e-01
+ node= 202, fiber (top)= 1.000000e-01
+ node= 260, fiber (top)= 1.000000e-01
+ node= 257, fiber (top)= 1.000000e-01
+ node= 201, fiber (top)= 1.000000e-01
+ node= 262, fiber (top)= 1.000000e-01
+ node= 261, fiber (top)= 1.000000e-01
+ node= 263, fiber (top)= 1.000000e-01
+elem= 66
+ node= 202, fiber (top)= 1.000000e-01
+ node= 204, fiber (top)= 1.000000e-01
+ node= 214, fiber (top)= 1.000000e-01
+ node= 260, fiber (top)= 1.000000e-01
+ node= 203, fiber (top)= 1.000000e-01
+ node= 215, fiber (top)= 1.000000e-01
+ node= 258, fiber (top)= 1.000000e-01
+ node= 262, fiber (top)= 1.000000e-01
+
+Load Cases
+id= 1
+elem= 16, face= 1
+ node= 97, pressure= 1.000000e+04
+ node= 99, pressure= 1.000000e+04
+ node= 110, pressure= 1.000000e+04
+ node= 112, pressure= 1.000000e+04
+ node= 98, pressure= 1.000000e+04
+ node= 107, pressure= 1.000000e+04
+ node= 108, pressure= 1.000000e+04
+ node= 106, pressure= 1.000000e+04
+elem= 17, face= 1
+ node= 99, pressure= 1.000000e+04
+ node= 95, pressure= 1.000000e+04
+ node= 93, pressure= 1.000000e+04
+ node= 110, pressure= 1.000000e+04
+ node= 100, pressure= 1.000000e+04
+ node= 94, pressure= 1.000000e+04
+ node= 111, pressure= 1.000000e+04
+ node= 107, pressure= 1.000000e+04
+elem= 18, face= 1
+ node= 72, pressure= 1.000000e+04
+ node= 70, pressure= 1.000000e+04
+ node= 97, pressure= 1.000000e+04
+ node= 112, pressure= 1.000000e+04
+ node= 71, pressure= 1.000000e+04
+ node= 96, pressure= 1.000000e+04
+ node= 106, pressure= 1.000000e+04
+ node= 109, pressure= 1.000000e+04
+elem= 19, face= 1
+ node= 118, pressure= 1.000000e+04
+ node= 112, pressure= 1.000000e+04
+ node= 110, pressure= 1.000000e+04
+ node= 119, pressure= 1.000000e+04
+ node= 113, pressure= 1.000000e+04
+ node= 108, pressure= 1.000000e+04
+ node= 114, pressure= 1.000000e+04
+ node= 115, pressure= 1.000000e+04
+elem= 20, face= 1
+ node= 93, pressure= 1.000000e+04
+ node= 91, pressure= 1.000000e+04
+ node= 119, pressure= 1.000000e+04
+ node= 110, pressure= 1.000000e+04
+ node= 92, pressure= 1.000000e+04
+ node= 117, pressure= 1.000000e+04
+ node= 114, pressure= 1.000000e+04
+ node= 111, pressure= 1.000000e+04
+elem= 21, face= 1
+ node= 74, pressure= 1.000000e+04
+ node= 72, pressure= 1.000000e+04
+ node= 112, pressure= 1.000000e+04
+ node= 118, pressure= 1.000000e+04
+ node= 73, pressure= 1.000000e+04
+ node= 109, pressure= 1.000000e+04
+ node= 113, pressure= 1.000000e+04
+ node= 116, pressure= 1.000000e+04
+elem= 22, face= 1
+ node= 76, pressure= 1.000000e+04
+ node= 74, pressure= 1.000000e+04
+ node= 118, pressure= 1.000000e+04
+ node= 122, pressure= 1.000000e+04
+ node= 75, pressure= 1.000000e+04
+ node= 116, pressure= 1.000000e+04
+ node= 120, pressure= 1.000000e+04
+ node= 125, pressure= 1.000000e+04
+elem= 23, face= 1
+ node= 119, pressure= 1.000000e+04
+ node= 123, pressure= 1.000000e+04
+ node= 122, pressure= 1.000000e+04
+ node= 118, pressure= 1.000000e+04
+ node= 121, pressure= 1.000000e+04
+ node= 126, pressure= 1.000000e+04
+ node= 120, pressure= 1.000000e+04
+ node= 115, pressure= 1.000000e+04
+elem= 24, face= 1
+ node= 91, pressure= 1.000000e+04
+ node= 89, pressure= 1.000000e+04
+ node= 123, pressure= 1.000000e+04
+ node= 119, pressure= 1.000000e+04
+ node= 90, pressure= 1.000000e+04
+ node= 124, pressure= 1.000000e+04
+ node= 121, pressure= 1.000000e+04
+ node= 117, pressure= 1.000000e+04
+elem= 25, face= 1
+ node= 78, pressure= 1.000000e+04
+ node= 76, pressure= 1.000000e+04
+ node= 122, pressure= 1.000000e+04
+ node= 129, pressure= 1.000000e+04
+ node= 77, pressure= 1.000000e+04
+ node= 125, pressure= 1.000000e+04
+ node= 127, pressure= 1.000000e+04
+ node= 131, pressure= 1.000000e+04
+elem= 26, face= 1
+ node= 129, pressure= 1.000000e+04
+ node= 122, pressure= 1.000000e+04
+ node= 123, pressure= 1.000000e+04
+ node= 130, pressure= 1.000000e+04
+ node= 127, pressure= 1.000000e+04
+ node= 126, pressure= 1.000000e+04
+ node= 128, pressure= 1.000000e+04
+ node= 133, pressure= 1.000000e+04
+elem= 27, face= 1
+ node= 89, pressure= 1.000000e+04
+ node= 87, pressure= 1.000000e+04
+ node= 130, pressure= 1.000000e+04
+ node= 123, pressure= 1.000000e+04
+ node= 88, pressure= 1.000000e+04
+ node= 132, pressure= 1.000000e+04
+ node= 128, pressure= 1.000000e+04
+ node= 124, pressure= 1.000000e+04
+elem= 28, face= 1
+ node= 87, pressure= 1.000000e+04
+ node= 85, pressure= 1.000000e+04
+ node= 136, pressure= 1.000000e+04
+ node= 130, pressure= 1.000000e+04
+ node= 86, pressure= 1.000000e+04
+ node= 138, pressure= 1.000000e+04
+ node= 135, pressure= 1.000000e+04
+ node= 132, pressure= 1.000000e+04
+elem= 29, face= 1
+ node= 80, pressure= 1.000000e+04
+ node= 78, pressure= 1.000000e+04
+ node= 129, pressure= 1.000000e+04
+ node= 139, pressure= 1.000000e+04
+ node= 79, pressure= 1.000000e+04
+ node= 131, pressure= 1.000000e+04
+ node= 134, pressure= 1.000000e+04
+ node= 137, pressure= 1.000000e+04
+elem= 30, face= 1
+ node= 139, pressure= 1.000000e+04
+ node= 129, pressure= 1.000000e+04
+ node= 130, pressure= 1.000000e+04
+ node= 136, pressure= 1.000000e+04
+ node= 134, pressure= 1.000000e+04
+ node= 133, pressure= 1.000000e+04
+ node= 135, pressure= 1.000000e+04
+ node= 140, pressure= 1.000000e+04
+elem= 31, face= 1
+ node= 85, pressure= 1.000000e+04
+ node= 83, pressure= 1.000000e+04
+ node= 104, pressure= 1.000000e+04
+ node= 136, pressure= 1.000000e+04
+ node= 84, pressure= 1.000000e+04
+ node= 105, pressure= 1.000000e+04
+ node= 142, pressure= 1.000000e+04
+ node= 138, pressure= 1.000000e+04
+elem= 32, face= 1
+ node= 102, pressure= 1.000000e+04
+ node= 82, pressure= 1.000000e+04
+ node= 80, pressure= 1.000000e+04
+ node= 139, pressure= 1.000000e+04
+ node= 101, pressure= 1.000000e+04
+ node= 81, pressure= 1.000000e+04
+ node= 137, pressure= 1.000000e+04
+ node= 141, pressure= 1.000000e+04
+elem= 33, face= 1
+ node= 104, pressure= 1.000000e+04
+ node= 102, pressure= 1.000000e+04
+ node= 139, pressure= 1.000000e+04
+ node= 136, pressure= 1.000000e+04
+ node= 103, pressure= 1.000000e+04
+ node= 141, pressure= 1.000000e+04
+ node= 140, pressure= 1.000000e+04
+ node= 142, pressure= 1.000000e+04
+
+Restraint Cases
+id= 1
+ node= 166, applied dof tag= 1, value= 0.000000e+00
+ node= 166, applied dof tag= 2, value= 0.000000e+00
+ node= 166, applied dof tag= 3, value= 0.000000e+00
+ node= 166, applied dof tag= 4, value= 0.000000e+00
+ node= 166, applied dof tag= 5, value= 0.000000e+00
+ node= 166, applied dof tag= 6, value= 0.000000e+00
+ node= 164, applied dof tag= 1, value= 0.000000e+00
+ node= 164, applied dof tag= 2, value= 0.000000e+00
+ node= 164, applied dof tag= 3, value= 0.000000e+00
+ node= 164, applied dof tag= 4, value= 0.000000e+00
+ node= 164, applied dof tag= 5, value= 0.000000e+00
+ node= 164, applied dof tag= 6, value= 0.000000e+00
+ node= 165, applied dof tag= 1, value= 0.000000e+00
+ node= 165, applied dof tag= 2, value= 0.000000e+00
+ node= 165, applied dof tag= 3, value= 0.000000e+00
+ node= 165, applied dof tag= 4, value= 0.000000e+00
+ node= 165, applied dof tag= 5, value= 0.000000e+00
+ node= 165, applied dof tag= 6, value= 0.000000e+00
+ node= 162, applied dof tag= 1, value= 0.000000e+00
+ node= 162, applied dof tag= 2, value= 0.000000e+00
+ node= 162, applied dof tag= 3, value= 0.000000e+00
+ node= 162, applied dof tag= 4, value= 0.000000e+00
+ node= 162, applied dof tag= 5, value= 0.000000e+00
+ node= 162, applied dof tag= 6, value= 0.000000e+00
+ node= 163, applied dof tag= 1, value= 0.000000e+00
+ node= 163, applied dof tag= 2, value= 0.000000e+00
+ node= 163, applied dof tag= 3, value= 0.000000e+00
+ node= 163, applied dof tag= 4, value= 0.000000e+00
+ node= 163, applied dof tag= 5, value= 0.000000e+00
+ node= 163, applied dof tag= 6, value= 0.000000e+00
+ node= 143, applied dof tag= 1, value= 0.000000e+00
+ node= 143, applied dof tag= 2, value= 0.000000e+00
+ node= 143, applied dof tag= 3, value= 0.000000e+00
+ node= 143, applied dof tag= 4, value= 0.000000e+00
+ node= 143, applied dof tag= 5, value= 0.000000e+00
+ node= 143, applied dof tag= 6, value= 0.000000e+00
+ node= 167, applied dof tag= 1, value= 0.000000e+00
+ node= 167, applied dof tag= 2, value= 0.000000e+00
+ node= 167, applied dof tag= 3, value= 0.000000e+00
+ node= 167, applied dof tag= 4, value= 0.000000e+00
+ node= 167, applied dof tag= 5, value= 0.000000e+00
+ node= 167, applied dof tag= 6, value= 0.000000e+00
+ node= 225, applied dof tag= 1, value= 0.000000e+00
+ node= 225, applied dof tag= 2, value= 0.000000e+00
+ node= 225, applied dof tag= 3, value= 0.000000e+00
+ node= 225, applied dof tag= 4, value= 0.000000e+00
+ node= 225, applied dof tag= 5, value= 0.000000e+00
+ node= 225, applied dof tag= 6, value= 0.000000e+00
+ node= 231, applied dof tag= 1, value= 0.000000e+00
+ node= 231, applied dof tag= 2, value= 0.000000e+00
+ node= 231, applied dof tag= 3, value= 0.000000e+00
+ node= 231, applied dof tag= 4, value= 0.000000e+00
+ node= 231, applied dof tag= 5, value= 0.000000e+00
+ node= 231, applied dof tag= 6, value= 0.000000e+00
+ node= 226, applied dof tag= 1, value= 0.000000e+00
+ node= 226, applied dof tag= 2, value= 0.000000e+00
+ node= 226, applied dof tag= 3, value= 0.000000e+00
+ node= 226, applied dof tag= 4, value= 0.000000e+00
+ node= 226, applied dof tag= 5, value= 0.000000e+00
+ node= 226, applied dof tag= 6, value= 0.000000e+00
+ node= 232, applied dof tag= 1, value= 0.000000e+00
+ node= 232, applied dof tag= 2, value= 0.000000e+00
+ node= 232, applied dof tag= 3, value= 0.000000e+00
+ node= 232, applied dof tag= 4, value= 0.000000e+00
+ node= 232, applied dof tag= 5, value= 0.000000e+00
+ node= 232, applied dof tag= 6, value= 0.000000e+00
+ node= 228, applied dof tag= 1, value= 0.000000e+00
+ node= 228, applied dof tag= 2, value= 0.000000e+00
+ node= 228, applied dof tag= 3, value= 0.000000e+00
+ node= 228, applied dof tag= 4, value= 0.000000e+00
+ node= 228, applied dof tag= 5, value= 0.000000e+00
+ node= 228, applied dof tag= 6, value= 0.000000e+00
+ node= 233, applied dof tag= 1, value= 0.000000e+00
+ node= 233, applied dof tag= 2, value= 0.000000e+00
+ node= 233, applied dof tag= 3, value= 0.000000e+00
+ node= 233, applied dof tag= 4, value= 0.000000e+00
+ node= 233, applied dof tag= 5, value= 0.000000e+00
+ node= 233, applied dof tag= 6, value= 0.000000e+00
+ node= 229, applied dof tag= 1, value= 0.000000e+00
+ node= 229, applied dof tag= 2, value= 0.000000e+00
+ node= 229, applied dof tag= 3, value= 0.000000e+00
+ node= 229, applied dof tag= 4, value= 0.000000e+00
+ node= 229, applied dof tag= 5, value= 0.000000e+00
+ node= 229, applied dof tag= 6, value= 0.000000e+00
+ node= 227, applied dof tag= 1, value= 0.000000e+00
+ node= 227, applied dof tag= 2, value= 0.000000e+00
+ node= 227, applied dof tag= 3, value= 0.000000e+00
+ node= 227, applied dof tag= 4, value= 0.000000e+00
+ node= 227, applied dof tag= 5, value= 0.000000e+00
+ node= 227, applied dof tag= 6, value= 0.000000e+00
+ node= 206, applied dof tag= 1, value= 0.000000e+00
+ node= 206, applied dof tag= 2, value= 0.000000e+00
+ node= 206, applied dof tag= 3, value= 0.000000e+00
+ node= 206, applied dof tag= 4, value= 0.000000e+00
+ node= 206, applied dof tag= 5, value= 0.000000e+00
+ node= 206, applied dof tag= 6, value= 0.000000e+00
+ node= 205, applied dof tag= 1, value= 0.000000e+00
+ node= 205, applied dof tag= 2, value= 0.000000e+00
+ node= 205, applied dof tag= 3, value= 0.000000e+00
+ node= 205, applied dof tag= 4, value= 0.000000e+00
+ node= 205, applied dof tag= 5, value= 0.000000e+00
+ node= 205, applied dof tag= 6, value= 0.000000e+00
+ node= 230, applied dof tag= 1, value= 0.000000e+00
+ node= 230, applied dof tag= 2, value= 0.000000e+00
+ node= 230, applied dof tag= 3, value= 0.000000e+00
+ node= 230, applied dof tag= 4, value= 0.000000e+00
+ node= 230, applied dof tag= 5, value= 0.000000e+00
+ node= 230, applied dof tag= 6, value= 0.000000e+00
+ node= 223, applied dof tag= 1, value= 0.000000e+00
+ node= 223, applied dof tag= 2, value= 0.000000e+00
+ node= 223, applied dof tag= 3, value= 0.000000e+00
+ node= 223, applied dof tag= 4, value= 0.000000e+00
+ node= 223, applied dof tag= 5, value= 0.000000e+00
+ node= 223, applied dof tag= 6, value= 0.000000e+00
+ node= 239, applied dof tag= 1, value= 0.000000e+00
+ node= 239, applied dof tag= 2, value= 0.000000e+00
+ node= 239, applied dof tag= 3, value= 0.000000e+00
+ node= 239, applied dof tag= 4, value= 0.000000e+00
+ node= 239, applied dof tag= 5, value= 0.000000e+00
+ node= 239, applied dof tag= 6, value= 0.000000e+00
+ node= 224, applied dof tag= 1, value= 0.000000e+00
+ node= 224, applied dof tag= 2, value= 0.000000e+00
+ node= 224, applied dof tag= 3, value= 0.000000e+00
+ node= 224, applied dof tag= 4, value= 0.000000e+00
+ node= 224, applied dof tag= 5, value= 0.000000e+00
+ node= 224, applied dof tag= 6, value= 0.000000e+00
+ node= 238, applied dof tag= 1, value= 0.000000e+00
+ node= 238, applied dof tag= 2, value= 0.000000e+00
+ node= 238, applied dof tag= 3, value= 0.000000e+00
+ node= 238, applied dof tag= 4, value= 0.000000e+00
+ node= 238, applied dof tag= 5, value= 0.000000e+00
+ node= 238, applied dof tag= 6, value= 0.000000e+00
+ node= 235, applied dof tag= 1, value= 0.000000e+00
+ node= 235, applied dof tag= 2, value= 0.000000e+00
+ node= 235, applied dof tag= 3, value= 0.000000e+00
+ node= 235, applied dof tag= 4, value= 0.000000e+00
+ node= 235, applied dof tag= 5, value= 0.000000e+00
+ node= 235, applied dof tag= 6, value= 0.000000e+00
+ node= 240, applied dof tag= 1, value= 0.000000e+00
+ node= 240, applied dof tag= 2, value= 0.000000e+00
+ node= 240, applied dof tag= 3, value= 0.000000e+00
+ node= 240, applied dof tag= 4, value= 0.000000e+00
+ node= 240, applied dof tag= 5, value= 0.000000e+00
+ node= 240, applied dof tag= 6, value= 0.000000e+00
+ node= 234, applied dof tag= 1, value= 0.000000e+00
+ node= 234, applied dof tag= 2, value= 0.000000e+00
+ node= 234, applied dof tag= 3, value= 0.000000e+00
+ node= 234, applied dof tag= 4, value= 0.000000e+00
+ node= 234, applied dof tag= 5, value= 0.000000e+00
+ node= 234, applied dof tag= 6, value= 0.000000e+00
+ node= 236, applied dof tag= 1, value= 0.000000e+00
+ node= 236, applied dof tag= 2, value= 0.000000e+00
+ node= 236, applied dof tag= 3, value= 0.000000e+00
+ node= 236, applied dof tag= 4, value= 0.000000e+00
+ node= 236, applied dof tag= 5, value= 0.000000e+00
+ node= 236, applied dof tag= 6, value= 0.000000e+00
+ node= 208, applied dof tag= 1, value= 0.000000e+00
+ node= 208, applied dof tag= 2, value= 0.000000e+00
+ node= 208, applied dof tag= 3, value= 0.000000e+00
+ node= 208, applied dof tag= 4, value= 0.000000e+00
+ node= 208, applied dof tag= 5, value= 0.000000e+00
+ node= 208, applied dof tag= 6, value= 0.000000e+00
+ node= 207, applied dof tag= 1, value= 0.000000e+00
+ node= 207, applied dof tag= 2, value= 0.000000e+00
+ node= 207, applied dof tag= 3, value= 0.000000e+00
+ node= 207, applied dof tag= 4, value= 0.000000e+00
+ node= 207, applied dof tag= 5, value= 0.000000e+00
+ node= 207, applied dof tag= 6, value= 0.000000e+00
+ node= 237, applied dof tag= 1, value= 0.000000e+00
+ node= 237, applied dof tag= 2, value= 0.000000e+00
+ node= 237, applied dof tag= 3, value= 0.000000e+00
+ node= 237, applied dof tag= 4, value= 0.000000e+00
+ node= 237, applied dof tag= 5, value= 0.000000e+00
+ node= 237, applied dof tag= 6, value= 0.000000e+00
+ node= 221, applied dof tag= 1, value= 0.000000e+00
+ node= 221, applied dof tag= 2, value= 0.000000e+00
+ node= 221, applied dof tag= 3, value= 0.000000e+00
+ node= 221, applied dof tag= 4, value= 0.000000e+00
+ node= 221, applied dof tag= 5, value= 0.000000e+00
+ node= 221, applied dof tag= 6, value= 0.000000e+00
+ node= 243, applied dof tag= 1, value= 0.000000e+00
+ node= 243, applied dof tag= 2, value= 0.000000e+00
+ node= 243, applied dof tag= 3, value= 0.000000e+00
+ node= 243, applied dof tag= 4, value= 0.000000e+00
+ node= 243, applied dof tag= 5, value= 0.000000e+00
+ node= 243, applied dof tag= 6, value= 0.000000e+00
+ node= 222, applied dof tag= 1, value= 0.000000e+00
+ node= 222, applied dof tag= 2, value= 0.000000e+00
+ node= 222, applied dof tag= 3, value= 0.000000e+00
+ node= 222, applied dof tag= 4, value= 0.000000e+00
+ node= 222, applied dof tag= 5, value= 0.000000e+00
+ node= 222, applied dof tag= 6, value= 0.000000e+00
+ node= 245, applied dof tag= 1, value= 0.000000e+00
+ node= 245, applied dof tag= 2, value= 0.000000e+00
+ node= 245, applied dof tag= 3, value= 0.000000e+00
+ node= 245, applied dof tag= 4, value= 0.000000e+00
+ node= 245, applied dof tag= 5, value= 0.000000e+00
+ node= 245, applied dof tag= 6, value= 0.000000e+00
+ node= 242, applied dof tag= 1, value= 0.000000e+00
+ node= 242, applied dof tag= 2, value= 0.000000e+00
+ node= 242, applied dof tag= 3, value= 0.000000e+00
+ node= 242, applied dof tag= 4, value= 0.000000e+00
+ node= 242, applied dof tag= 5, value= 0.000000e+00
+ node= 242, applied dof tag= 6, value= 0.000000e+00
+ node= 244, applied dof tag= 1, value= 0.000000e+00
+ node= 244, applied dof tag= 2, value= 0.000000e+00
+ node= 244, applied dof tag= 3, value= 0.000000e+00
+ node= 244, applied dof tag= 4, value= 0.000000e+00
+ node= 244, applied dof tag= 5, value= 0.000000e+00
+ node= 244, applied dof tag= 6, value= 0.000000e+00
+ node= 247, applied dof tag= 1, value= 0.000000e+00
+ node= 247, applied dof tag= 2, value= 0.000000e+00
+ node= 247, applied dof tag= 3, value= 0.000000e+00
+ node= 247, applied dof tag= 4, value= 0.000000e+00
+ node= 247, applied dof tag= 5, value= 0.000000e+00
+ node= 247, applied dof tag= 6, value= 0.000000e+00
+ node= 241, applied dof tag= 1, value= 0.000000e+00
+ node= 241, applied dof tag= 2, value= 0.000000e+00
+ node= 241, applied dof tag= 3, value= 0.000000e+00
+ node= 241, applied dof tag= 4, value= 0.000000e+00
+ node= 241, applied dof tag= 5, value= 0.000000e+00
+ node= 241, applied dof tag= 6, value= 0.000000e+00
+ node= 210, applied dof tag= 1, value= 0.000000e+00
+ node= 210, applied dof tag= 2, value= 0.000000e+00
+ node= 210, applied dof tag= 3, value= 0.000000e+00
+ node= 210, applied dof tag= 4, value= 0.000000e+00
+ node= 210, applied dof tag= 5, value= 0.000000e+00
+ node= 210, applied dof tag= 6, value= 0.000000e+00
+ node= 209, applied dof tag= 1, value= 0.000000e+00
+ node= 209, applied dof tag= 2, value= 0.000000e+00
+ node= 209, applied dof tag= 3, value= 0.000000e+00
+ node= 209, applied dof tag= 4, value= 0.000000e+00
+ node= 209, applied dof tag= 5, value= 0.000000e+00
+ node= 209, applied dof tag= 6, value= 0.000000e+00
+ node= 246, applied dof tag= 1, value= 0.000000e+00
+ node= 246, applied dof tag= 2, value= 0.000000e+00
+ node= 246, applied dof tag= 3, value= 0.000000e+00
+ node= 246, applied dof tag= 4, value= 0.000000e+00
+ node= 246, applied dof tag= 5, value= 0.000000e+00
+ node= 246, applied dof tag= 6, value= 0.000000e+00
+ node= 219, applied dof tag= 1, value= 0.000000e+00
+ node= 219, applied dof tag= 2, value= 0.000000e+00
+ node= 219, applied dof tag= 3, value= 0.000000e+00
+ node= 219, applied dof tag= 4, value= 0.000000e+00
+ node= 219, applied dof tag= 5, value= 0.000000e+00
+ node= 219, applied dof tag= 6, value= 0.000000e+00
+ node= 250, applied dof tag= 1, value= 0.000000e+00
+ node= 250, applied dof tag= 2, value= 0.000000e+00
+ node= 250, applied dof tag= 3, value= 0.000000e+00
+ node= 250, applied dof tag= 4, value= 0.000000e+00
+ node= 250, applied dof tag= 5, value= 0.000000e+00
+ node= 250, applied dof tag= 6, value= 0.000000e+00
+ node= 220, applied dof tag= 1, value= 0.000000e+00
+ node= 220, applied dof tag= 2, value= 0.000000e+00
+ node= 220, applied dof tag= 3, value= 0.000000e+00
+ node= 220, applied dof tag= 4, value= 0.000000e+00
+ node= 220, applied dof tag= 5, value= 0.000000e+00
+ node= 220, applied dof tag= 6, value= 0.000000e+00
+ node= 253, applied dof tag= 1, value= 0.000000e+00
+ node= 253, applied dof tag= 2, value= 0.000000e+00
+ node= 253, applied dof tag= 3, value= 0.000000e+00
+ node= 253, applied dof tag= 4, value= 0.000000e+00
+ node= 253, applied dof tag= 5, value= 0.000000e+00
+ node= 253, applied dof tag= 6, value= 0.000000e+00
+ node= 249, applied dof tag= 1, value= 0.000000e+00
+ node= 249, applied dof tag= 2, value= 0.000000e+00
+ node= 249, applied dof tag= 3, value= 0.000000e+00
+ node= 249, applied dof tag= 4, value= 0.000000e+00
+ node= 249, applied dof tag= 5, value= 0.000000e+00
+ node= 249, applied dof tag= 6, value= 0.000000e+00
+ node= 251, applied dof tag= 1, value= 0.000000e+00
+ node= 251, applied dof tag= 2, value= 0.000000e+00
+ node= 251, applied dof tag= 3, value= 0.000000e+00
+ node= 251, applied dof tag= 4, value= 0.000000e+00
+ node= 251, applied dof tag= 5, value= 0.000000e+00
+ node= 251, applied dof tag= 6, value= 0.000000e+00
+ node= 248, applied dof tag= 1, value= 0.000000e+00
+ node= 248, applied dof tag= 2, value= 0.000000e+00
+ node= 248, applied dof tag= 3, value= 0.000000e+00
+ node= 248, applied dof tag= 4, value= 0.000000e+00
+ node= 248, applied dof tag= 5, value= 0.000000e+00
+ node= 248, applied dof tag= 6, value= 0.000000e+00
+ node= 254, applied dof tag= 1, value= 0.000000e+00
+ node= 254, applied dof tag= 2, value= 0.000000e+00
+ node= 254, applied dof tag= 3, value= 0.000000e+00
+ node= 254, applied dof tag= 4, value= 0.000000e+00
+ node= 254, applied dof tag= 5, value= 0.000000e+00
+ node= 254, applied dof tag= 6, value= 0.000000e+00
+ node= 212, applied dof tag= 1, value= 0.000000e+00
+ node= 212, applied dof tag= 2, value= 0.000000e+00
+ node= 212, applied dof tag= 3, value= 0.000000e+00
+ node= 212, applied dof tag= 4, value= 0.000000e+00
+ node= 212, applied dof tag= 5, value= 0.000000e+00
+ node= 212, applied dof tag= 6, value= 0.000000e+00
+ node= 211, applied dof tag= 1, value= 0.000000e+00
+ node= 211, applied dof tag= 2, value= 0.000000e+00
+ node= 211, applied dof tag= 3, value= 0.000000e+00
+ node= 211, applied dof tag= 4, value= 0.000000e+00
+ node= 211, applied dof tag= 5, value= 0.000000e+00
+ node= 211, applied dof tag= 6, value= 0.000000e+00
+ node= 252, applied dof tag= 1, value= 0.000000e+00
+ node= 252, applied dof tag= 2, value= 0.000000e+00
+ node= 252, applied dof tag= 3, value= 0.000000e+00
+ node= 252, applied dof tag= 4, value= 0.000000e+00
+ node= 252, applied dof tag= 5, value= 0.000000e+00
+ node= 252, applied dof tag= 6, value= 0.000000e+00
+ node= 217, applied dof tag= 1, value= 0.000000e+00
+ node= 217, applied dof tag= 2, value= 0.000000e+00
+ node= 217, applied dof tag= 3, value= 0.000000e+00
+ node= 217, applied dof tag= 4, value= 0.000000e+00
+ node= 217, applied dof tag= 5, value= 0.000000e+00
+ node= 217, applied dof tag= 6, value= 0.000000e+00
+ node= 257, applied dof tag= 1, value= 0.000000e+00
+ node= 257, applied dof tag= 2, value= 0.000000e+00
+ node= 257, applied dof tag= 3, value= 0.000000e+00
+ node= 257, applied dof tag= 4, value= 0.000000e+00
+ node= 257, applied dof tag= 5, value= 0.000000e+00
+ node= 257, applied dof tag= 6, value= 0.000000e+00
+ node= 218, applied dof tag= 1, value= 0.000000e+00
+ node= 218, applied dof tag= 2, value= 0.000000e+00
+ node= 218, applied dof tag= 3, value= 0.000000e+00
+ node= 218, applied dof tag= 4, value= 0.000000e+00
+ node= 218, applied dof tag= 5, value= 0.000000e+00
+ node= 218, applied dof tag= 6, value= 0.000000e+00
+ node= 259, applied dof tag= 1, value= 0.000000e+00
+ node= 259, applied dof tag= 2, value= 0.000000e+00
+ node= 259, applied dof tag= 3, value= 0.000000e+00
+ node= 259, applied dof tag= 4, value= 0.000000e+00
+ node= 259, applied dof tag= 5, value= 0.000000e+00
+ node= 259, applied dof tag= 6, value= 0.000000e+00
+ node= 256, applied dof tag= 1, value= 0.000000e+00
+ node= 256, applied dof tag= 2, value= 0.000000e+00
+ node= 256, applied dof tag= 3, value= 0.000000e+00
+ node= 256, applied dof tag= 4, value= 0.000000e+00
+ node= 256, applied dof tag= 5, value= 0.000000e+00
+ node= 256, applied dof tag= 6, value= 0.000000e+00
+ node= 260, applied dof tag= 1, value= 0.000000e+00
+ node= 260, applied dof tag= 2, value= 0.000000e+00
+ node= 260, applied dof tag= 3, value= 0.000000e+00
+ node= 260, applied dof tag= 4, value= 0.000000e+00
+ node= 260, applied dof tag= 5, value= 0.000000e+00
+ node= 260, applied dof tag= 6, value= 0.000000e+00
+ node= 255, applied dof tag= 1, value= 0.000000e+00
+ node= 255, applied dof tag= 2, value= 0.000000e+00
+ node= 255, applied dof tag= 3, value= 0.000000e+00
+ node= 255, applied dof tag= 4, value= 0.000000e+00
+ node= 255, applied dof tag= 5, value= 0.000000e+00
+ node= 255, applied dof tag= 6, value= 0.000000e+00
+ node= 261, applied dof tag= 1, value= 0.000000e+00
+ node= 261, applied dof tag= 2, value= 0.000000e+00
+ node= 261, applied dof tag= 3, value= 0.000000e+00
+ node= 261, applied dof tag= 4, value= 0.000000e+00
+ node= 261, applied dof tag= 5, value= 0.000000e+00
+ node= 261, applied dof tag= 6, value= 0.000000e+00
+ node= 214, applied dof tag= 1, value= 0.000000e+00
+ node= 214, applied dof tag= 2, value= 0.000000e+00
+ node= 214, applied dof tag= 3, value= 0.000000e+00
+ node= 214, applied dof tag= 4, value= 0.000000e+00
+ node= 214, applied dof tag= 5, value= 0.000000e+00
+ node= 214, applied dof tag= 6, value= 0.000000e+00
+ node= 213, applied dof tag= 1, value= 0.000000e+00
+ node= 213, applied dof tag= 2, value= 0.000000e+00
+ node= 213, applied dof tag= 3, value= 0.000000e+00
+ node= 213, applied dof tag= 4, value= 0.000000e+00
+ node= 213, applied dof tag= 5, value= 0.000000e+00
+ node= 213, applied dof tag= 6, value= 0.000000e+00
+ node= 258, applied dof tag= 1, value= 0.000000e+00
+ node= 258, applied dof tag= 2, value= 0.000000e+00
+ node= 258, applied dof tag= 3, value= 0.000000e+00
+ node= 258, applied dof tag= 4, value= 0.000000e+00
+ node= 258, applied dof tag= 5, value= 0.000000e+00
+ node= 258, applied dof tag= 6, value= 0.000000e+00
+ node= 198, applied dof tag= 1, value= 0.000000e+00
+ node= 198, applied dof tag= 2, value= 0.000000e+00
+ node= 198, applied dof tag= 3, value= 0.000000e+00
+ node= 198, applied dof tag= 4, value= 0.000000e+00
+ node= 198, applied dof tag= 5, value= 0.000000e+00
+ node= 198, applied dof tag= 6, value= 0.000000e+00
+ node= 200, applied dof tag= 1, value= 0.000000e+00
+ node= 200, applied dof tag= 2, value= 0.000000e+00
+ node= 200, applied dof tag= 3, value= 0.000000e+00
+ node= 200, applied dof tag= 4, value= 0.000000e+00
+ node= 200, applied dof tag= 5, value= 0.000000e+00
+ node= 200, applied dof tag= 6, value= 0.000000e+00
+ node= 216, applied dof tag= 1, value= 0.000000e+00
+ node= 216, applied dof tag= 2, value= 0.000000e+00
+ node= 216, applied dof tag= 3, value= 0.000000e+00
+ node= 216, applied dof tag= 4, value= 0.000000e+00
+ node= 216, applied dof tag= 5, value= 0.000000e+00
+ node= 216, applied dof tag= 6, value= 0.000000e+00
+ node= 199, applied dof tag= 1, value= 0.000000e+00
+ node= 199, applied dof tag= 2, value= 0.000000e+00
+ node= 199, applied dof tag= 3, value= 0.000000e+00
+ node= 199, applied dof tag= 4, value= 0.000000e+00
+ node= 199, applied dof tag= 5, value= 0.000000e+00
+ node= 199, applied dof tag= 6, value= 0.000000e+00
+ node= 263, applied dof tag= 1, value= 0.000000e+00
+ node= 263, applied dof tag= 2, value= 0.000000e+00
+ node= 263, applied dof tag= 3, value= 0.000000e+00
+ node= 263, applied dof tag= 4, value= 0.000000e+00
+ node= 263, applied dof tag= 5, value= 0.000000e+00
+ node= 263, applied dof tag= 6, value= 0.000000e+00
+ node= 202, applied dof tag= 1, value= 0.000000e+00
+ node= 202, applied dof tag= 2, value= 0.000000e+00
+ node= 202, applied dof tag= 3, value= 0.000000e+00
+ node= 202, applied dof tag= 4, value= 0.000000e+00
+ node= 202, applied dof tag= 5, value= 0.000000e+00
+ node= 202, applied dof tag= 6, value= 0.000000e+00
+ node= 201, applied dof tag= 1, value= 0.000000e+00
+ node= 201, applied dof tag= 2, value= 0.000000e+00
+ node= 201, applied dof tag= 3, value= 0.000000e+00
+ node= 201, applied dof tag= 4, value= 0.000000e+00
+ node= 201, applied dof tag= 5, value= 0.000000e+00
+ node= 201, applied dof tag= 6, value= 0.000000e+00
+ node= 262, applied dof tag= 1, value= 0.000000e+00
+ node= 262, applied dof tag= 2, value= 0.000000e+00
+ node= 262, applied dof tag= 3, value= 0.000000e+00
+ node= 262, applied dof tag= 4, value= 0.000000e+00
+ node= 262, applied dof tag= 5, value= 0.000000e+00
+ node= 262, applied dof tag= 6, value= 0.000000e+00
+ node= 204, applied dof tag= 1, value= 0.000000e+00
+ node= 204, applied dof tag= 2, value= 0.000000e+00
+ node= 204, applied dof tag= 3, value= 0.000000e+00
+ node= 204, applied dof tag= 4, value= 0.000000e+00
+ node= 204, applied dof tag= 5, value= 0.000000e+00
+ node= 204, applied dof tag= 6, value= 0.000000e+00
+ node= 203, applied dof tag= 1, value= 0.000000e+00
+ node= 203, applied dof tag= 2, value= 0.000000e+00
+ node= 203, applied dof tag= 3, value= 0.000000e+00
+ node= 203, applied dof tag= 4, value= 0.000000e+00
+ node= 203, applied dof tag= 5, value= 0.000000e+00
+ node= 203, applied dof tag= 6, value= 0.000000e+00
+ node= 215, applied dof tag= 1, value= 0.000000e+00
+ node= 215, applied dof tag= 2, value= 0.000000e+00
+ node= 215, applied dof tag= 3, value= 0.000000e+00
+ node= 215, applied dof tag= 4, value= 0.000000e+00
+ node= 215, applied dof tag= 5, value= 0.000000e+00
+ node= 215, applied dof tag= 6, value= 0.000000e+00
+
+Solution Properties
+id= 1, type=  Static Analysis Property
+
+ name = Analysis type
+ nval= 1
+ Integer
+  value= 1
+
+ name = Case Id
+ nval= 1
+ Integer
+  value= 1
+
+ name = Number of load cases
+ nval= 1
+ Integer
+  value= 1
+
+ name = Load case Id
+ nval= 1
+ Integer
+  value= 1
+
+ name = Load case factor
+ nval= 1
+ Real
+  value= 1.000000e+00
+
+ name = Time initial
+ nval= 1
+ Real
+  value= 0.000000e+00
+
+ name = Time step
+ nval= 1
+ Real
+  value= 1.000000e+00
+
+ name = Time termination
+ nval= 1
+ Real
+  value= 1.000000e+00
+
+ name = Nonlinear analysis flag
+ nval= 1
+ Integer
+  value= 0
+
+ name = Restraint case Id
+ nval= 1
+ Integer
+  value= 1
+
+ name = Restraint case factor
+ nval= 1
+ Real
+  value= 1.000000e+00
+
+ name = Save frequency
+ nval= 1
+ Integer
+  value= 1
+
+ name = Save last
+ nval= 1
+ Integer
+  value= 1
+
+ name = Number of results filed
+ nval= 1
+ Integer
+  value= 8
+
+ name = Results filed
+ nval= 8
+ Integer
+  value= 1
+  value= 35
+  value= 30
+  value= 98
+  value= 3
+  value= 2
+  value= 94
+  value= 51
+
+ name = Number of results printed
+ nval= 1
+ Integer
+  value= 0
+
+ name = Title
+ nval= 81
+  value= simple shell model
+
+ name = Subtitle
+ nval= 81
+  value= pressure load

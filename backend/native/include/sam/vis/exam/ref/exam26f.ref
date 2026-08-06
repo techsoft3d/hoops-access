@@ -1,0 +1,42 @@
+Original distance, node state
+node= 1, s= 0.000000
+node= 2, s= 1.000000
+node= 3, s= 2.000000
+node= 4, s= 1.000000
+node= 5, s= 1.414214
+node= 6, s= 2.236068
+node= 7, s= 2.000000
+node= 8, s= 2.236068
+node= 9, s= 2.828427
+node= 10, s= 2.549510
+node= 11, s= 3.162278
+node= 12, s= 2.915476
+Linearized midsides, node state
+node= 1, s= 0.000000
+node= 2, s= 1.000000
+node= 3, s= 2.000000
+node= 4, s= 1.000000
+node= 5, s= 1.414214
+node= 6, s= 2.414214
+node= 7, s= 2.000000
+node= 8, s= 2.414214
+node= 9, s= 2.828427
+node= 10, s= 2.581139
+node= 11, s= 3.162278
+node= 12, s= 2.995352
+Linearized midsides, elem state
+elem= 1, node= 1, s= 0.000000
+elem= 1, node= 2, s= 1.000000
+elem= 1, node= 3, s= 2.000000
+elem= 1, node= 4, s= 1.000000
+elem= 1, node= 5, s= 1.414214
+elem= 1, node= 6, s= 2.414214
+elem= 1, node= 7, s= 2.000000
+elem= 1, node= 8, s= 2.414214
+elem= 1, node= 9, s= 2.828427
+elem= 2, node= 1, s= 2.000000
+elem= 2, node= 2, s= 3.162278
+elem= 2, node= 3, s= 2.828427
+elem= 2, node= 4, s= 2.581139
+elem= 2, node= 5, s= 2.995352
+elem= 2, node= 6, s= 2.414214

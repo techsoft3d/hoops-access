@@ -1,0 +1,17 @@
+ numstrips= 2, maxlength= 5
+strip= 1, ns= 5
+ 1 4 6 5 3
+strip= 2, ns= 3
+ 5 4 2
+Current number of triangles= 4
+tri[1]= 1 4 6
+tri[2]= 4 5 6
+tri[3]= 4 2 5
+tri[4]= 6 5 3
+ numstrips= 3, maxlength= 7
+strip= 1, ns= 7
+ 1 2 5 6 8 9 10
+strip= 2, ns= 5
+ 9 6 7 3 4
+strip= 3, ns= 3
+ 6 2 3

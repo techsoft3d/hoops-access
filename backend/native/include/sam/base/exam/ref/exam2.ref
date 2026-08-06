@@ -1,0 +1,145 @@
+
+BitVec test
+maximum index = 5
+index 0 = 0
+index 1 = 1
+index 2 = 0
+index 3 = 1
+index 4 = 0
+index 5 = 1
+number of flags = 3
+
+X
+index = 1
+index = 3
+index = 5
+
+Y is a copy of X with index 5 set to zero
+index = 1
+index = 3
+
+Z is X AND Y
+index = 1
+index = 3
+
+Z is X OR Y
+index = 1
+index = 3
+index = 5
+
+Z is X XOR Y
+index = 5
+
+Y is NOT Y
+index = 0
+index = 2
+index = 4
+index = 5
+
+exclude index zero from Y
+index = 2
+index = 4
+index = 5
+
+DblVec test
+num = -1, count = 0
+value = 105.000000
+value = 0.000000
+index= 1, value= 101.000000
+index= 2, value= 102.000000
+index= 3, value= 103.000000
+index= 4, value= 0.000000
+index= 5, value= 105.000000
+index= 6, value= 0.000000
+index= 7, value= 107.000000
+index = 1, value = 101.000000
+index = 2, value = 102.000000
+index = 3, value = 103.000000
+index = 5, value = 105.000000
+index = 7, value = 107.000000
+num = -1, count = 0
+
+IntVec test
+num = -1, count = 0
+value = 105
+value = 0
+index= 1, value= 101
+index= 2, value= 102
+index= 3, value= 103
+index= 4, value= 0
+index= 5, value= 105
+index= 6, value= 0
+index= 7, value= 107
+index = 1, value = 101
+index = 2, value = 102
+index = 3, value = 103
+index = 5, value = 105
+index = 7, value = 107
+num = -1, count = 0
+
+IntDict test
+num = 128, count = 0
+value = 101
+value = 0
+num = 128, count = 5
+name = 100, value = 100
+name = 101, value = 101
+name = 102, value = 102
+name = 103, value = 103
+name = 105, value = 105
+num = 128, count = 0
+
+IntStack test
+
+ IntStack Object:
+ nument = 22
+ topent = 4
+ maxid  = 109
+stack[0]= 105
+stack[1]= 103
+stack[2]= 100
+stack[3]= 102
+stack[4]= 101
+
+ IntStack Object:
+ nument = 22
+ topent = 4
+ maxid  = 109
+stack[0]= 105
+stack[1]= 103
+stack[2]= 100
+stack[3]= 102
+stack[4]= 101
+id = 101
+
+ IntStack Object:
+ nument = 22
+ topent = 3
+ maxid  = 109
+stack[0]= 105
+stack[1]= 103
+stack[2]= 100
+stack[3]= 102
+
+ IntStack Object:
+ nument = 22
+ topent = -1
+ maxid  = 109
+num = 0
+
+IntHash test
+num = 5, count = 0
+value = 101
+value = 0
+num = 5, count = 5
+key = 0, value = 100
+key = 5, value = 105
+key = 3, value = 103
+key = 2, value = 102
+key = 1, value = 101
+
+IntQue test
+num = 10, count = 0
+value = 105
+value = 105
+num = 10, count = 4

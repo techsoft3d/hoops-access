@@ -1,0 +1,28 @@
+
+Element node thickness:
+thickness= 5.000000e-01
+thickness= 5.000000e-01
+thickness= 1.500000e+00
+thickness= 1.500000e+00
+thickness= 5.000000e-01
+thickness= 1.000000e+00
+thickness= 1.500000e+00
+thickness= 1.000000e+00
+ntypes = 2
+
+ name = Material Id
+ nval= 1, nloc= 1
+ Integer
+  value= 1
+
+ name = Thickness
+ nval= 1, nloc= 4
+ Real
+ Location= 0
+  value= 5.000000e-01
+ Location= 1
+  value= 5.000000e-01
+ Location= 2
+  value= 1.500000e+00
+ Location= 3
+  value= 1.500000e+00

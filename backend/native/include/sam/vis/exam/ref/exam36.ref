@@ -1,0 +1,46 @@
+ntypes = 9
+
+ name = Number of eigenvalues
+ nval= 1
+ Integer
+  value= 1
+
+ name = Number of load cases
+ nval= 1
+ Integer
+  value= 2
+
+ name = Load case Id
+ nval= 2
+ Integer
+  value= 2
+  value= 4
+
+ name = Load case factor
+ nval= 2
+ Real
+  value= 1.000000e+01
+  value= 2.000000e+01
+
+ name = Restraint case Id
+ nval= 1
+ Integer
+  value= 1
+
+ name = Number of results filed
+ nval= 1
+ Integer
+  value= 1
+
+ name = Results filed
+ nval= 1
+ Integer
+  value= 1
+
+ name = Title
+ nval= 81
+  value= Buckling solution
+
+ name = Subtitle
+ nval= 81
+  value= Example

@@ -1,0 +1,32 @@
+
+ADTree test
+
+POINT ADTree
+search point= 0.500000, 0.500000, 0.000000,  tolerance= 0.260000
+ find key= 1
+ find key= 2
+ find key= 3
+remove point 3
+search point= 0.500000, 0.500000, 0.000000,  tolerance= 0.260000
+ find key= 1
+ find key= 2
+search point= 0.500000, 0.500000, 0.000000,  tolerance= 0.360000
+ find key= 1
+ find key= 2
+ find key= 5
+remove point 2
+search point= 0.500000, 0.500000, 0.000000,  tolerance= 0.360000
+ find key= 1
+ find key= 5
+
+EXTENT ADTree
+search point= 0.500000, 0.500000, 0.000000,  tolerance= 0.100000
+ number of hits= 2
+ find key= 1
+ find key= 2
+search extent, min= 0.600000, 0.550000, 0.000000
+               max= 0.900000, 0.550000, 0.000000
+               tolerance= 0.050000
+ number of hits= 2
+ find key= 2
+ find key= 3

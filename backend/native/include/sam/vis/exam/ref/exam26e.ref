@@ -1,0 +1,252 @@
+
+elem=  1, nsecs=  1
+section=  1
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+section=  1
+node=  1
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node=  2
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node=  6
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node=  5
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node=  9
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node= 10
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node= 13
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node= 12
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+elem=  2, nsecs=  1
+section=  1
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+section=  1
+node=  2
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  3
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  7
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  6
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node= 10
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node= 11
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node= 14
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node= 13
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+elem=  3, nsecs=  2
+section=  1
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+section=  2
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+section=  1
+node=  3
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+node=  4
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+node=  8
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+node=  7
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+section=  2
+node=  3
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  4
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  8
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  7
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+
+Section 2
+elem=  3, section 2
+ sxx=   1.400000,  syy=  -2.300000,  szz=   3.500000
+ sxy=   0.140000,  syz=   0.250000,  szx=   0.340000
+
+min= 1.400000, max= 1.400000
+min= -2.300000, max= -2.300000
+min= 3.500000, max= 3.500000
+min= 0.140000, max= 0.140000
+min= 0.250000, max= 0.250000
+min= 0.340000, max= 0.340000
+OperateUnary
+
+Section 2, doubled
+elem=  3, section 2
+ sxx=   2.800000,  syy=  -4.600000,  szz=   7.000000
+ sxy=   0.280000,  syz=   0.500000,  szx=   0.680000
+
+Section 2, halved
+elem=  3, section 2
+ sxx=   1.400000,  syy=  -2.300000,  szz=   3.500000
+ sxy=   0.140000,  syz=   0.250000,  szx=   0.340000
+node= 1, Von Mises stress= 4.406813
+node= 2, Von Mises stress= 4.664649
+node= 3, Von Mises stress= 4.938213
+node= 4, Von Mises stress= 4.955825
+node= 5, Von Mises stress= 4.406813
+node= 6, Von Mises stress= 4.664649
+node= 7, Von Mises stress= 4.938213
+node= 8, Von Mises stress= 4.955825
+node= 9, Von Mises stress= 4.406813
+node= 10, Von Mises stress= 4.664649
+node= 11, Von Mises stress= 4.922784
+node= 12, Von Mises stress= 4.406813
+node= 13, Von Mises stress= 4.664649
+node= 14, Von Mises stress= 4.922784
+ Sum
+ sxx=   4.900000,  syy=  -8.600000,  szz=  13.400000
+ sxy=   0.490000,  syz=   0.900000,  szx=   1.280000
+
+elem=  1, nsecs=  1
+section=  1
+node=  1
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node=  2
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node=  6
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node=  5
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node=  9
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node= 10
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node= 13
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+node= 12
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+section=  1
+ sxx=   1.000000,  syy=  -2.000000,  szz=   3.000000
+ sxy=   0.100000,  syz=   0.200000,  szx=   0.300000
+elem=  2, nsecs=  1
+section=  1
+node=  2
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  3
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  7
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node=  6
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node= 10
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node= 11
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node= 14
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+node= 13
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+section=  1
+ sxx=   1.200000,  syy=  -2.100000,  szz=   3.500000
+ sxy=   0.120000,  syz=   0.210000,  szx=   0.310000
+elem=  3, nsecs=  2
+section=  1
+node=  3
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+node=  4
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+node=  8
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+node=  7
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+section=  2
+node=  3
+ sxx=   1.400000,  syy=  -2.300000,  szz=   3.500000
+ sxy=   0.140000,  syz=   0.250000,  szx=   0.340000
+node=  4
+ sxx=   1.400000,  syy=  -2.300000,  szz=   3.500000
+ sxy=   0.140000,  syz=   0.250000,  szx=   0.340000
+node=  8
+ sxx=   1.400000,  syy=  -2.300000,  szz=   3.500000
+ sxy=   0.140000,  syz=   0.250000,  szx=   0.340000
+node=  7
+ sxx=   1.400000,  syy=  -2.300000,  szz=   3.500000
+ sxy=   0.140000,  syz=   0.250000,  szx=   0.340000
+section=  1
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+section=  2
+ sxx=   1.300000,  syy=  -2.200000,  szz=   3.400000
+ sxy=   0.130000,  syz=   0.240000,  szx=   0.330000
+min= 1.000000 ids= 1 nos= 1, max= 1.400000 ids= 3 nos= 1
+min= -2.300000 ids= 3 nos= 1, max= -2.000000 ids= 1 nos= 1
+min= 3.000000 ids= 1 nos= 1, max= 3.500000 ids= 2 nos= 1
+min= 0.100000 ids= 1 nos= 1, max= 0.140000 ids= 3 nos= 1
+min= 0.200000 ids= 1 nos= 1, max= 0.250000 ids= 3 nos= 1
+min= 0.300000 ids= 1 nos= 1, max= 0.340000 ids= 3 nos= 1
+min= 1.000000 ids= 1 nos= 1 sec= 1
+max= 1.400000 ids= 3 nos= 1 sec= 2
+min= -2.300000 ids= 3 nos= 1 sec= 2
+max= -2.000000 ids= 1 nos= 1 sec= 1
+min= 3.000000 ids= 1 nos= 1 sec= 1
+max= 3.500000 ids= 2 nos= 1 sec= 1
+min= 0.100000 ids= 1 nos= 1 sec= 1
+max= 0.140000 ids= 3 nos= 1 sec= 2
+min= 0.200000 ids= 1 nos= 1 sec= 1
+max= 0.250000 ids= 3 nos= 1 sec= 2
+min= 0.300000 ids= 1 nos= 1 sec= 1
+max= 0.340000 ids= 3 nos= 1 sec= 2
+Element 1, face 2 from node state
+Von Mises stress= 4.406813
+Von Mises stress= 4.664649
+Von Mises stress= 4.664649
+Von Mises stress= 4.406813
+Element 1, face 2 from element node state
+Von Mises stress= 4.406813
+Von Mises stress= 4.406813
+Von Mises stress= 4.406813
+Von Mises stress= 4.406813

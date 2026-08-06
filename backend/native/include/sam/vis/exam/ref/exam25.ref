@@ -1,0 +1,19 @@
+index= 1, magnitude= 3.605551
+index= 2, magnitude= 1.000000
+index= 3, magnitude= 1.414214
+index= 4, magnitude= 4.898980
+index= 2, vector= -1.000000 0.000000 0.000000
+index= 3, vector= 1.000000 1.000000 0.000000
+index= 4, vector= 2.000000 -2.000000 -4.000000
+vector min= -1.000000 -2.000000 -4.000000
+vector max= 3.000000 2.000000 0.000000
+vector min= -1.000000 -2.000000 -4.000000
+       ids= 2 4 4
+vector max= 3.000000 2.000000 0.000000
+       ids= 1 1 1
+vector min= -2.000000 -4.000000 -8.000000
+vector max= 6.000000 4.000000 0.000000
+index= 2, vector= 6.000000 4.000000 0.000000
+index= 2, vector= 2.000000 0.000000 0.000000
+index= 2, vector= 2.000000 2.000000 0.000000
+index= 2, vector= 4.000000 4.000000 8.000000
