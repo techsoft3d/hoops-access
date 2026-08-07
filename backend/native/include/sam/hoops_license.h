@@ -1,14 +1,34 @@
-// Copyright (c) Tech Soft 3D, Inc.
-//
-// The information contained herein is confidential and proprietary to Tech Soft 3D, Inc.,
-// and considered a trade secret as defined under civil and criminal statutes.
-// Tech Soft 3D, Inc. shall pursue its civil and criminal remedies in the event of
-// unauthorized use or misappropriation of its trade secrets.  Use of this information
-// by anyone other than authorized employees of Tech Soft 3D, Inc. is granted only under
-// a written non-disclosure agreement, expressly prescribing the scope and manner of such use.
+/*
+--------------------------------------------------
+Tech Soft 3D - Generated Unified License File
+  for: techsoft3d
+--------------------------------------------------
 
-// HOOPS Solve Mesh and Access license key
+Expires: 09/06/2026
+Customer: techsoft3d
+Products: Exchange Ceetron
+Visualize Desktop: 
+Visualize Web: 
+Ceetron: CEETRON_VERSION_499 Access
+Luminate: 
+Exchange: EXCHANGE_VERSION_2699
+Exchange Import: 
+Exchange Export: 
+
+
+NOTICE:
+When passing HOOPS_LICENSE into Define_System_Options in 3DF the license string needs
+to be quoted in back-ticks.
+
+Define_System_Options("license = `your_license_here`");
+
+You may use the following string to copy and paste as a command line parameter for HOOPS Visualize Web components:
+--license '4AU03CQ64UQ2AfQL0DeNxuMRCUAzxSV8vQJ01QNw3DpFj7DFaWTMj7DFj7F38TRrCyBpCARnj7F50uQz0wRm9BezxwAZ0TQKxfj80xfnCRa43TR3BEYJ8yF36hq39AIQ3wiJBvj28jeJABiP1Ue5AxaO8Cnt1xVrCeI21DR32hryDwBb3DZ1xir5DgJz4wYGBDeOBg25CxULChjq3yFqAzq50uJ33Tf38RYV4rDFj7ENj7DFj7DFj7DFj7DFj7DFj7DFjDXHj7DFj7DFj7DFjGtPj7DFj7DFj7DFjHmPIqQ2vRa0xUa3wAFo8Rm5vBizxBm28Ri09ia6xBa8jDiTwimNCSvbvQU72yI31zeRBxnb3CYZDyMLBUruCRiL9DJpP60FIhQ28QNnxuM5weE58QZnwQZm8uFnjFf2vFfnBU6HxhiS5eV48hVp5wZ5wDeWDU74xiuz9uFu1DIW3TiVCAVz8Cn39VfvxCuTwDR8DS264S6HxAMPDijzCSaZEiv$DSQ5wxJr3Tj00EVnCuQPwSuU1wZc8vUNDyUS0TIzwymJByVk0waZ9wrx4AZxAhfc9U2L6fjcxeM12Bm13EZs2gBv5RJ47UJxEguNwTf21zeUDFqL5Dq84UAQACEMAfI6CFfy4uJ2wRIL0EZ8xfmQCEQ79vY50EiYEhb0zSfy6fm55CyX0AV57SY_xhn0DFjs1gQJDgZb3yvx5Vq4DDnw0xMK2wjs1gM18yqYvCaP4QI24BM12yyS0qPGj7DFj7DFz7DFj7DFj7ETvE62Bgnk5jr27UflwwIHwDRw1wV2vSR2wza19fIL3yfu3fIO3fI63ffx8jnq0jaJCViK1AJq5FmQCiQMBfY_7Tn34Vja9uNdxVr6ACBs8xIYvRa81faODgeH4yIH7UZ$zUYK0fm73BaHwUi3xTV24wv6xzmY2iu52xeWxEn0CxVp2fm02wqNxEeN3QYWDw2TvRU39VflDye1wfUU3vn$EeV00SuREhn02im35gJa0yaK3TYN2BV4wBi_Ejiz0Ubu2vj3BRYQ4zr1BUBnvTZ81gnwwg2Y9vn99haQCFeSxBnp3U661yj18S2ZAiEZ2gIV3uZy4Em05UeJxvR9vEr21Sm1Ci2K8hbwDxi01yyXDxIN2wqNxyEWwwUK3Ev69Bi0BuFb3EU8AUu44FeKDAZ49iJ33TqXASVlCE67zUv13U2X0gaM9iNc1eU_1U2TDC77Byu_8wnt2guJxEeUxUVa2fNzAgYTvCrm1uJy1jmPCBeR4xN01Ua04Fn23CiODTM81hZ$wirt2SE1xSBn1yQW3U7wCeQ2CyBcCUuY5ia4xBQT5Tnz4SQG1RMR4eM_5wNtwViO4Czuw5'
+
+*/
+
 #ifndef HOOPS_LICENSE_DEFINED
-#define HOOPS_LICENSE_DEFINED
-#define HOOPS_LICENSE ""
+#	define HOOPS_LICENSE_DEFINED
+#	define HOOPS_LICENSE "4AU03CQ64UQ2AfQL0DeNxuMRCUAzxSV8vQJ01QNw3DpFj7DFaWTMj7DFj7F38TRrCyBpCARnj7F50uQz0wRm9BezxwAZ0TQKxfj80xfnCRa43TR3BEYJ8yF36hq39AIQ3wiJBvj28jeJABiP1Ue5AxaO8Cnt1xVrCeI21DR32hryDwBb3DZ1xir5DgJz4wYGBDeOBg25CxULChjq3yFqAzq50uJ33Tf38RYV4rDFj7ENj7DFj7DFj7DFj7DFj7DFj7DFjDXHj7DFj7DFj7DFjGtPj7DFj7DFj7DFjHmPIqQ2vRa0xUa3wAFo8Rm5vBizxBm28Ri09ia6xBa8jDiTwimNCSvbvQU72yI31zeRBxnb3CYZDyMLBUruCRiL9DJpP60FIhQ28QNnxuM5weE58QZnwQZm8uFnjFf2vFfnBU6HxhiS5eV48hVp5wZ5wDeWDU74xiuz9uFu1DIW3TiVCAVz8Cn39VfvxCuTwDR8DS264S6HxAMPDijzCSaZEiv$DSQ5wxJr3Tj00EVnCuQPwSuU1wZc8vUNDyUS0TIzwymJByVk0waZ9wrx4AZxAhfc9U2L6fjcxeM12Bm13EZs2gBv5RJ47UJxEguNwTf21zeUDFqL5Dq84UAQACEMAfI6CFfy4uJ2wRIL0EZ8xfmQCEQ79vY50EiYEhb0zSfy6fm55CyX0AV57SY_xhn0DFjs1gQJDgZb3yvx5Vq4DDnw0xMK2wjs1gM18yqYvCaP4QI24BM12yyS0qPGj7DFj7DFz7DFj7DFj7ETvE62Bgnk5jr27UflwwIHwDRw1wV2vSR2wza19fIL3yfu3fIO3fI63ffx8jnq0jaJCViK1AJq5FmQCiQMBfY_7Tn34Vja9uNdxVr6ACBs8xIYvRa81faODgeH4yIH7UZ$zUYK0fm73BaHwUi3xTV24wv6xzmY2iu52xeWxEn0CxVp2fm02wqNxEeN3QYWDw2TvRU39VflDye1wfUU3vn$EeV00SuREhn02im35gJa0yaK3TYN2BV4wBi_Ejiz0Ubu2vj3BRYQ4zr1BUBnvTZ81gnwwg2Y9vn99haQCFeSxBnp3U661yj18S2ZAiEZ2gIV3uZy4Em05UeJxvR9vEr21Sm1Ci2K8hbwDxi01yyXDxIN2wqNxyEWwwUK3Ev69Bi0BuFb3EU8AUu44FeKDAZ49iJ33TqXASVlCE67zUv13U2X0gaM9iNc1eU_1U2TDC77Byu_8wnt2guJxEeUxUVa2fNzAgYTvCrm1uJy1jmPCBeR4xN01Ua04Fn23CiODTM81hZ$wirt2SE1xSBn1yQW3U7wCeQ2CyBcCUuY5ia4xBQT5Tnz4SQG1RMR4eM_5wNtwViO4Czuw5"
+#	define VISUALIZE_LICENSE HOOPS_LICENSE
 #endif
