@@ -1,8 +1,0 @@
-
-Slave Nodes
-node= 4, area= 1.000000e+00
-node= 8, area= 1.000000e+00
-
-Master Element Faces
-elem= 2
- face= 1
