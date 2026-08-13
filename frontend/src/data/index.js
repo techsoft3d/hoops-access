@@ -1,7 +1,19 @@
-import { nastran } from './nastran';
-import { abaqus } from './abaqus';
-import { ansys } from './ansys';
-import { fluent } from './fluent';
+export const formats = {
+  nastran: {
+    label: 'Nastran',
+    filename: 'sample_plate.nas',
+    samplePath: '/samples/sample_plate.nas',
+  },
+  lsdyna: {
+    label: 'LS-DYNA',
+    filename: 'sample_plate.key',
+    samplePath: '/samples/sample_plate.key',
+  },
+  unv: {
+    label: 'IDEAS UNV',
+    filename: 'sample_plate.unv',
+    samplePath: '/samples/sample_plate.unv',
+  },
+};
 
-export const formats = { nastran, abaqus, ansys, fluent };
 export const formatList = Object.values(formats);

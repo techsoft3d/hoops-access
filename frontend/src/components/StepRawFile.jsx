@@ -14,7 +14,7 @@ function highlightLine(text) {
   });
 }
 
-export default function StepRawFile({ format, onNext, collapsed, onExpand }) {
+export default function StepRawFile({ format, onNext, collapsed, onExpand}) {
   if (collapsed) {
     return (
       <div className="bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2 flex items-center gap-2.5 mb-4.5">
