@@ -1,12 +1,8 @@
 import PrimaryButton from './PrimaryButton';
+import { useState, useEffect } from 'react';
 
-// crude keyword highlighter: colors known NASTRAN keywords blue, numbers amber
 function highlightLine(text) {
-  const keywords = ['GRID', 'CQUAD4', 'PSHELL', 'MAT1'];
   return text.split(/(\s+)/).map((token, i) => {
-    if (keywords.includes(token)) {
-      return <span key={i} className="text-blue-400">{token}</span>;
-    }
     if (/^-?\d/.test(token)) {
       return <span key={i} className="text-amber-400">{token}</span>;
     }
@@ -15,6 +11,16 @@ function highlightLine(text) {
 }
 
 export default function StepRawFile({ format, onNext, collapsed, onExpand}) {
+
+  const [text, setText] = useState('');
+
+   useEffect(() => {
+      fetch(format.samplePath)
+      .then(response => response.text())
+      .then(data => setText(data));
+  }, [format]);
+          
+
   if (collapsed) {
     return (
       <div className="bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2 flex items-center gap-2.5 mb-4.5">
@@ -41,28 +47,21 @@ export default function StepRawFile({ format, onNext, collapsed, onExpand}) {
             <span className="w-2.5 h-2.5 rounded-full bg-[#f5a623]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#3dd66b]" />
           </div>
-          <span className="ml-auto text-[11px] text-gray-500 font-mono">
-            {format.filename}
-          </span>
-        </div>
+            <span className="ml-auto text-[11px] text-gray-500 font-mono">
+              {format.filename}
+            </span>
+          </div>
 
         {/* code body */}
-        <div className="px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto">
-          {format.rawLines.map((line, i) => (
-            <div key={i} className="flex gap-4">
-              <span className="text-gray-600 select-none w-5 text-right shrink-0">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <span
-                className={
-                  line.type === 'comment' ? 'text-green-500' : 'text-gray-300'
-                }
-              >
-                {line.type === 'code' ? highlightLine(line.text) : line.text}
-              </span>
-            </div>
-          ))}
+        <div className="px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto  whitespace-pre-wrap text-gray-300">
+         {text ? text.split('\n').map((line, i) => (
+            <div key={i}>{highlightLine(line)}</div>
+          )) : 'Loading...'}
         </div>
+      </div>
+
+      <div className="mt-2.5 text-[11px] text-gray-400 font-mono">
+        <div className="mb-1">Sample {format.label} file</div>
       </div>
 
       <div className="flex justify-center mt-6">

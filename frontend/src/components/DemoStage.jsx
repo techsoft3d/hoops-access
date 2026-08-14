@@ -18,7 +18,7 @@ function onNext(currentStep, setStep) {
 
 export default function DemoStage() {
 
-    const [activeId, setActiveId] = useState('nastran');
+    const [activeId, setActiveId] = useState('Nastran');
     const [step, setStep] = useState('raw');
     const [collapsed, setCollapsed] = useState(false);
 

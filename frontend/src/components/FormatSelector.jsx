@@ -5,11 +5,11 @@ export default function FormatSelector({ activeId, onChange }) {
   return (
       <div className="flex items-center justify-center px-8 py-4 gap-4 mb-5">
       {formatList.map((format) => {
-        const isActive = format.id === activeId;
+        const isActive = format.label === activeId;
         return (
           <button
-            key={format.id}
-            onClick={() => onChange(format.id)}
+            key={format.label}
+            onClick={() => onChange(format.label)}
             className={
               'text-xs font-bold px-5.5 py-2.5 rounded-full transition-colors ' +
               (isActive
