@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import PrimaryButton from './PrimaryButton';
+import { buildTreeAndTable } from '../data/buildTreeAndTable';
 
-function TreeNode({ node, selectedLabel, onSelect, isCollapsed, onToggleCollapse }) {
+function TreeNode({ node, selectedLabel, onSelect, collapsedLabels, onToggleCollapse, depth = 0 }) {
   const isSelected = selectedLabel === node.label;
-  const hasChildren = Boolean(node.children);
+  const hasChildren = Boolean(node.children && node.children.length);
+  const isCollapsed = collapsedLabels.has(node.label);
+
   return (
     <div>
       <button
@@ -12,40 +15,31 @@ function TreeNode({ node, selectedLabel, onSelect, isCollapsed, onToggleCollapse
           onSelect(node);
           if (hasChildren) onToggleCollapse(node.label);
         }}
+        style={{ paddingLeft: depth * 16 }}
         className={
-          'w-full text-left text-[13px] leading-loose rounded px-1 -mx-1 transition-colors cursor-pointer ' +
+          'block w-full text-left text-[13px] leading-loose rounded px-1 -mx-1 transition-colors cursor-pointer ' +
           (isSelected ? 'bg-brand/10 text-brand font-semibold' : 'text-gray-800 hover:bg-gray-100')
         }
       >
         {hasChildren ? (isCollapsed ? '▸' : '▾') : '▸'} {node.label}
       </button>
       {hasChildren && !isCollapsed &&
-        node.children.map((child) => {
-          const isChildSelected = selectedLabel === child.label;
-          return (
-            <button
-              type="button"
-              key={child.label}
-              onClick={() => onSelect(child)}
-              className={
-                'block w-full text-left pl-5 text-[13px] leading-loose rounded px-1 -mx-1 transition-colors cursor-pointer ' +
-                (isChildSelected ? 'bg-brand/10 text-brand font-semibold' : 'text-gray-800 hover:bg-gray-100')
-              }
-            >
-              <span
-                className={
-                  'inline-block w-2 h-2 rounded-sm mr-1.5 bg-brand'
-                }
-              />
-              {child.label}
-            </button>
-          );
-        })}
+        node.children.map((child) => (
+          <TreeNode
+            key={child.label}
+            node={child}
+            selectedLabel={selectedLabel}
+            onSelect={onSelect}
+            collapsedLabels={collapsedLabels}
+            onToggleCollapse={onToggleCollapse}
+            depth={depth + 1}
+          />
+        ))}
     </div>
   );
 }
 
-export default function StepStructured({ format, onNext }) {
+export default function StepStructured({ format, geometryData, onNext }) {
   const [selected, setSelected] = useState(null);
   const [collapsedLabels, setCollapsedLabels] = useState(() => new Set());
 
@@ -54,6 +48,12 @@ export default function StepStructured({ format, onNext }) {
     setSelected(null);
     setCollapsedLabels(new Set());
   }, [format]);
+
+  if (!geometryData) {
+    return <p className="text-[13px] text-gray-400">Waiting for Access to structure the file...</p>;
+  }
+
+  const { tree, table } = buildTreeAndTable(geometryData);
 
   function handleSelect(node) {
     setSelected((prev) => (prev?.label === node.label ? null : node));
@@ -68,7 +68,7 @@ export default function StepStructured({ format, onNext }) {
     });
   }
 
-  const highlightedIds = selected ? new Set(selected.nodeIds ?? []) : null;
+  const highlightedIds = selected ? new Set((selected.nodeIds ?? []).map(String)) : null;
 
   return (
     <div>
@@ -77,13 +77,13 @@ export default function StepStructured({ format, onNext }) {
           <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-2.5">
             Model tree
           </p>
-          {format.tree.map((node) => (
+          {tree.map((node) => (
             <TreeNode
               key={node.label}
               node={node}
               selectedLabel={selected?.label}
               onSelect={handleSelect}
-              isCollapsed={collapsedLabels.has(node.label)}
+              collapsedLabels={collapsedLabels}
               onToggleCollapse={handleToggleCollapse}
             />
           ))}
@@ -96,7 +96,7 @@ export default function StepStructured({ format, onNext }) {
           <table className="w-full text-[13px] border-collapse">
             <thead>
               <tr className="text-gray-400">
-                {format.table.columns.map((col) => (
+                {table.columns.map((col) => (
                   <th key={col} className="text-left font-normal py-1 px-1.5">
                     {col}
                   </th>
@@ -105,10 +105,10 @@ export default function StepStructured({ format, onNext }) {
             </thead>
             <tbody>
               {(highlightedIds
-                ? format.table.rows.filter((row) => highlightedIds.has(row.node))
-                : format.table.rows
+                ? table.rows.filter((row) => highlightedIds.has(String(row.node)))
+                : table.rows
               ).map((row) => {
-                const isHighlighted = highlightedIds ? true : row.highlight;
+                const isHighlighted = Boolean(highlightedIds);
                 return (
                   <tr
                     key={row.node}
@@ -128,11 +128,6 @@ export default function StepStructured({ format, onNext }) {
               })}
             </tbody>
           </table>
-          {selected && highlightedIds.size === 0 && (
-            <p className="text-[11px] text-gray-400 mt-2">
-              No coordinate data published for "{selected.label}" yet.
-            </p>
-          )}
         </div>
       </div>
 
