@@ -13,7 +13,8 @@ function TreeNode({ node, selectedLabel, onSelect, collapsedLabels, onToggleColl
         type="button"
         onClick={() => {
           onSelect(node);
-          if (hasChildren) onToggleCollapse(node.label);
+          if (hasChildren) 
+            onToggleCollapse(node.label);
         }}
         style={{ paddingLeft: depth * 16 }}
         className={
@@ -43,7 +44,6 @@ export default function StepStructured({ format, geometryData, onNext }) {
   const [selected, setSelected] = useState(null);
   const [collapsedLabels, setCollapsedLabels] = useState(() => new Set());
 
-  // reset the selection and collapse state whenever the user switches to a different format
   useEffect(() => {
     setSelected(null);
     setCollapsedLabels(new Set());

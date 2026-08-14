@@ -4,7 +4,10 @@ const multer = require('multer');
 const { execFile } = require('child_process');
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

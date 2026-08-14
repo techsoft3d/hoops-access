@@ -21,17 +21,38 @@ export default function DemoStage() {
     const [activeId, setActiveId] = useState('Nastran');
     const [step, setStep] = useState('raw');
     const [collapsed, setCollapsed] = useState(false);
+    const [geometryData, setGeometryData] = useState(null);
 
     const format = formats[activeId];
+
+    async function handleExtract() {
+        const response = await fetch(format.samplePath);
+        const blob = await response.blob();
+
+        const formData = new FormData();
+        formData.append('file', blob, format.filename);
+
+        const backendResponse = await fetch('http://localhost:3000/translate', {
+            method: 'POST',
+            body: formData,
+        });
+
+        const data = await backendResponse.json();
+        setGeometryData(data);
+
+        onNext(step, setStep);
+        setCollapsed(true);
+    }
+
     return (
 
         <div className="min-h-screen flex items-start justify-center bg-slate-50 p-4 pt-16">
             <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-6">
                 <StepIndicator step={step} format={format}/>
                 {step === 'raw' && <FormatSelector activeId={activeId} onChange={setActiveId} />}
-                <StepRawFile format={format} onNext={() => { onNext(step, setStep); setCollapsed(true); }} collapsed={collapsed} onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }} />
-                {step === 'structured' && <StepStructured format={format} onNext={() => onNext(step, setStep)} />}
-                {step === '3D' && <StepResult format={format} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
+                <StepRawFile format={format} onNext={handleExtract} collapsed={collapsed} onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }} />
+                {step === 'structured' && <StepStructured format={format} geometryData={geometryData} onNext={() => onNext(step, setStep)} />}
+                {step === '3D' && <StepResult format={format} geometryData={geometryData} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
             </div>
         </div>
     );
