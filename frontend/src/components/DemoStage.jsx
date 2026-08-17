@@ -52,7 +52,7 @@ export default function DemoStage() {
                 {step === 'raw' && <FormatSelector activeId={activeId} onChange={setActiveId} />}
                 <StepRawFile format={format} onNext={handleExtract} collapsed={collapsed} onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }} />
                 {step === 'structured' && <StepStructured format={format} geometryData={geometryData} onNext={() => onNext(step, setStep)} />}
-                {step === '3D' && <StepResult format={format} geometryData={geometryData} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
+                {step === '3D' && <StepResult geometryData={geometryData} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
             </div>
         </div>
     );

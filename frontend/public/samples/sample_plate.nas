@@ -1,27 +1,35 @@
-ID       SAMPLE,PLATE
+ID       SAMPLE,BRACKET
 SOL      101
 CEND
-TITLE    = Simple test plate - 4 nodes, 2 CTRIA3 elements
-SUBTITLE = For HOOPS Access smoke test
-LOAD     = 1
-SPC      = 1
-DISP     = ALL
-STRESS   = ALL
+TITLE    = Bracket - chassis plate + engine mount boss
+SUBTITLE = For HOOPS Access demo
 BEGIN BULK
-$ Four corner nodes of a 1x1 unit square, lying flat in the XY plane
-GRID           1              0.0     0.0     0.0
-GRID           2              1.0     0.0     0.0
-GRID           3              1.0     1.0     0.0
-GRID           4              0.0     1.0     0.0
-$ Two triangular shell elements forming the square (split along diagonal)
-CTRIA3         1       1       1       2       3
-CTRIA3         2       1       1       3       4
-$ Shell property: references material 1, thickness 0.1
-PSHELL         1       1      0.1
-$ Material: isotropic, E=2.1e11 Pa (steel-like), nu=0.3, rho=7850 kg/m^3
-MAT1           1  2.1+11             .3  7850.
-$ Fix all 4 nodes fully (simple boundary condition so the deck is complete)
-SPC1           1  123456       1       2       3       4
-$ Apply a small downward force on node 3
-FORCE          1       3       0    100.     0.0     0.0    -1.0
+$ Base plate corners
+GRID,1,,0.0,-0.5,0.0
+GRID,2,,2.0,-0.5,0.0
+GRID,3,,2.0,0.5,0.0
+GRID,4,,0.0,0.5,0.0
+$ Mounting boss - bottom corners
+GRID,5,,0.7,-0.3,0.0
+GRID,6,,1.3,-0.3,0.0
+GRID,7,,1.3,0.3,0.0
+GRID,8,,0.7,0.3,0.0
+$ Mounting boss - top corners
+GRID,9,,0.7,-0.3,0.4
+GRID,10,,1.3,-0.3,0.4
+GRID,11,,1.3,0.3,0.4
+GRID,12,,0.7,0.3,0.4
+$ Chassis: base plate (part 1)
+CQUAD4,1,1,1,2,3,4
+$ Engine mount: boss top + 4 side walls (part 2)
+CQUAD4,2,2,9,10,11,12
+CQUAD4,3,2,5,6,10,9
+CQUAD4,4,2,6,7,11,10
+CQUAD4,5,2,7,8,12,11
+CQUAD4,6,2,8,5,9,12
+$ Shell properties (one per part)
+PSHELL,1,1,0.1
+PSHELL,2,1,0.1
+$ Material
+MAT1,1,2.1e+11,,.3,7850.
 ENDDATA
