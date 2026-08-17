@@ -22,7 +22,7 @@ function TreeNode({ node, selectedLabel, onSelect, collapsedLabels, onToggleColl
           (isSelected ? 'bg-brand/10 text-brand font-semibold' : 'text-gray-800 hover:bg-gray-100')
         }
       >
-        {hasChildren ? (isCollapsed ? '▸' : '▾') : '▸'} {node.label}
+        {hasChildren ? (isCollapsed ? '▸' : '▾') : '•'} {node.label}
       </button>
       {hasChildren && !isCollapsed &&
         node.children.map((child) => (
