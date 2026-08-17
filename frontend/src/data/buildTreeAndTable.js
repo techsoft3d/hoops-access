@@ -1,5 +1,5 @@
 export function buildTreeAndTable(geometryData) {
-  const partNodes = geometryData.parts.map((part) => {
+  const partNodes = geometryData.parts.map((part, partIndex) => {
     const elementNodes = part.elements.map((element, i) => ({
       label: `Element ${i + 1}`,
       nodeIds: element,
@@ -12,6 +12,7 @@ export function buildTreeAndTable(geometryData) {
     return {
       label: part.label,
       nodeIds: Array.from(partNodeIdSet),
+      partIndex, // position in geometryData.parts — matches buildEnvisionGeometry's part order
       children: elementNodes,
     };
   });

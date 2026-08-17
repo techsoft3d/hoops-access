@@ -1,44 +1,7 @@
 import { useEffect, useState } from 'react';
 import PrimaryButton from './PrimaryButton';
+import TreeNode from './TreeNode';
 import { buildTreeAndTable } from '../data/buildTreeAndTable';
-
-function TreeNode({ node, selectedLabel, onSelect, collapsedLabels, onToggleCollapse, depth = 0 }) {
-  const isSelected = selectedLabel === node.label;
-  const hasChildren = Boolean(node.children && node.children.length);
-  const isCollapsed = collapsedLabels.has(node.label);
-
-  return (
-    <div>
-      <button
-        type="button"
-        onClick={() => {
-          onSelect(node);
-          if (hasChildren) 
-            onToggleCollapse(node.label);
-        }}
-        style={{ paddingLeft: depth * 16 }}
-        className={
-          'block w-full text-left text-[13px] leading-loose rounded px-1 -mx-1 transition-colors cursor-pointer ' +
-          (isSelected ? 'bg-brand/10 text-brand font-semibold' : 'text-gray-800 hover:bg-gray-100')
-        }
-      >
-        {hasChildren ? (isCollapsed ? '▸' : '▾') : '•'} {node.label}
-      </button>
-      {hasChildren && !isCollapsed &&
-        node.children.map((child) => (
-          <TreeNode
-            key={child.label}
-            node={child}
-            selectedLabel={selectedLabel}
-            onSelect={onSelect}
-            collapsedLabels={collapsedLabels}
-            onToggleCollapse={onToggleCollapse}
-            depth={depth + 1}
-          />
-        ))}
-    </div>
-  );
-}
 
 export default function StepStructured({ format, geometryData, onNext }) {
   const [selected, setSelected] = useState(null);
@@ -128,6 +91,11 @@ export default function StepStructured({ format, geometryData, onNext }) {
               })}
             </tbody>
           </table>
+          {selected && highlightedIds.size === 0 && (
+            <p className="text-[11px] text-gray-400 mt-2">
+              No coordinate data published for "{selected.label}" yet.
+            </p>
+          )}
         </div>
       </div>
 
