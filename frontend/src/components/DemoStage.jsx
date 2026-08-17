@@ -22,26 +22,41 @@ export default function DemoStage() {
     const [step, setStep] = useState('raw');
     const [collapsed, setCollapsed] = useState(false);
     const [geometryData, setGeometryData] = useState(null);
+    const [isExtracting, setIsExtracting] = useState(false);
+    const [extractError, setExtractError] = useState(null);
 
     const format = formats[activeId];
 
     async function handleExtract() {
-        const response = await fetch(format.samplePath);
-        const blob = await response.blob();
+        setIsExtracting(true);
+        setExtractError(null);
 
-        const formData = new FormData();
-        formData.append('file', blob, format.filename);
+        try {
+            const response = await fetch(format.samplePath);
+            const blob = await response.blob();
 
-        const backendResponse = await fetch('http://localhost:3000/translate', {
-            method: 'POST',
-            body: formData,
-        });
+            const formData = new FormData();
+            formData.append('file', blob, format.filename);
 
-        const data = await backendResponse.json();
-        setGeometryData(data);
+            const backendResponse = await fetch('http://localhost:3000/translate', {
+                method: 'POST',
+                body: formData,
+            });
 
-        onNext(step, setStep);
-        setCollapsed(true);
+            const data = await backendResponse.json();
+
+            if (!backendResponse.ok) {
+                throw new Error(data.error || 'Access failed to process the file.');
+            }
+
+            setGeometryData(data);
+            onNext(step, setStep);
+            setCollapsed(true);
+        } catch (err) {
+            setExtractError(err.message || 'Something went wrong while contacting the backend.');
+        } finally {
+            setIsExtracting(false);
+        }
     }
 
     return (
@@ -50,7 +65,14 @@ export default function DemoStage() {
             <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-6">
                 <StepIndicator step={step} format={format}/>
                 {step === 'raw' && <FormatSelector activeId={activeId} onChange={setActiveId} />}
-                <StepRawFile format={format} onNext={handleExtract} collapsed={collapsed} onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }} />
+                <StepRawFile
+                    format={format}
+                    onNext={handleExtract}
+                    collapsed={collapsed}
+                    onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }}
+                    isExtracting={isExtracting}
+                    extractError={extractError}
+                />
                 {step === 'structured' && <StepStructured format={format} geometryData={geometryData} onNext={() => onNext(step, setStep)} />}
                 {step === '3D' && <StepResult geometryData={geometryData} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
             </div>

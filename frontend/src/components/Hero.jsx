@@ -8,7 +8,7 @@ export default function Hero() {
         One API. Every FEA and CFD format.
       </h1>
       <p className="text-[15px] text-gray-600 max-w-130 mx-auto leading-relaxed">
-    Read solver data from NASTRAN, ABAQUS, ANSYS, Fluent and more through a single, consistent interface. Try the demo below. </p>
+    Read solver data from NASTRAN, LS-DYNA, IDEAS UNV and more through a single, consistent interface. Try the demo below. </p>
     </div>
   );
 }

@@ -1,7 +1,5 @@
-// Converts a geometry object (see geometryData.js) into a cee.usg.Geometry
-// that can be attached to a cee.usg.State and rendered by Envision.
-//
-// Translates node ids (our data's language) into array indices (Envision's).
+// Converts a geometry object (shaped like { nodes, parts }, produced by
+// access_cli via the backend) into a cee.usg.Geometry
 
 /**
  * @param {object} cee - the global window.cee object

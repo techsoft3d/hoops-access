@@ -10,17 +10,14 @@ function highlightLine(text) {
   });
 }
 
-export default function StepRawFile({ format, onNext, collapsed, onExpand}) {
-
+export default function StepRawFile({ format, onNext, collapsed, onExpand, isExtracting, extractError }) {
   const [text, setText] = useState('');
-
    useEffect(() => {
       fetch(format.samplePath)
       .then(response => response.text())
       .then(data => setText(data));
   }, [format]);
           
-
   if (collapsed) {
     return (
       <div className="bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2 flex items-center gap-2.5 mb-4.5">
@@ -51,7 +48,6 @@ export default function StepRawFile({ format, onNext, collapsed, onExpand}) {
               {format.filename}
             </span>
           </div>
-
         {/* code body */}
         <div className="px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto  whitespace-pre-wrap text-gray-300">
          {text ? text.split('\n').map((line, i) => (
@@ -60,13 +56,15 @@ export default function StepRawFile({ format, onNext, collapsed, onExpand}) {
         </div>
       </div>
 
-      <div className="mt-2.5 text-[11px] text-gray-400 font-mono">
-        <div className="mb-1">Sample {format.label} file</div>
-      </div>
+      {extractError && (
+        <p className="text-center text-[12px] text-red-500 mt-3">
+          {extractError}
+        </p>
+      )}
 
       <div className="flex justify-center mt-6">
-        <PrimaryButton onClick={onNext}>
-          Extract with HOOPS Access
+        <PrimaryButton onClick={onNext} disabled={isExtracting}>
+          {isExtracting ? 'Extracting...' : 'Extract with HOOPS Access'}
         </PrimaryButton>
       </div>
     </div>
