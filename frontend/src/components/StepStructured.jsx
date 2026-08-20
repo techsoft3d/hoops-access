@@ -36,7 +36,7 @@ export default function StepStructured({ format, geometryData, onNext }) {
   return (
     <div>
       <div className="grid grid-cols-[0.9fr_1.1fr] gap-5">
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 max-h-190 overflow-y-auto">
           <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-2.5">
             Model tree
           </p>
@@ -52,7 +52,7 @@ export default function StepStructured({ format, geometryData, onNext }) {
           ))}
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-4 border-2 border-brand">
+        <div className="bg-gray-50 rounded-lg p-4 border-2 border-brand max-h-190 overflow-y-auto">
           <p className="text-[11px] font-bold text-brand uppercase tracking-wide mb-2.5">
             Node coordinates
           </p>

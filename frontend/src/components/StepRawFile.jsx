@@ -10,45 +10,83 @@ function highlightLine(text) {
   });
 }
 
-// Renders bytes the way a real hex editor would: offset | hex bytes | ascii,
-// 16 bytes per row. Non-printable bytes show as "." in the ascii column.
-function formatHexDump(bytes, maxBytes = 2048) {
-  const lines = [];
+// Turns raw bytes into structured rows (offset + 16 bytes each), 
+// so each byte can be colored individually: 
+// readable ASCII bytes in one color, 
+// everything else dimmed.
+function buildHexRows(bytes, maxBytes = 2048) {
+  const rows = [];
   const limit = Math.min(bytes.length, maxBytes);
 
   for (let offset = 0; offset < limit; offset += 16) {
-    const row = bytes.slice(offset, offset + 16);
-
-    const offsetStr = offset.toString(16).padStart(8, '0');
-
-    const hexStr = Array.from(row)
-      .map((b) => b.toString(16).padStart(2, '0'))
-      .join(' ')
-      .padEnd(16 * 3 - 1, ' ');
-
-    const asciiStr = Array.from(row)
-      .map((b) => (b >= 32 && b <= 126 ? String.fromCharCode(b) : '.'))
-      .join('');
-
-    lines.push(`${offsetStr}  ${hexStr}  |${asciiStr}|`);
+    const row = Array.from(bytes.slice(offset, offset + 16));
+    rows.push({ offset, bytes: row });
   }
 
-  if (bytes.length > maxBytes) {
-    lines.push(`... (${bytes.length - maxBytes} more bytes not shown)`);
-  }
+  return { rows, truncated: bytes.length > maxBytes, remaining: bytes.length - maxBytes };
+}
 
-  return lines.join('\n');
+function isPrintable(byte) {
+  return byte >= 32 && byte <= 126;
+}
+
+function HexDump({ bytes }) {
+  const { rows, truncated, remaining } = buildHexRows(bytes);
+
+  return (
+    <div>
+      {rows.map((row) => (
+        <div key={row.offset} className="flex gap-4">
+          <span className="text-gray-600 select-none">
+            {row.offset.toString(16).padStart(8, '0')}
+          </span>
+          <span className="flex-1">
+            {row.bytes.map((b, i) => (
+              <span
+                key={i}
+                className={isPrintable(b) ? 'text-amber-400' : 'text-gray-500'}
+              >
+                {b.toString(16).padStart(2, '0')}{' '}
+              </span>
+            ))}
+            {/* pad out short final row so the ascii sidebar still lines up */}
+            {Array.from({ length: 16 - row.bytes.length }).map((_, i) => (
+              <span key={`pad-${i}`}>{'   '}</span>
+            ))}
+          </span>
+          <span className="text-gray-600 select-none">|</span>
+          <span>
+            {row.bytes.map((b, i) => (
+              <span
+                key={i}
+                className={isPrintable(b) ? 'text-amber-400' : 'text-gray-500'}
+              >
+                {isPrintable(b) ? String.fromCharCode(b) : '.'}
+              </span>
+            ))}
+          </span>
+          <span className="text-gray-600 select-none">|</span>
+        </div>
+      ))}
+      {truncated && (
+        <div className="text-gray-500 mt-1">... ({remaining} more bytes not shown)</div>
+      )}
+    </div>
+  );
 }
 
 export default function StepRawFile({ format, onNext, collapsed, onExpand, isExtracting, extractError }) {
   const [text, setText] = useState('');
+  const [binaryBytes, setBinaryBytes] = useState(null);
 
   useEffect(() => {
     if (format.isBinary) {
+      setBinaryBytes(null);
       fetch(format.samplePath)
         .then((response) => response.arrayBuffer())
-        .then((buffer) => setText(formatHexDump(new Uint8Array(buffer))));
+        .then((buffer) => setBinaryBytes(new Uint8Array(buffer)));
     } else {
+      setText('');
       fetch(format.samplePath)
         .then((response) => response.text())
         .then((data) => setText(data));
@@ -87,21 +125,21 @@ export default function StepRawFile({ format, onNext, collapsed, onExpand, isExt
         </div>
 
         {/* code body */}
-        <div className="px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto whitespace-pre-wrap text-gray-300">
-          {!text
-            ? 'Loading...'
-            : format.isBinary
-              ? text
-              : text.split('\n').map((line, i) => (
-                  <div key={i}>{highlightLine(line)}</div>
-                ))}
+     <div className="dark-scrollbar px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto overflow-y-auto whitespace-pre-wrap text-gray-300 max-h-190">          
+        {format.isBinary ? (
+            binaryBytes ? <HexDump bytes={binaryBytes} /> : 'Loading...'
+          ) : text ? (
+            text.split('\n').map((line, i) => <div key={i}>{highlightLine(line)}</div>)
+          ) : (
+            'Loading...'
+          )}
         </div>
       </div>
 
       <div className="mt-2.5 text-[11px] text-gray-400 font-mono">
         <div className="mb-1">
           {format.isBinary
-            ? `Bytes of ${format.label} file, shown as hex`
+            ? `Raw bytes of the ${format.label} file, shown as hex,the actual file is binary`
             : `Sample ${format.label} file`}
         </div>
       </div>

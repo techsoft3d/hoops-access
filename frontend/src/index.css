@@ -48,4 +48,22 @@ body {
   .ts3d-nav-shadow {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
   }
+
+  .dark-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .dark-scrollbar::-webkit-scrollbar-track {
+    background: var(--color-code-panel);
+  }
+  .dark-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(75 85 99);
+    border-radius: 4px;
+  }
+  .dark-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(107 114 128);
+  }
+  .dark-scrollbar {
+    scrollbar-color: rgb(75 85 99) var(--color-code-panel);
+    scrollbar-width: thin;
+  }
 }
