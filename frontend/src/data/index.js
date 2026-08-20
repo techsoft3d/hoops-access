@@ -1,8 +1,9 @@
 export const formats = {
   Nastran: {
     label: 'Nastran',
-    filename: 'sample_plate.nas',
-    samplePath: '/samples/sample_plate.nas',
+    filename: 'sdvk-531-toq_wing_box_simcenter-2_10incr_s-toq_wing_box_simcenter-2_10inc_4lcs.op2',
+    samplePath: '/samples/sdvk-531-toq_wing_box_simcenter-2_10incr_s-toq_wing_box_simcenter-2_10inc_4lcs.op2',
+    isBinary: true,
   },
   'LS-DYNA': {
     label: 'LS-DYNA',

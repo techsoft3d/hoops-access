@@ -10,14 +10,51 @@ function highlightLine(text) {
   });
 }
 
+// Renders bytes the way a real hex editor would: offset | hex bytes | ascii,
+// 16 bytes per row. Non-printable bytes show as "." in the ascii column.
+function formatHexDump(bytes, maxBytes = 2048) {
+  const lines = [];
+  const limit = Math.min(bytes.length, maxBytes);
+
+  for (let offset = 0; offset < limit; offset += 16) {
+    const row = bytes.slice(offset, offset + 16);
+
+    const offsetStr = offset.toString(16).padStart(8, '0');
+
+    const hexStr = Array.from(row)
+      .map((b) => b.toString(16).padStart(2, '0'))
+      .join(' ')
+      .padEnd(16 * 3 - 1, ' ');
+
+    const asciiStr = Array.from(row)
+      .map((b) => (b >= 32 && b <= 126 ? String.fromCharCode(b) : '.'))
+      .join('');
+
+    lines.push(`${offsetStr}  ${hexStr}  |${asciiStr}|`);
+  }
+
+  if (bytes.length > maxBytes) {
+    lines.push(`... (${bytes.length - maxBytes} more bytes not shown)`);
+  }
+
+  return lines.join('\n');
+}
+
 export default function StepRawFile({ format, onNext, collapsed, onExpand, isExtracting, extractError }) {
   const [text, setText] = useState('');
-   useEffect(() => {
+
+  useEffect(() => {
+    if (format.isBinary) {
       fetch(format.samplePath)
-      .then(response => response.text())
-      .then(data => setText(data));
+        .then((response) => response.arrayBuffer())
+        .then((buffer) => setText(formatHexDump(new Uint8Array(buffer))));
+    } else {
+      fetch(format.samplePath)
+        .then((response) => response.text())
+        .then((data) => setText(data));
+    }
   }, [format]);
-          
+
   if (collapsed) {
     return (
       <div className="bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2 flex items-center gap-2.5 mb-4.5">
@@ -44,15 +81,28 @@ export default function StepRawFile({ format, onNext, collapsed, onExpand, isExt
             <span className="w-2.5 h-2.5 rounded-full bg-[#f5a623]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#3dd66b]" />
           </div>
-            <span className="ml-auto text-[11px] text-gray-500 font-mono">
-              {format.filename}
-            </span>
-          </div>
+          <span className="ml-auto text-[11px] text-gray-500 font-mono">
+            {format.filename}
+          </span>
+        </div>
+
         {/* code body */}
-        <div className="px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto  whitespace-pre-wrap text-gray-300">
-         {text ? text.split('\n').map((line, i) => (
-            <div key={i}>{highlightLine(line)}</div>
-          )) : 'Loading...'}
+        <div className="px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto whitespace-pre-wrap text-gray-300">
+          {!text
+            ? 'Loading...'
+            : format.isBinary
+              ? text
+              : text.split('\n').map((line, i) => (
+                  <div key={i}>{highlightLine(line)}</div>
+                ))}
+        </div>
+      </div>
+
+      <div className="mt-2.5 text-[11px] text-gray-400 font-mono">
+        <div className="mb-1">
+          {format.isBinary
+            ? `Bytes of ${format.label} file, shown as hex`
+            : `Sample ${format.label} file`}
         </div>
       </div>
 
