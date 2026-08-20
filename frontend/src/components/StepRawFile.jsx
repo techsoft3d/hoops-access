@@ -76,21 +76,13 @@ function HexDump({ bytes }) {
 }
 
 export default function StepRawFile({ format, onNext, collapsed, onExpand, isExtracting, extractError }) {
-  const [text, setText] = useState('');
   const [binaryBytes, setBinaryBytes] = useState(null);
 
   useEffect(() => {
-    if (format.isBinary) {
       setBinaryBytes(null);
       fetch(format.samplePath)
         .then((response) => response.arrayBuffer())
         .then((buffer) => setBinaryBytes(new Uint8Array(buffer)));
-    } else {
-      setText('');
-      fetch(format.samplePath)
-        .then((response) => response.text())
-        .then((data) => setText(data));
-    }
   }, [format]);
 
   if (collapsed) {
@@ -125,14 +117,8 @@ export default function StepRawFile({ format, onNext, collapsed, onExpand, isExt
         </div>
 
         {/* code body */}
-     <div className="dark-scrollbar px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto overflow-y-auto whitespace-pre-wrap text-gray-300 max-h-190">          
-        {format.isBinary ? (
-            binaryBytes ? <HexDump bytes={binaryBytes} /> : 'Loading...'
-          ) : text ? (
-            text.split('\n').map((line, i) => <div key={i}>{highlightLine(line)}</div>)
-          ) : (
-            'Loading...'
-          )}
+        <div className="dark-scrollbar px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto overflow-y-auto whitespace-pre-wrap text-gray-300 max-h-190">
+          {binaryBytes ? <HexDump bytes={binaryBytes} /> : 'Loading...'}
         </div>
       </div>
 
