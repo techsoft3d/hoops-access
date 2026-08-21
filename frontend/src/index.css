@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --brand: 61 156 251;
+  --brand-hover: 42 136 232;
+  --brand-press: 30 125 212;
+  --dark-neutral: 51 51 51;
+  --light-neutral: 239 239 239;
+  --page-bg: 242 242 244;
+  --hairline: 229 229 229;
+  --muted-foreground: 153 153 153;
+  --focus-ring: 234 243 255;
+  --code-panel: 27 35 48;
+}
+
+@theme {
+  --color-brand: rgb(61 156 251);
+  --color-brand-hover: rgb(42 136 232);
+  --color-brand-press: rgb(30 125 212);
+  --color-page-bg: rgb(242 242 244);
+  --color-hairline: rgb(229 229 229);
+  --color-muted-foreground: rgb(153 153 153);
+  --color-code-panel: rgb(27 35 48);
+
+  --font-heading: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-lg: 0.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page-bg);
+  color: rgb(51 51 51);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .ts3d-shadow {
+    box-shadow: 0 0 0.625rem 0.0625rem rgba(0, 0, 0, 0.20);
+  }
+  .ts3d-shadow-hover {
+    box-shadow: 0 0 0.75rem 0.125rem rgba(0, 0, 0, 0.30);
+  }
+  .ts3d-nav-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+  }
+
+  .dark-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .dark-scrollbar::-webkit-scrollbar-track {
+    background: var(--color-code-panel);
+  }
+  .dark-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(75 85 99);
+    border-radius: 4px;
+  }
+  .dark-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(107 114 128);
+  }
+  .dark-scrollbar {
+    scrollbar-color: rgb(75 85 99) var(--color-code-panel);
+    scrollbar-width: thin;
+  }
+}
