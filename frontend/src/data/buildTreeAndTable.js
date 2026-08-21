@@ -1,8 +1,8 @@
 export function buildTreeAndTable(geometryData) {
   const partNodes = geometryData.parts.map((part, partIndex) => {
-    const elementNodes = part.elements.map((element, i) => ({
-      label: `Element ${i + 1}`,
-      nodeIds: element,
+    const elementNodes = part.elements.map((element) => ({
+      label: `${element.shape} ${element.id}`,
+      nodeIds: element.nodes,
     }));
 
     // A part's nodeIds is the union of every node id used by its elements.
@@ -27,8 +27,6 @@ export function buildTreeAndTable(geometryData) {
     children: partNodes,
   };
 
-  // The model's nodeIds is just the mesh's, since Mesh is currently the
-  // only thing under Model.
   const modelNode = {
     label: 'Model',
     nodeIds: meshNode.nodeIds,

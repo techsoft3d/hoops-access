@@ -18,7 +18,7 @@ export function buildEnvisionGeometry(cee, geometryData) {
     const nodeIdsInPart = []; 
     const nodeIdToLocalIndex = {}; 
     for (const element of partDef.elements) {
-      for (const nodeId of element) {
+      for (const nodeId of element.nodes) {
         if (!(nodeId in nodeIdToLocalIndex)) {
           nodeIdToLocalIndex[nodeId] = nodeIdsInPart.length;
           nodeIdsInPart.push(nodeId);
@@ -42,8 +42,8 @@ export function buildEnvisionGeometry(cee, geometryData) {
     const elementNodeIndexArr = []; // flattened list of local node indices for all elements in this part
     const elementTypeArr = []; //  how many corners each face has
     for (const element of partDef.elements) {
-      elementTypeArr.push(element.length);
-      for (const nodeId of element) {
+      elementTypeArr.push(element.nodes.length);
+      for (const nodeId of element.nodes) {
         elementNodeIndexArr.push(nodeIdToLocalIndex[nodeId]);
       }
     }
