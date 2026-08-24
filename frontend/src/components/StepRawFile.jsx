@@ -1,15 +1,6 @@
 import PrimaryButton from './PrimaryButton';
 import { useState, useEffect } from 'react';
 
-function highlightLine(text) {
-  return text.split(/(\s+)/).map((token, i) => {
-    if (/^-?\d/.test(token)) {
-      return <span key={i} className="text-amber-400">{token}</span>;
-    }
-    return token;
-  });
-}
-
 // Turns raw bytes into structured rows (offset + 16 bytes each), 
 // so each byte can be colored individually: 
 // readable ASCII bytes in one color, 
