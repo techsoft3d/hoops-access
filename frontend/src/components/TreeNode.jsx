@@ -9,7 +9,8 @@ export default function TreeNode({ node, selectedLabel, onSelect, collapsedLabel
         type="button"
         onClick={() => {
           onSelect(node);
-          if (hasChildren) onToggleCollapse(node.label);
+          if (hasChildren) 
+            onToggleCollapse(node.label);
         }}
         style={{ paddingLeft: depth * 16 }}
         className={

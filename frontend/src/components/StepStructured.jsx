@@ -25,8 +25,10 @@ export default function StepStructured({ format, geometryData, onNext }) {
   function handleToggleCollapse(label) {
     setCollapsedLabels((prev) => {
       const next = new Set(prev);
-      if (next.has(label)) next.delete(label);
-      else next.add(label);
+      if (next.has(label)) 
+        next.delete(label);
+      else 
+        next.add(label);
       return next;
     });
   }
