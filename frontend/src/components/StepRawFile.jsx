@@ -1,11 +1,28 @@
 import PrimaryButton from './PrimaryButton';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
-// Turns raw bytes into structured rows (offset + 16 bytes each), 
-// so each byte can be colored individually: 
-// readable ASCII bytes in one color, 
-// everything else dimmed.
-function buildHexRows(bytes, maxBytes = 2048) {
+const PREVIEW_BYTES = 2048;
+
+function looksBinary(bytes, sampleSize = 1024) {
+  const sample = bytes.subarray(0, Math.min(bytes.length, sampleSize));
+  if (sample.length === 0) 
+    return false;
+
+  let suspicious = 0;
+  for (let i = 0; i < sample.length; i++) {
+    const b = sample[i];
+    if (b === 0) 
+      return true;
+    const isText = (b >= 32 && b <= 126) || b === 9 || b === 10 || b === 13;
+    if (!isText) 
+      suspicious++;
+  }
+
+  return suspicious / sample.length > 0.1;
+}
+
+
+function buildHexRows(bytes, totalBytes, maxBytes = PREVIEW_BYTES) {
   const rows = [];
   const limit = Math.min(bytes.length, maxBytes);
 
@@ -14,15 +31,15 @@ function buildHexRows(bytes, maxBytes = 2048) {
     rows.push({ offset, bytes: row });
   }
 
-  return { rows, truncated: bytes.length > maxBytes, remaining: bytes.length - maxBytes };
+  return { rows, truncated: totalBytes > maxBytes, remaining: totalBytes - maxBytes };
 }
 
 function isPrintable(byte) {
   return byte >= 32 && byte <= 126;
 }
 
-function HexDump({ bytes }) {
-  const { rows, truncated, remaining } = buildHexRows(bytes);
+function HexDump({ bytes, totalBytes = bytes.length }) {
+  const { rows, truncated, remaining } = buildHexRows(bytes, totalBytes);
 
   return (
     <div>
@@ -66,27 +83,59 @@ function HexDump({ bytes }) {
   );
 }
 
-export default function StepRawFile({ format, onNext, collapsed, onExpand, isExtracting, extractError }) {
+function TextPreview({ bytes, totalBytes = bytes.length, maxBytes = PREVIEW_BYTES }) {
+  const limit = Math.min(bytes.length, maxBytes);
+  const text = new TextDecoder('utf-8').decode(bytes.subarray(0, limit));
+  const truncated = totalBytes > maxBytes;
+  const remaining = totalBytes - maxBytes;
+
+  return (
+    <div>
+      <pre className="whitespace-pre-wrap wrap-break-word font-mono">{text}</pre>
+      {truncated && (
+        <div className="text-gray-500 mt-1">... ({remaining} more bytes not shown)</div>
+      )}
+    </div>
+  );
+}
+
+export default function StepRawFile({ format, uploadedFile, onNext, collapsed, onExpand, isExtracting, extractError }) {
   const [binaryBytes, setBinaryBytes] = useState(null);
+  const [totalBytes, setTotalBytes] = useState(0);
 
   useEffect(() => {
       setBinaryBytes(null);
-      fetch(format.samplePath)
-        .then((response) => response.arrayBuffer())
-        .then((buffer) => setBinaryBytes(new Uint8Array(buffer)));
-  }, [format]);
+      if (uploadedFile) {
+        uploadedFile.slice(0, PREVIEW_BYTES).arrayBuffer().then((buffer) => {
+          setTotalBytes(uploadedFile.size);
+          setBinaryBytes(new Uint8Array(buffer));
+        });
+      } else {
+        fetch(format.samplePath)
+          .then((response) => response.arrayBuffer())
+          .then((buffer) => {
+            setTotalBytes(buffer.byteLength);
+            setBinaryBytes(new Uint8Array(buffer));
+          });
+      }
+  }, [format, uploadedFile]);
+
+  const isBinary = useMemo(() => 
+    (binaryBytes ? looksBinary(binaryBytes) : false)
+    ,[binaryBytes]);
+  const filename = uploadedFile ? uploadedFile.name : format.filename;
 
   if (collapsed) {
     return (
       <div className="bg-gray-50 border border-gray-200 rounded-lg px-3.5 py-2 flex items-center gap-2.5 mb-4.5">
         <span className="text-[11px] text-gray-400 font-mono truncate">
-          {format.filename}
+          {filename}
         </span>
         <button
           onClick={onExpand}
           className="ml-auto text-[11px] font-semibold text-brand shrink-0"
         >
-          {format.label} source ↑
+          Source ↑
         </button>
       </div>
     );
@@ -103,21 +152,25 @@ export default function StepRawFile({ format, onNext, collapsed, onExpand, isExt
             <span className="w-2.5 h-2.5 rounded-full bg-[#3dd66b]" />
           </div>
           <span className="ml-auto text-[11px] text-gray-500 font-mono">
-            {format.filename}
+            {filename}
           </span>
         </div>
 
         {/* code body */}
         <div className="dark-scrollbar px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto overflow-y-auto whitespace-pre-wrap text-gray-300 max-h-190">
-          {binaryBytes ? <HexDump bytes={binaryBytes} /> : 'Loading...'}
+          {binaryBytes
+            ? (isBinary
+                ? <HexDump bytes={binaryBytes} totalBytes={totalBytes} />
+                : <TextPreview bytes={binaryBytes} totalBytes={totalBytes} />)
+            : 'Loading...'}
         </div>
       </div>
 
       <div className="mt-2.5 text-[11px] text-gray-400 font-mono">
         <div className="mb-1">
-          {format.isBinary
-            ? `Raw bytes of the ${format.label} file, shown as hex,the actual file is binary`
-            : `Sample ${format.label} file`}
+          {isBinary
+            ? `Raw bytes of ${filename}, shown as hex — this file is binary`
+            : `Contents of ${filename}, shown as text`}
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { formats } from '../data';
 import FormatSelector from './FormatSelector';
 import StepRawFile from './StepRawFile';
@@ -24,16 +24,38 @@ export default function DemoStage() {
     const [geometryData, setGeometryData] = useState(null);
     const [isExtracting, setIsExtracting] = useState(false);
     const [extractError, setExtractError] = useState(null);
+    const [uploadedFile, setUploadedFile] = useState(null);
 
-    const format = formats[activeId];
+    const format = useMemo(
+        () => (uploadedFile ? { label: 'Uploaded file', filename: uploadedFile.name } : formats[activeId]),
+        [uploadedFile, activeId]
+    );
+
+    function handleFormatChange(id) {
+        setUploadedFile(null);
+        setActiveId(id);
+    }
+
+    function handleUpload(file) {
+        setUploadedFile(file);
+        setGeometryData(null);
+        setExtractError(null);
+        setCollapsed(false);
+        setStep('raw');
+    }
 
     async function handleExtract() {
         setIsExtracting(true);
         setExtractError(null);
 
         try {
-            const response = await fetch(format.samplePath);
-            const blob = await response.blob();
+            let blob;
+            if (uploadedFile) {
+                blob = uploadedFile;
+            } else {
+                const response = await fetch(format.samplePath);
+                blob = await response.blob();
+            }
 
             const formData = new FormData();
             formData.append('file', blob, format.filename);
@@ -64,9 +86,18 @@ export default function DemoStage() {
         <div className="min-h-screen flex items-start justify-center bg-slate-50 p-4 pt-16">
             <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-6">
                 <StepIndicator step={step} format={format}/>
-                {step === 'raw' && <FormatSelector activeId={activeId} onChange={setActiveId} />}
+                {step === 'raw' && (
+                    <FormatSelector
+                        activeId={activeId}
+                        onChange={handleFormatChange}
+                        onUpload={handleUpload}
+                        isUploadActive={Boolean(uploadedFile)}
+                        uploadedFileName={uploadedFile?.name}
+                    />
+                )}
                 <StepRawFile
                     format={format}
+                    uploadedFile={uploadedFile}
                     onNext={handleExtract}
                     collapsed={collapsed}
                     onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }}

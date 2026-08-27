@@ -1,0 +1,235 @@
+# Project context: HOOPS Access demo
+
+## What this project is
+A demo app showing how HOOPS Access (Tech Soft 3D's CAE file translation
+SDK) reads real engineering files and structures them, ending in a live
+3D view. Three steps: raw file → structured tree → 3D result.
+
+## Architecture
+- `frontend/`: React + Vite. Deliberately renamed from the original
+  `hoops-access/` to avoid confusion with the Access SDK itself.
+- `backend/`: Node/Express server (`server.js`). Receives an uploaded
+  file, spawns a native CLI on it, returns JSON.
+- `backend/native/`: contains `bin/access_cli` (a compiled C++ binary)
+  and `lib/{abaqus-odb_api,intelmkl,intelopenmp}/` (its runtime .so
+  dependencies). **Only the compiled binary + runtime libs are vendored
+  here — no headers, no build files.** access_cli is built and rebuilt
+  entirely inside a separate Tech Soft 3D "HOOPS Solve Access Mesh Eval"
+  package (lives outside this repo, currently at
+  `~/Desktop/git/HOOPS_Solve_Access_Mesh_Eval_3.1.0_c3503f96/`), by
+  adding `access_cli.cpp` to that package's own
+  `src/sam/vdm/exam/CMakeLists.txt` (added to the `CEE_SAM_VDM_EXAMPLES_CPP`
+  list) and letting its CMake build handle all linking. After any
+  access_cli.cpp change: edit it in the eval package, `cmake --build .`,
+  then copy the resulting `bin/vdm_access_cli` over
+  `backend/native/bin/access_cli`.
+
+## The data pipeline, concretely
+1. Frontend fetches a real sample file from `frontend/public/samples/`
+2. Posts it to `POST http://localhost:3000/translate` (Express + Multer)
+3. Express spawns `access_cli <file>` via `child_process.execFile`,
+   with `LD_LIBRARY_PATH` set to the three `native/lib/*` folders
+4. access_cli calls HOOPS Access: `openFile()` → `loadModel()` →
+   `getMesh()`, walks nodes/elements/parts, prints JSON to stdout:
+   `{"nodes": {"1":[x,y,z], ...}, "parts": [{"partRef":..., "label":
+   "Part N", "elements": [{"id": <real element id>, "shape":
+   "Quadrilateral"|"Line"|"Point"|etc, "nodes": [nodeId, ...]}]}]}`
+5. Express parses and returns that JSON; temp upload file is deleted
+   after each request regardless of outcome
+6. Frontend uses the same JSON for two independent things:
+   `data/buildTreeAndTable.js` builds a Model→Mesh→Part→Element tree
+   for display; `envision/buildEnvisionGeometry.js` builds Envision's
+   actual 3D geometry objects. These are two separate, unrelated
+   transforms of the same source JSON — not the same tree.
+
+## Sample files — all real, not hand-written mocks
+- `sample_plate.nas` — no longer used, was hand-written, replaced by:
+- Nastran: a real solved `.op2` wing-box model (binary, has real
+  results though only geometry is currently extracted)
+- Abaqus: a real solved `.odb` file (`viewer_tutorial_2026.odb`) —
+  includes a single-node reference-point element (confirmed correct,
+  not a bug)
+- Ansys: a real solved `.rst` file
+- LS-DYNA and IDEAS UNV samples are still the original hand-written
+  ones (`sample_plate.key`, `sample_plate.unv`) — not yet replaced with
+  real files, unlike Nastran/Abaqus/Ansys
+- VTK Legacy was tried and dropped — its reader crashes (glibc heap
+  corruption) in this Access build, even on a minimal valid file.
+  VTK XML (.vtu) works fine for writing but wasn't tested for reading.
+- OpenFOAM was considered, not attempted (multi-file case structure,
+  bigger undertaking than a single file)
+- Licensing concern about Abaqus/Ansys (Dassault/Ansys partnership
+  agreement needed to redistribute their reader libs) is RESOLVED —
+  confirmed the company has the rights to use both in this demo
+
+## Binary vs. text sample files in the UI
+All three current sample formats (Nastran `.op2`, Abaqus `.odb`, Ansys
+`.rst`) are binary. The `isBinary` flag that used to live on each
+format's entry in `data/index.js` has been removed, since it was
+previously used to branch between text-fetch and hex-dump rendering in
+`StepRawFile.jsx`, and every current format needs the hex-dump path.
+**Worth double-checking with the new session:** if `StepRawFile.jsx`
+still contains a `format.isBinary` check, removing the field entirely
+means that check now always reads `undefined` (falsy) for every format,
+which would silently fall back to the old `.text()` fetch path and
+reintroduce garbled/unreadable output — this needs to either be
+confirmed as already handled (e.g. `StepRawFile` simplified to always
+hex-dump, or made a plain boolean per format again) or fixed.
+
+`StepRawFile.jsx`'s `HexDump` component (readable ASCII bytes in amber,
+everything else gray, offset + hex + ascii sidebar layout, capped at
+2048 bytes with a "N more bytes not shown" note) is otherwise unchanged
+and was working correctly against real binary files.
+
+## The Tech Soft 3D "HOOPS Solve Access Mesh Eval" package — critical context
+
+This is a **separate package, outside this repo**, and it's where
+`access_cli.cpp` actually lives, gets edited, and gets compiled. This
+repo only ever receives the **finished compiled binary** plus its
+runtime `.so` dependencies — never source code, never build tooling.
+Understanding this split is essential before touching anything native.
+
+**Location:** `~/Desktop/git/HOOPS_Solve_Access_Mesh_Eval_3.1.0_c3503f96/`
+(has moved once already, from `~/Downloads/`, after being relocated —
+if paths don't resolve, check current location first rather than
+assuming).
+
+**What's in it, roughly:**
+- `src/sam/vdm/exam/` — where `access_cli.cpp` lives, alongside Tech
+  Soft 3D's own tutorial `.cpp` files (`tutorial_file_translation.cpp`,
+  `tutorial_read_model_data.cpp`, `tutorial_read_result_data.cpp`, etc.)
+  and their `CMakeLists.txt`. access_cli.cpp is based directly on
+  `tutorial_file_translation.cpp`'s structure (openFile → loadModel →
+  getMesh pattern), not written from scratch.
+- `thirdparty/` — the full dependency chain access_cli needs to link
+  against: HDF5, Intel MKL, Intel OpenMP, METIS/GKlib, c-blosc, the
+  Abaqus ODB API (proprietary, licensed — confirmed OK to use/ship for
+  this project), CGNS, ANSYS DPF. This folder is NOT vendored into the
+  demo repo — only used during the eval package's own build.
+- `sam/hoops_license.h` — contains the actual HOOPS license key
+  (`#define HOOPS_LICENSE "..."`), replaced with a real key early in
+  this project. Gets baked into the compiled binary at build time; not
+  needed at runtime, not vendored into the demo repo.
+- CMake presets (`cmake --preset Linux`) — build output location has
+  moved before (was `bin/`, became `out/build/Linux/bin/` after a full
+  cache wipe at one point) — always confirm where the actual binary
+  landed after a build rather than assuming a fixed path.
+
+**How access_cli.cpp got into this package's build in the first place:**
+added as an entry to the `CEE_SAM_VDM_EXAMPLES_CPP` list inside
+`src/sam/vdm/exam/CMakeLists.txt`. That file auto-generates a build
+target per listed `.cpp` file (named `vdm_<filename-without-extension>`,
+so `access_cli.cpp` → target/binary `vdm_access_cli`), with the same
+linking treatment as every other tutorial in that list — meaning we
+never had to hand-write the correct link recipe ourselves; we let their
+existing, proven-correct CMake logic handle it.
+
+**The workflow for any future access_cli.cpp change:**
+1. Edit `access_cli.cpp` directly inside
+   `HOOPS_Solve_Access_Mesh_Eval_.../src/sam/vdm/exam/`
+2. `cmake --build .` from the eval package root (only re-run
+   `cmake --preset Linux` first if CMakeLists.txt itself changed, not
+   for plain .cpp edits)
+3. Test directly there first: `./bin/vdm_access_cli <file>` (or
+   wherever the build output actually landed)
+4. Requires `LD_LIBRARY_PATH` set for that terminal session — see below
+5. Only once confirmed working: copy the resulting binary over
+   `backend/native/bin/access_cli` in this repo, overwriting the old one
+
+**LD_LIBRARY_PATH when testing directly in the eval package** (different
+paths than testing inside this repo's `backend/native/`):
+```bash
+export LD_LIBRARY_PATH=$(pwd)/thirdparty/abaqus-odb_api-2026-linux64/lib:$(pwd)/thirdparty/hdf5-1.14.5-linux64/lib:$(pwd)/thirdparty/intelmkl.linux-x64/lib:$(pwd)/thirdparty/c-blosc-1.21.6-linux64/lib:$(pwd)/thirdparty/METIS-linux64/lib:$(pwd)/thirdparty/GKlib-linux64/lib:$LD_LIBRARY_PATH
+```
+(run from the eval package root; adjust `$(pwd)/thirdparty` to
+`$(pwd)/../thirdparty` etc. if running from a subfolder like `bin/`)
+
+**Why only the binary + 3 runtime lib folders get copied into this
+repo's `backend/native/`, nothing else:** confirmed via `ldd` on the
+compiled binary — of the full `thirdparty/` dependency chain used to
+*build* access_cli, only `abaqus-odb_api`, `intelmkl`, and `intelopenmp`
+are genuinely required at *runtime* (dynamically linked); everything
+else (HDF5, METIS, c-blosc, etc.) got statically linked into the binary
+itself and isn't needed as separate files. This was verified directly,
+not assumed.
+
+## Key frontend files and what changed from the original mock version
+- `data/index.js`: simplified to `{label, filename, samplePath,
+  isBinary?}` per format, keyed by label (e.g. `formats['Nastran']`,
+  matching `FormatSelector`'s `activeId` convention exactly — case
+  sensitive)
+- `DemoStage.jsx`: owns `geometryData`, `isExtracting`, `extractError`
+  state. `handleExtract()` does the real fetch→post→parse flow, with
+  try/catch/finally for loading/error handling.
+- `StepRawFile.jsx`: fetches real file content (text or hex dump per
+  `isBinary`), shows extraction loading/error state on the button
+- `StepStructured.jsx` / `StepResult3D.jsx`: both render trees built
+  from `buildTreeAndTable(geometryData)` via a shared `TreeNode.jsx`
+  component. StepStructured shows the full tree (down to Elements) next
+  to a coordinate table with click-to-filter. StepResult3D shows a
+  trimmed tree (Model/Mesh/Part only, Elements stripped — they don't
+  map to anything selectable in 3D) next to the live Envision view,
+  with click-to-isolate part highlighting (selected part keeps its
+  color, others dim to gray) via a `selectedPartIndex` prop bridged
+  through each Part node's `partIndex` field.
+- `EnvisionViewer.jsx`: takes `geometryData` + `selectedPartIndex`
+  directly (no more mock lookup by format id). Three separate
+  `useEffect`s: one-time session/viewer setup, full model rebuild on
+  `geometryData` change (assigns each part a distinct default color
+  from a small palette, cycling via modulo), and a lightweight
+  re-color-only effect on `selectedPartIndex` change (no model rebuild,
+  just walks the existing part array and recolors).
+- Removed entirely: `geometryData.js` (old mock), `contourColors.js`,
+  per-format `nastran.js`/`abaqus.js`/`ansys.js` files, all contour/
+  scalar-mapping code (no scalar data exists yet — see below)
+
+## Known gaps / deliberately deferred, in rough priority order
+1. **Scalar results (stress/displacement coloring).** All current
+   files/code are geometry-only. Real result data exists in the .op2/
+   .odb/.rst files already (confirmed — e.g. OES1/OSTR1 tables in the
+   op2) but access_cli doesn't extract it yet. Would need: DataSource's
+   State/ResultMetadata API (`tutorial_read_result_data.cpp` in the eval
+   package — already read once, not yet implemented from) added to
+   access_cli.cpp, a new JSON field (something like `scalarsByResult`),
+   and restoring contour/legend UI in StepResult3D/EnvisionViewer (was
+   deliberately stripped when this was mock-only).
+2. **True volumetric solid elements (hexahedra/pentahedra) are
+   confirmed NOT rendering correctly.** `cee.usg` (what this project
+   uses, "UnstructGrid" for the Web product) is explicitly surface-only
+   per a colleague and per Tech Soft 3D docs. A colleague described
+   `cee.ug.RemoteModel` as the real fix — supports volumetric elements,
+   but requires running a separate stateful "UgServer" Node.js process
+   alongside the existing Express backend, and a different geometry-
+   building API than buildEnvisionGeometry's current Mesh-from-flat-
+   arrays approach. Not started; only discussed conceptually, not
+   verified against actual Envision Web docs.
+3. **Line/beam (2-node) elements are CONFIRMED working** — render as
+   visible lines in `cee.usg` with zero special-casing needed, verified
+   directly on the wing-box file. Single-node "point" elements (Abaqus
+   reference points) also confirmed rendering as points, same way.
+4. LS-DYNA and IDEAS UNV still use old hand-written samples, not real
+   solved files like the other three — inconsistent with the rest of
+   the demo now.
+5. Not deployed anywhere — everything runs against localhost. Would
+   need Docker (to package access_cli + its runtime .so deps reliably
+   for a different machine), separate hosting for frontend/backend,
+   CORS/HTTPS, updated fetch URLs.
+
+## Working style notes for continuing this project
+- The person learns best with concrete, from-scratch explanations —
+  avoid unexplained jargon, walk through actual code line by line when
+  asked, use their real data as examples rather than abstractions.
+- Verify empirically rather than guess when it comes to Access API
+  behavior or file format specifics — this project hit real, costly
+  dead ends earlier from confident-but-wrong assumptions (e.g. VTK
+  Legacy crashing, hand-written LS-DYNA/Nastran files with subtle
+  column-alignment bugs). Test small changes before building further on
+  them.
+- `LD_LIBRARY_PATH` needs to be set per-terminal-session for manual
+  testing (not persisted by default — was recently added to `~/.zshrc`,
+  since the person uses zsh, not bash — don't suggest `.bashrc`).
+- When editing access_cli.cpp, always test directly in the eval package
+  first (`./bin/vdm_access_cli <file>` or wherever the build output
+  currently is — it has moved around, e.g. `out/build/Linux/bin/` after
+  a cache wipe at one point) before copying the binary into the actual
+  project.

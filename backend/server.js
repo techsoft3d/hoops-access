@@ -9,6 +9,8 @@ const app = express();
 
 app.use(cors());
 
+const MAX_UPLOAD_BYTES = 250 * 1024 * 1024;
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads/');
@@ -18,7 +20,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
+const upload = multer({ storage, limits: { fileSize: MAX_UPLOAD_BYTES } });
 
 app.post('/translate', upload.single('file'), (req, res) => {
 
@@ -35,12 +37,12 @@ app.post('/translate', upload.single('file'), (req, res) => {
         path.join(libDir, 'intelopenmp'),
     ].join(':');
 
-    execFile(cliPath, [req.file.path], { env : {LD_LIBRARY_PATH: ldLibraryPath} }, (err, stdout, stderr) => {
+    execFile(cliPath, [req.file.path], { env: { LD_LIBRARY_PATH: ldLibraryPath }, maxBuffer: MAX_UPLOAD_BYTES }, (err, stdout, stderr) => {
         fs.unlink(req.file.path, (unlinkErr) => {
-        if (unlinkErr) 
+        if (unlinkErr)
             console.error('Failed to delete temp file:', unlinkErr);
         });
-       
+
         if (err) {
             console.error('access_cli failed:', stderr);
             return res.status(500).json({ error: 'access_cli failed', details: stderr});
@@ -55,6 +57,13 @@ app.post('/translate', upload.single('file'), (req, res) => {
         }
     });
 
+});
+
+app.use((err, req, res, next) => {
+    if (err instanceof multer.MulterError) {
+        return res.status(400).json({ error: err.code === 'LIMIT_FILE_SIZE' ? 'File too large' : err.message });
+    }
+    next(err);
 });
 
 app.listen(3000, () => {
