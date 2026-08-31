@@ -33,7 +33,11 @@ export default function StepStructured({ format, geometryData, onNext }) {
     });
   }
 
-  const highlightedIds = selected ? new Set((selected.nodeIds ?? []).map(String)) : null;
+  // Only filter the coordinate table when the selected node actually has node
+  // ids to filter by (Parts/Elements). Materials/Element Properties/Interaction
+  // Pairs are never spatial — selecting one shouldn't blank out the table.
+  const hasSelectedNodeIds = Boolean(selected?.nodeIds?.length);
+  const highlightedIds = hasSelectedNodeIds ? new Set(selected.nodeIds.map(String)) : null;
 
   return (
     <div>
@@ -93,7 +97,7 @@ export default function StepStructured({ format, geometryData, onNext }) {
               })}
             </tbody>
           </table>
-          {selected && highlightedIds.size === 0 && (
+          {selected && highlightedIds && highlightedIds.size === 0 && (
             <p className="text-[11px] text-gray-400 mt-2">
               No coordinate data published for "{selected.label}" yet.
             </p>
