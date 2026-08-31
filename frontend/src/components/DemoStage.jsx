@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { formats } from '../data';
 import FormatSelector from './FormatSelector';
+import UploadButton from './UploadButton';
 import StepRawFile from './StepRawFile';
 import StepStructured from './StepStructured';
 import StepResult from './StepResult3D';
@@ -87,13 +88,20 @@ export default function DemoStage() {
             <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-6">
                 <StepIndicator step={step} format={format}/>
                 {step === 'raw' && (
-                    <FormatSelector
-                        activeId={activeId}
-                        onChange={handleFormatChange}
-                        onUpload={handleUpload}
-                        isUploadActive={Boolean(uploadedFile)}
-                        uploadedFileName={uploadedFile?.name}
-                    />
+                    <>
+                        <FormatSelector
+                            activeId={activeId}
+                            onChange={handleFormatChange}
+                            isUploadActive={Boolean(uploadedFile)}
+                        />
+                        <div className="flex justify-center mb-5 -mt-1">
+                            <UploadButton
+                                onUpload={handleUpload}
+                                isActive={Boolean(uploadedFile)}
+                                fileName={uploadedFile?.name}
+                            />
+                        </div>
+                    </>
                 )}
                 <StepRawFile
                     format={format}
