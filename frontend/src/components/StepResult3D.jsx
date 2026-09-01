@@ -9,7 +9,7 @@ export default function StepResult3D({ geometryData }) {
 
   if (!geometryData) {
     return (
-      <div className="bg-gray-100 rounded-lg h-136 relative overflow-hidden">
+      <div className="flex-1 min-h-0 bg-gray-100 rounded-lg relative overflow-hidden">
         <p className="flex items-center justify-center h-full text-[13px] text-gray-400">
           Waiting for Access to structure the file...
         </p>
@@ -19,10 +19,6 @@ export default function StepResult3D({ geometryData }) {
 
   const { tree } = buildTreeAndTable(geometryData);
 
-  // The 3D step keeps the tree limited to what's actually highlightable in
-  // the viewer — Mesh/Parts. Materials, Element Properties, Interaction
-  // Pairs, or anything else non-spatial doesn't map to anything isolatable
-  // here, so only Mesh survives; full detail lives in the Structured step.
   const VISIBLE_BRANCHES = new Set(['Mesh']);
 
   const treeWithoutElements = tree.map((modelNode) => ({
@@ -51,8 +47,8 @@ export default function StepResult3D({ geometryData }) {
   const selectedPartIndex = typeof selected?.partIndex === 'number' ? selected.partIndex : null;
 
   return (
-    <div className="grid grid-cols-[0.5fr_1.5fr] gap-5">
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+    <div className="grid grid-cols-[0.5fr_1.5fr] gap-5 flex-1 min-h-0">
+      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 h-full overflow-y-auto">
         <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-2.5">
           Model tree
         </p>
@@ -68,7 +64,7 @@ export default function StepResult3D({ geometryData }) {
         ))}
       </div>
 
-      <div className="bg-gray-100 rounded-lg h-136 relative overflow-hidden">
+      <div className="bg-gray-100 rounded-lg h-full relative overflow-hidden">
         <EnvisionViewer geometryData={geometryData} selectedPartIndex={selectedPartIndex} />
       </div>
     </div>

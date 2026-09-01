@@ -13,7 +13,11 @@ export default function StepStructured({ format, geometryData, onNext }) {
   }, [format]);
 
   if (!geometryData) {
-    return <p className="text-[13px] text-gray-400">Waiting for Access to structure the file...</p>;
+    return (
+      <div className="flex-1 min-h-0 flex items-center justify-center">
+        <p className="text-[13px] text-gray-400">Waiting for Access to structure the file...</p>
+      </div>
+    );
   }
 
   const { tree, table } = buildTreeAndTable(geometryData);
@@ -33,16 +37,13 @@ export default function StepStructured({ format, geometryData, onNext }) {
     });
   }
 
-  // Only filter the coordinate table when the selected node actually has node
-  // ids to filter by (Parts/Elements). Materials/Element Properties/Interaction
-  // Pairs are never spatial — selecting one shouldn't blank out the table.
   const hasSelectedNodeIds = Boolean(selected?.nodeIds?.length);
   const highlightedIds = hasSelectedNodeIds ? new Set(selected.nodeIds.map(String)) : null;
 
   return (
-    <div>
-      <div className="grid grid-cols-[0.9fr_1.1fr] gap-5">
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 max-h-190 overflow-y-auto">
+    <div className="flex-1 min-h-0 flex flex-col">
+      <div className="grid grid-cols-[0.9fr_1.1fr] gap-5 flex-1 min-h-0">
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 h-full overflow-y-auto">
           <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-2.5">
             Model tree
           </p>
@@ -58,7 +59,7 @@ export default function StepStructured({ format, geometryData, onNext }) {
           ))}
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-4 border-2 border-brand max-h-190 overflow-y-auto">
+        <div className="bg-gray-50 rounded-lg p-4 border-2 border-brand h-full overflow-y-auto">
           <p className="text-[11px] font-bold text-brand uppercase tracking-wide mb-2.5">
             Node coordinates
           </p>

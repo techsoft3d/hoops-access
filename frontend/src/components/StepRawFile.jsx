@@ -142,8 +142,8 @@ export default function StepRawFile({ format, uploadedFile, onNext, collapsed, o
   }
 
   return (
-    <div>
-      <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
+    <div className="flex-1 min-h-0 flex flex-col">
+      <div className="bg-[#1a1a1a] rounded-lg overflow-hidden flex-1 min-h-0 flex flex-col">
         {/* editor chrome header */}
         <div className="flex items-center px-4 py-2.5 border-b border-white/10">
           <div className="flex gap-1.5">
@@ -157,7 +157,7 @@ export default function StepRawFile({ format, uploadedFile, onNext, collapsed, o
         </div>
 
         {/* code body */}
-        <div className="dark-scrollbar px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto overflow-y-auto whitespace-pre-wrap text-gray-300 max-h-190">
+        <div className="dark-scrollbar px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto overflow-y-auto whitespace-pre-wrap text-gray-300 flex-1 min-h-0">
           {binaryBytes
             ? (isBinary
                 ? <HexDump bytes={binaryBytes} totalBytes={totalBytes} />

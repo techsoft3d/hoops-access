@@ -85,35 +85,37 @@ export default function DemoStage() {
     return (
 
         <div className="min-h-screen flex items-start justify-center bg-slate-50 p-4 pt-16">
-            <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-6">
+            <div className="w-full max-w-5xl h-300 bg-white rounded-2xl shadow-lg p-6 flex flex-col">
                 <StepIndicator step={step} format={format}/>
-                {step === 'raw' && (
-                    <>
-                        <FormatSelector
-                            activeId={activeId}
-                            onChange={handleFormatChange}
-                            isUploadActive={Boolean(uploadedFile)}
-                        />
-                        <div className="flex justify-center mb-5 -mt-1">
-                            <UploadButton
-                                onUpload={handleUpload}
-                                isActive={Boolean(uploadedFile)}
-                                fileName={uploadedFile?.name}
+                <div className="flex-1 min-h-0 flex flex-col overflow-y-auto">
+                    {step === 'raw' && (
+                        <>
+                            <FormatSelector
+                                activeId={activeId}
+                                onChange={handleFormatChange}
+                                isUploadActive={Boolean(uploadedFile)}
                             />
-                        </div>
-                    </>
-                )}
-                <StepRawFile
-                    format={format}
-                    uploadedFile={uploadedFile}
-                    onNext={handleExtract}
-                    collapsed={collapsed}
-                    onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }}
-                    isExtracting={isExtracting}
-                    extractError={extractError}
-                />
-                {step === 'structured' && <StepStructured format={format} geometryData={geometryData} onNext={() => onNext(step, setStep)} />}
-                {step === '3D' && <StepResult geometryData={geometryData} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
+                            <div className="flex justify-center mb-5 -mt-1">
+                                <UploadButton
+                                    onUpload={handleUpload}
+                                    isActive={Boolean(uploadedFile)}
+                                    fileName={uploadedFile?.name}
+                                />
+                            </div>
+                        </>
+                    )}
+                    <StepRawFile
+                        format={format}
+                        uploadedFile={uploadedFile}
+                        onNext={handleExtract}
+                        collapsed={collapsed}
+                        onExpand={() => { setCollapsed(!collapsed); setStep('raw'); }}
+                        isExtracting={isExtracting}
+                        extractError={extractError}
+                    />
+                    {step === 'structured' && <StepStructured format={format} geometryData={geometryData} onNext={() => onNext(step, setStep)} />}
+                    {step === '3D' && <StepResult geometryData={geometryData} onNext={() => { onNext(step, setStep); setCollapsed(false); }} />}
+                </div>
             </div>
         </div>
     );
