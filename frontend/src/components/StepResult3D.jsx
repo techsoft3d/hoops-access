@@ -19,15 +19,20 @@ export default function StepResult3D({ geometryData }) {
 
   const { tree } = buildTreeAndTable(geometryData);
 
+  // The 3D step keeps the tree limited to what's actually highlightable in
+  // the viewer — Mesh/Parts. Materials, Element Properties, Interaction
+  // Pairs, or anything else non-spatial doesn't map to anything isolatable
+  // here, so only Mesh survives; full detail lives in the Structured step.
+  const VISIBLE_BRANCHES = new Set(['Mesh']);
+
   const treeWithoutElements = tree.map((modelNode) => ({
     ...modelNode,
-    children: modelNode.children.map((meshNode) => ({
-      ...meshNode,
-      children: meshNode.children.map((partNode) => ({
-        ...partNode,
-        children: undefined,
+    children: modelNode.children
+      .filter((child) => VISIBLE_BRANCHES.has(child.label))
+      .map((child) => ({
+        ...child,
+        children: child.children?.map((grandchild) => ({ ...grandchild, children: undefined })),
       })),
-    })),
   }));
 
   function handleSelect(node) {
