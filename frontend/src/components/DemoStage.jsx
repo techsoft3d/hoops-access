@@ -84,8 +84,8 @@ export default function DemoStage() {
 
     return (
 
-        <div className="min-h-screen flex items-start justify-center bg-slate-50 p-4 pt-16">
-            <div className="w-full max-w-5xl h-300 bg-white rounded-2xl shadow-lg p-6 flex flex-col">
+        <div className="min-h-screen flex items-start justify-center bg-slate-50 p-4 pt-8 sm:pt-16">
+            <div className="w-full max-w-5xl h-160 sm:h-220 md:h-300 bg-white rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col">
                 <StepIndicator step={step} format={format}/>
                 <div className="flex-1 min-h-0 flex flex-col overflow-y-auto">
                     {step === 'raw' && (

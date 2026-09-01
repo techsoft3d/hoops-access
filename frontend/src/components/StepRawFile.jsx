@@ -157,7 +157,7 @@ export default function StepRawFile({ format, uploadedFile, onNext, collapsed, o
         </div>
 
         {/* code body */}
-        <div className="dark-scrollbar px-5 py-4 font-mono text-[13px] leading-relaxed overflow-x-auto overflow-y-auto whitespace-pre-wrap text-gray-300 flex-1 min-h-0">
+        <div className="dark-scrollbar px-3 sm:px-5 py-3 sm:py-4 font-mono text-[11px] sm:text-[13px] leading-relaxed overflow-x-auto overflow-y-auto whitespace-pre-wrap text-gray-300 flex-1 min-h-0">
           {binaryBytes
             ? (isBinary
                 ? <HexDump bytes={binaryBytes} totalBytes={totalBytes} />

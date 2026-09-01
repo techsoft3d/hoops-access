@@ -9,7 +9,7 @@ function UploadIcon() {
 
 export default function UploadButton({ onUpload, isActive, fileName }) {
   return (
-    <label className="inline-flex items-center justify-center gap-2 text-[13px] font-semibold uppercase tracking-widest text-white px-7 py-3 bg-brand hover:bg-brand-hover transition-colors cursor-pointer max-w-full">
+    <label className="inline-flex items-center justify-center gap-2 text-[13px] font-semibold uppercase tracking-widest text-white px-5 sm:px-7 py-2.5 sm:py-3 bg-brand hover:bg-brand-hover transition-colors cursor-pointer max-w-full">
       <UploadIcon />
       <span className={'truncate ' + (isActive ? 'normal-case tracking-normal' : '')}>
         {isActive ? fileName : 'Upload your own file'}

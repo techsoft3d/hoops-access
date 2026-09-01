@@ -47,8 +47,8 @@ export default function StepResult3D({ geometryData }) {
   const selectedPartIndex = typeof selected?.partIndex === 'number' ? selected.partIndex : null;
 
   return (
-    <div className="grid grid-cols-[0.5fr_1.5fr] gap-5 flex-1 min-h-0">
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 h-full overflow-y-auto">
+    <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1.5fr] gap-5 flex-1 min-h-0 overflow-y-auto">
+      <div className="order-2 md:order-1 bg-gray-50 border border-gray-200 rounded-lg p-4 h-40 md:h-full overflow-y-auto">
         <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wide mb-2.5">
           Model tree
         </p>
@@ -64,7 +64,7 @@ export default function StepResult3D({ geometryData }) {
         ))}
       </div>
 
-      <div className="bg-gray-100 rounded-lg h-full relative overflow-hidden">
+      <div className="order-1 md:order-2 bg-gray-100 rounded-lg h-64 md:h-full relative overflow-hidden">
         <EnvisionViewer geometryData={geometryData} selectedPartIndex={selectedPartIndex} />
       </div>
     </div>

@@ -12,7 +12,7 @@ const steps = {
 export default function StepIndicator({ step, format }) {
   const total = 3;
   return (
-    <div className="mb-6 flex items-center justify-between border-b border-hairline pb-4">
+    <div className="mb-6 flex items-center justify-between flex-wrap gap-2 border-b border-hairline pb-4">
       <div className="flex items-baseline gap-3">
         <span className="font-mono text-sm font-bold text-brand">
           {String(steps[step]).padStart(2, "0")}

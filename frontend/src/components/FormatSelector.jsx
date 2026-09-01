@@ -3,7 +3,7 @@ import StepIndicator from './StepIndicator';
 
 export default function FormatSelector({ activeId, onChange, isUploadActive }) {
   return (
-      <div className="flex items-center justify-center px-8 py-4 gap-4 mb-5">
+      <div className="flex flex-wrap items-center justify-center px-2 sm:px-8 py-4 gap-3 sm:gap-4 mb-5">
       {formatList.map((format) => {
         const isActive = !isUploadActive && format.label === activeId;
         return (
