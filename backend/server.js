@@ -11,20 +11,29 @@ app.use(cors());
 
 const MAX_UPLOAD_BYTES = 250 * 1024 * 1024;
 
+// Some formats reference sibling files.
+// So every file in one request needs to land in the SAME directory, 
+// with its ORIGINAL name intact, while still not colliding with other
+// requests. A per-request subdirectory gets both at once.
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads/');
+    if (!req.uploadDir) {
+      req.uploadDir = path.join('uploads', `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+      fs.mkdirSync(req.uploadDir, { recursive: true });
+    }
+    cb(null, req.uploadDir);
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + '-' + file.originalname);
+    cb(null, file.originalname);
   },
 });
 
 const upload = multer({ storage, limits: { fileSize: MAX_UPLOAD_BYTES } });
 
-app.post('/translate', upload.single('file'), (req, res) => {
+app.post('/translate', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'dependencies', maxCount: 20 }]), (req, res) => {
 
-      if (!req.file) {
+    const mainFile = req.files?.file?.[0];
+    if (!mainFile) {
         return res.status(400).json({ error: 'No file uploaded' });
     }
 
@@ -37,10 +46,10 @@ app.post('/translate', upload.single('file'), (req, res) => {
         path.join(libDir, 'intelopenmp'),
     ].join(':');
 
-    execFile(cliPath, [req.file.path], { env: { LD_LIBRARY_PATH: ldLibraryPath }, maxBuffer: MAX_UPLOAD_BYTES }, (err, stdout, stderr) => {
-        fs.unlink(req.file.path, (unlinkErr) => {
-        if (unlinkErr)
-            console.error('Failed to delete temp file:', unlinkErr);
+    execFile(cliPath, [mainFile.path], { env: { LD_LIBRARY_PATH: ldLibraryPath }, maxBuffer: MAX_UPLOAD_BYTES }, (err, stdout, stderr) => {
+        fs.rm(req.uploadDir, { recursive: true, force: true }, (rmErr) => {
+        if (rmErr)
+            console.error('Failed to delete temp upload dir:', rmErr);
         });
 
         if (err) {

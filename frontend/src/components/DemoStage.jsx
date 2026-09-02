@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { formats } from '../data';
 import FormatSelector from './FormatSelector';
 import UploadButton from './UploadButton';
+import DependencyFilesInput from './DependencyFilesInput';
 import StepRawFile from './StepRawFile';
 import StepStructured from './StepStructured';
 import StepResult from './StepResult3D';
@@ -26,6 +27,7 @@ export default function DemoStage() {
     const [isExtracting, setIsExtracting] = useState(false);
     const [extractError, setExtractError] = useState(null);
     const [uploadedFile, setUploadedFile] = useState(null);
+    const [dependencyFiles, setDependencyFiles] = useState([]);
 
     const format = useMemo(
         () => (uploadedFile ? { label: 'Uploaded file', filename: uploadedFile.name } : formats[activeId]),
@@ -34,11 +36,13 @@ export default function DemoStage() {
 
     function handleFormatChange(id) {
         setUploadedFile(null);
+        setDependencyFiles([]);
         setActiveId(id);
     }
 
     function handleUpload(file) {
         setUploadedFile(file);
+        setDependencyFiles([]);
         setGeometryData(null);
         setExtractError(null);
         setCollapsed(false);
@@ -60,6 +64,7 @@ export default function DemoStage() {
 
             const formData = new FormData();
             formData.append('file', blob, format.filename);
+            dependencyFiles.forEach((depFile) => formData.append('dependencies', depFile, depFile.name));
 
             const backendResponse = await fetch('http://localhost:3000/translate', {
                 method: 'POST',
@@ -102,6 +107,12 @@ export default function DemoStage() {
                                     fileName={uploadedFile?.name}
                                 />
                             </div>
+                            {uploadedFile && (
+                                <DependencyFilesInput
+                                    files={dependencyFiles}
+                                    onChange={setDependencyFiles}
+                                />
+                            )}
                         </>
                     )}
                     <StepRawFile
