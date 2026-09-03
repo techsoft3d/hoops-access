@@ -44,8 +44,8 @@ app.post('/translate', upload.fields([{ name: 'file', maxCount: 1 }, { name: 'de
 
     const ldLibraryPath = [
         path.join(libDir, 'abaqus-odb_api'),
-        path.join(libDir, 'intelmkl'),
-        path.join(libDir, 'intelopenmp'),
+        path.join(libDir, 'intelmkl', 'lib'),
+        path.join(libDir, 'intelopenmp', 'lib'),
     ].join(':');
 
     execFile(cliPath, [mainFile.path], { env: { LD_LIBRARY_PATH: ldLibraryPath }, maxBuffer: MAX_UPLOAD_BYTES }, (err, stdout, stderr) => {
