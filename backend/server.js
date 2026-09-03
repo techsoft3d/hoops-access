@@ -7,6 +7,8 @@ const fs = require('fs');
 const cors = require('cors');
 const app = express();
 
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
 app.use(cors());
 
 const MAX_UPLOAD_BYTES = 250 * 1024 * 1024;
@@ -75,7 +77,7 @@ app.use((err, req, res, next) => {
     next(err);
 });
 
-app.listen(3000, () => {
-    console.log('Server running on http://localhost:3000');
+app.listen(8180, () => {
+    console.log('Server running on http://localhost:8180');
 });
 

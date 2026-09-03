@@ -66,7 +66,7 @@ export default function DemoStage() {
             formData.append('file', blob, format.filename);
             dependencyFiles.forEach((depFile) => formData.append('dependencies', depFile, depFile.name));
 
-            const backendResponse = await fetch('http://localhost:3000/translate', {
+            const backendResponse = await fetch('/hoops-access/translate', {
                 method: 'POST',
                 body: formData,
             });
